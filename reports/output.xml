@@ -1,0 +1,197 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<robot generator="Robot 7.2.2 (Python 3.13.3 on win32)" generated="2025-04-16T22:37:15.695218" rpa="false" schemaversion="5">
+<suite id="s1" name="Testsuites" source="C:\Users\tahuu\Downloads\robot-ai-devops-framework\testsuites">
+<suite id="s1-s1" name="Login" source="C:\Users\tahuu\Downloads\robot-ai-devops-framework\testsuites\login.robot">
+<kw name="Open Browser To Login Page" owner="login_steps" type="SETUP">
+<kw name="Open Browser" owner="SeleniumLibrary">
+<msg time="2025-04-16T22:37:16.384411" level="INFO">Opening browser 'chrome' to base url 'https://cms.anhtester.com/users/login'.</msg>
+<arg>${LOGIN_URL}</arg>
+<arg>chrome</arg>
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<status status="PASS" start="2025-04-16T22:37:16.383943" elapsed="3.784271"/>
+</kw>
+<kw name="Maximize Browser Window" owner="SeleniumLibrary">
+<doc>Maximizes current browser window.</doc>
+<status status="PASS" start="2025-04-16T22:37:20.168627" elapsed="0.041996"/>
+</kw>
+<status status="PASS" start="2025-04-16T22:37:16.382287" elapsed="3.831736"/>
+</kw>
+<test id="s1-s1-t1" name="L_1" line="7">
+<kw name="Go To Login Page" owner="login_steps">
+<kw name="Go To" owner="SeleniumLibrary">
+<msg time="2025-04-16T22:37:20.217267" level="INFO">Opening url 'https://cms.anhtester.com/users/login'</msg>
+<arg>${LOGIN_URL}</arg>
+<doc>Navigates the current browser window to the provided ``url``.</doc>
+<status status="PASS" start="2025-04-16T22:37:20.216812" elapsed="0.670989"/>
+</kw>
+<status status="PASS" start="2025-04-16T22:37:20.216194" elapsed="0.671841"/>
+</kw>
+<kw name="Click Session Button" owner="login_steps">
+<kw name="Click Button" owner="SeleniumLibrary">
+<msg time="2025-04-16T22:37:20.890041" level="INFO">Clicking button 'xpath=//button[@class='absolute-top-right bg-white shadow-lg btn btn-circle btn-icon mr-n3 mt-n3 set-session']'.</msg>
+<arg>xpath=//button[@class='absolute-top-right bg-white shadow-lg btn btn-circle btn-icon mr-n3 mt-n3 set-session']</arg>
+<doc>Clicks the button identified by ``locator``.</doc>
+<status status="PASS" start="2025-04-16T22:37:20.889410" elapsed="0.209421"/>
+</kw>
+<status status="PASS" start="2025-04-16T22:37:20.888896" elapsed="0.210187"/>
+</kw>
+<kw name="Input Email Field" owner="login_steps">
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2025-04-16T22:37:21.102737" level="INFO">Typing text 'anhtester@email.com' into text field 'xpath=//input[@id='email']'.</msg>
+<arg>xpath=//input[@id='email']</arg>
+<arg>${email}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2025-04-16T22:37:21.102105" elapsed="0.224407"/>
+</kw>
+<arg>anhtester@email.com</arg>
+<status status="PASS" start="2025-04-16T22:37:21.101329" elapsed="0.225578"/>
+</kw>
+<kw name="Input Password Field" owner="login_steps">
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2025-04-16T22:37:21.331734" level="INFO">Typing text 'AnhTester@2023#' into text field 'xpath=//input[@id='password']'.</msg>
+<arg>xpath=//input[@id='password']</arg>
+<arg>${password}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2025-04-16T22:37:21.331336" elapsed="0.163286"/>
+</kw>
+<arg>AnhTester@2023#</arg>
+<status status="PASS" start="2025-04-16T22:37:21.330790" elapsed="0.164082"/>
+</kw>
+<kw name="Click Login Button" owner="login_steps">
+<kw name="Click Button" owner="SeleniumLibrary">
+<msg time="2025-04-16T22:37:21.496274" level="INFO">Clicking button 'xpath=//button[normalize-space()='Login']'.</msg>
+<arg>xpath=//button[normalize-space()='Login']</arg>
+<doc>Clicks the button identified by ``locator``.</doc>
+<status status="PASS" start="2025-04-16T22:37:21.495963" elapsed="0.129049"/>
+</kw>
+<status status="PASS" start="2025-04-16T22:37:21.495443" elapsed="0.129968"/>
+</kw>
+<kw name="Sleep" owner="BuiltIn">
+<msg time="2025-04-16T22:37:24.633483" level="INFO">Slept 3 seconds.</msg>
+<arg>3s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<status status="PASS" start="2025-04-16T22:37:21.631266" elapsed="3.002358"/>
+</kw>
+<kw name="Verify Dashboard URL" owner="login_steps">
+<kw name="Location Should Be" owner="SeleniumLibrary">
+<msg time="2025-04-16T22:37:24.643484" level="INFO">Current location is 'https://cms.anhtester.com/admin'.</msg>
+<arg>${expected_url}</arg>
+<doc>Verifies that the current URL is exactly ``url``.</doc>
+<status status="PASS" start="2025-04-16T22:37:24.634911" elapsed="0.008739"/>
+</kw>
+<arg>${ADMIN_URL}</arg>
+<status status="PASS" start="2025-04-16T22:37:24.634349" elapsed="0.009490"/>
+</kw>
+<kw name="Sleep" owner="BuiltIn">
+<msg time="2025-04-16T22:37:27.645339" level="INFO">Slept 3 seconds.</msg>
+<arg>3s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<status status="PASS" start="2025-04-16T22:37:24.644327" elapsed="3.001136"/>
+</kw>
+<kw name="Go To Logout Page" owner="login_steps">
+<kw name="Go To" owner="SeleniumLibrary">
+<msg time="2025-04-16T22:37:27.646557" level="INFO">Opening url 'https://cms.anhtester.com/logout'</msg>
+<arg>${LOGOUT_URL}</arg>
+<doc>Navigates the current browser window to the provided ``url``.</doc>
+<status status="PASS" start="2025-04-16T22:37:27.646366" elapsed="0.493412"/>
+</kw>
+<status status="PASS" start="2025-04-16T22:37:27.645928" elapsed="0.494064"/>
+</kw>
+<status status="PASS" start="2025-04-16T22:37:20.214255" elapsed="7.932402"/>
+</test>
+<test id="s1-s1-t2" name="L_2" line="18">
+<kw name="Go To Login Page" owner="login_steps">
+<kw name="Go To" owner="SeleniumLibrary">
+<msg time="2025-04-16T22:37:28.156625" level="INFO">Opening url 'https://cms.anhtester.com/users/login'</msg>
+<arg>${LOGIN_URL}</arg>
+<doc>Navigates the current browser window to the provided ``url``.</doc>
+<status status="PASS" start="2025-04-16T22:37:28.156301" elapsed="0.493044"/>
+</kw>
+<status status="PASS" start="2025-04-16T22:37:28.155734" elapsed="0.493845"/>
+</kw>
+<kw name="Input Email Field" owner="login_steps">
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2025-04-16T22:37:28.655968" level="INFO">Typing text 'customer2025@gmail.com' into text field 'xpath=//input[@id='email']'.</msg>
+<arg>xpath=//input[@id='email']</arg>
+<arg>${email}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2025-04-16T22:37:28.655429" elapsed="0.151108"/>
+</kw>
+<arg>customer2025@gmail.com</arg>
+<status status="PASS" start="2025-04-16T22:37:28.654420" elapsed="0.152319"/>
+</kw>
+<kw name="Input Password Field" owner="login_steps">
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2025-04-16T22:37:28.809980" level="INFO">Typing text '123456' into text field 'xpath=//input[@id='password']'.</msg>
+<arg>xpath=//input[@id='password']</arg>
+<arg>${password}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2025-04-16T22:37:28.809356" elapsed="0.138649"/>
+</kw>
+<arg>123456</arg>
+<status status="PASS" start="2025-04-16T22:37:28.807721" elapsed="0.140415"/>
+</kw>
+<kw name="Click Login Button" owner="login_steps">
+<kw name="Click Button" owner="SeleniumLibrary">
+<msg time="2025-04-16T22:37:28.949363" level="INFO">Clicking button 'xpath=//button[normalize-space()='Login']'.</msg>
+<arg>xpath=//button[normalize-space()='Login']</arg>
+<doc>Clicks the button identified by ``locator``.</doc>
+<status status="PASS" start="2025-04-16T22:37:28.949084" elapsed="0.840202"/>
+</kw>
+<status status="PASS" start="2025-04-16T22:37:28.948559" elapsed="0.840966"/>
+</kw>
+<kw name="Sleep" owner="BuiltIn">
+<msg time="2025-04-16T22:37:32.801355" level="INFO">Slept 3 seconds.</msg>
+<arg>3s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<status status="PASS" start="2025-04-16T22:37:29.800721" elapsed="3.000815"/>
+</kw>
+<kw name="Verify Dashboard URL" owner="login_steps">
+<kw name="Location Should Be" owner="SeleniumLibrary">
+<msg time="2025-04-16T22:37:32.812727" level="INFO">Current location is 'https://cms.anhtester.com/dashboard'.</msg>
+<arg>${expected_url}</arg>
+<doc>Verifies that the current URL is exactly ``url``.</doc>
+<status status="PASS" start="2025-04-16T22:37:32.803405" elapsed="0.009689"/>
+</kw>
+<arg>${DASHBOARD_URL}</arg>
+<status status="PASS" start="2025-04-16T22:37:32.802665" elapsed="0.010638"/>
+</kw>
+<kw name="Sleep" owner="BuiltIn">
+<msg time="2025-04-16T22:37:35.814231" level="INFO">Slept 3 seconds.</msg>
+<arg>3s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<status status="PASS" start="2025-04-16T22:37:32.813753" elapsed="3.000600"/>
+</kw>
+<kw name="Go To Logout Page" owner="login_steps">
+<kw name="Go To" owner="SeleniumLibrary">
+<msg time="2025-04-16T22:37:35.815575" level="INFO">Opening url 'https://cms.anhtester.com/logout'</msg>
+<arg>${LOGOUT_URL}</arg>
+<doc>Navigates the current browser window to the provided ``url``.</doc>
+<status status="PASS" start="2025-04-16T22:37:35.815357" elapsed="1.550335"/>
+</kw>
+<status status="PASS" start="2025-04-16T22:37:35.814892" elapsed="1.551003"/>
+</kw>
+<status status="PASS" start="2025-04-16T22:37:28.153760" elapsed="9.212634"/>
+</test>
+<kw name="Close Browser" owner="SeleniumLibrary" type="TEARDOWN">
+<doc>Closes the current browser.</doc>
+<status status="PASS" start="2025-04-16T22:37:37.369793" elapsed="2.606316"/>
+</kw>
+<status status="PASS" start="2025-04-16T22:37:15.763433" elapsed="24.212799"/>
+</suite>
+<status status="PASS" start="2025-04-16T22:37:15.699825" elapsed="24.278257"/>
+</suite>
+<statistics>
+<total>
+<stat pass="2" fail="0" skip="0">All Tests</stat>
+</total>
+<tag>
+</tag>
+<suite>
+<stat name="Testsuites" id="s1" pass="2" fail="0" skip="0">Testsuites</stat>
+<stat name="Login" id="s1-s1" pass="2" fail="0" skip="0">Testsuites.Login</stat>
+</suite>
+</statistics>
+<errors>
+</errors>
+</robot>
