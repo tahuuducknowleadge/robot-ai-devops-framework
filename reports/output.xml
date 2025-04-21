@@ -1,197 +1,913 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<robot generator="Robot 7.2.2 (Python 3.13.3 on win32)" generated="2025-04-16T22:37:15.695218" rpa="false" schemaversion="5">
-<suite id="s1" name="Testsuites" source="C:\Users\tahuu\Downloads\robot-ai-devops-framework\testsuites">
-<suite id="s1-s1" name="Login" source="C:\Users\tahuu\Downloads\robot-ai-devops-framework\testsuites\login.robot">
-<kw name="Open Browser To Login Page" owner="login_steps" type="SETUP">
+<robot generator="Robot 7.2.2 (Python 3.13.3 on win32)" generated="2025-04-21T13:53:01.588453" rpa="false" schemaversion="5">
+<suite id="s1" name="Testsuites" source="C:\Users\tahuu\robot-ai-devops-framework\testsuites">
+<suite id="s1-s1" name="Login" source="C:\Users\tahuu\robot-ai-devops-framework\testsuites\login.robot">
+<kw name="Open Chrome Browser" owner="common_keywords" type="SETUP">
 <kw name="Open Browser" owner="SeleniumLibrary">
-<msg time="2025-04-16T22:37:16.384411" level="INFO">Opening browser 'chrome' to base url 'https://cms.anhtester.com/users/login'.</msg>
-<arg>${LOGIN_URL}</arg>
+<msg time="2025-04-21T13:53:02.629075" level="INFO">Opening browser 'chrome' to base url 'about:blank'.</msg>
+<arg>about:blank</arg>
 <arg>chrome</arg>
 <doc>Opens a new browser instance to the optional ``url``.</doc>
-<status status="PASS" start="2025-04-16T22:37:16.383943" elapsed="3.784271"/>
+<status status="PASS" start="2025-04-21T13:53:02.628818" elapsed="2.663713"/>
 </kw>
 <kw name="Maximize Browser Window" owner="SeleniumLibrary">
 <doc>Maximizes current browser window.</doc>
-<status status="PASS" start="2025-04-16T22:37:20.168627" elapsed="0.041996"/>
+<status status="PASS" start="2025-04-21T13:53:05.292992" elapsed="0.073347"/>
 </kw>
-<status status="PASS" start="2025-04-16T22:37:16.382287" elapsed="3.831736"/>
+<status status="PASS" start="2025-04-21T13:53:02.627973" elapsed="2.738827"/>
 </kw>
-<test id="s1-s1-t1" name="L_1" line="7">
-<kw name="Go To Login Page" owner="login_steps">
+<test id="s1-s1-t1" name="L_1" line="9">
+<kw name="Run Horizontal Test From Excel" owner="excel_keywords">
+<msg time="2025-04-21T13:53:05.506652" level="INFO">▶️ [Row 2] Action: getUrl | Args: ['https://cms.anhtester.com/users/login']</msg>
+<kw name="getUrl" owner="common_keywords">
 <kw name="Go To" owner="SeleniumLibrary">
-<msg time="2025-04-16T22:37:20.217267" level="INFO">Opening url 'https://cms.anhtester.com/users/login'</msg>
-<arg>${LOGIN_URL}</arg>
+<msg time="2025-04-21T13:53:05.507963" level="INFO">Opening url 'https://cms.anhtester.com/users/login'</msg>
+<arg>${url}</arg>
 <doc>Navigates the current browser window to the provided ``url``.</doc>
-<status status="PASS" start="2025-04-16T22:37:20.216812" elapsed="0.670989"/>
+<status status="PASS" start="2025-04-21T13:53:05.507669" elapsed="1.128201"/>
 </kw>
-<status status="PASS" start="2025-04-16T22:37:20.216194" elapsed="0.671841"/>
+<kw name="Sleep" owner="BuiltIn">
+<msg time="2025-04-21T13:53:09.636920" level="INFO">Slept 3 seconds.</msg>
+<arg>${DELAY_MEDIUM}</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<status status="PASS" start="2025-04-21T13:53:06.636102" elapsed="3.000964"/>
 </kw>
-<kw name="Click Session Button" owner="login_steps">
-<kw name="Click Button" owner="SeleniumLibrary">
-<msg time="2025-04-16T22:37:20.890041" level="INFO">Clicking button 'xpath=//button[@class='absolute-top-right bg-white shadow-lg btn btn-circle btn-icon mr-n3 mt-n3 set-session']'.</msg>
-<arg>xpath=//button[@class='absolute-top-right bg-white shadow-lg btn btn-circle btn-icon mr-n3 mt-n3 set-session']</arg>
-<doc>Clicks the button identified by ``locator``.</doc>
-<status status="PASS" start="2025-04-16T22:37:20.889410" elapsed="0.209421"/>
+<arg>https://cms.anhtester.com/users/login</arg>
+<status status="PASS" start="2025-04-21T13:53:05.507079" elapsed="4.130129"/>
 </kw>
-<status status="PASS" start="2025-04-16T22:37:20.888896" elapsed="0.210187"/>
+<msg time="2025-04-21T13:53:09.637341" level="INFO">▶️ [Row 3] Action: clickButton | Locator: //button[@class='absolute-top-right bg-white shadow-lg btn btn-circle btn-icon mr-n3 mt-n3 set-session']</msg>
+<kw name="clickButton" owner="common_keywords">
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>${locator}</arg>
+<arg>timeout=10s</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" start="2025-04-21T13:53:09.637985" elapsed="0.039580"/>
 </kw>
-<kw name="Input Email Field" owner="login_steps">
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2025-04-21T13:53:09.678038" level="INFO">Clicking element '//button[@class='absolute-top-right bg-white shadow-lg btn btn-circle btn-icon mr-n3 mt-n3 set-session']'.</msg>
+<arg>${locator}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2025-04-21T13:53:09.677767" elapsed="0.229489"/>
+</kw>
+<kw name="Sleep" owner="BuiltIn">
+<msg time="2025-04-21T13:53:12.908708" level="INFO">Slept 3 seconds.</msg>
+<arg>${DELAY_MEDIUM}</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<status status="PASS" start="2025-04-21T13:53:09.907541" elapsed="3.001325"/>
+</kw>
+<arg>//button[@class='absolute-top-right bg-white shadow-lg btn btn-circle btn-icon mr-n3 mt-n3 set-session']</arg>
+<status status="PASS" start="2025-04-21T13:53:09.637586" elapsed="3.271469"/>
+</kw>
+<msg time="2025-04-21T13:53:12.909196" level="INFO">▶️ [Row 4] Action: enterText | Args: ["//input[@id='email']", 'anhtester@email.com']</msg>
+<kw name="enterText" owner="common_keywords">
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>${locator}</arg>
+<arg>timeout=10s</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" start="2025-04-21T13:53:12.910014" elapsed="0.030320"/>
+</kw>
 <kw name="Input Text" owner="SeleniumLibrary">
-<msg time="2025-04-16T22:37:21.102737" level="INFO">Typing text 'anhtester@email.com' into text field 'xpath=//input[@id='email']'.</msg>
-<arg>xpath=//input[@id='email']</arg>
-<arg>${email}</arg>
+<msg time="2025-04-21T13:53:12.940859" level="INFO">Typing text 'anhtester@email.com' into text field '//input[@id='email']'.</msg>
+<arg>${locator}</arg>
+<arg>${text}</arg>
 <doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
-<status status="PASS" start="2025-04-16T22:37:21.102105" elapsed="0.224407"/>
+<status status="PASS" start="2025-04-21T13:53:12.940564" elapsed="0.159074"/>
 </kw>
+<kw name="Sleep" owner="BuiltIn">
+<msg time="2025-04-21T13:53:14.100915" level="INFO">Slept 1 second.</msg>
+<arg>${DELAY_FAST}</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<status status="PASS" start="2025-04-21T13:53:13.099868" elapsed="1.001376"/>
+</kw>
+<arg>//input[@id='email']</arg>
 <arg>anhtester@email.com</arg>
-<status status="PASS" start="2025-04-16T22:37:21.101329" elapsed="0.225578"/>
+<status status="PASS" start="2025-04-21T13:53:12.909468" elapsed="1.192257"/>
 </kw>
-<kw name="Input Password Field" owner="login_steps">
+<msg time="2025-04-21T13:53:14.102089" level="INFO">▶️ [Row 5] Action: enterText | Args: ["//input[@id='password']", 'AnhTester@2023#']</msg>
+<kw name="enterText" owner="common_keywords">
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>${locator}</arg>
+<arg>timeout=10s</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" start="2025-04-21T13:53:14.103784" elapsed="0.063834"/>
+</kw>
 <kw name="Input Text" owner="SeleniumLibrary">
-<msg time="2025-04-16T22:37:21.331734" level="INFO">Typing text 'AnhTester@2023#' into text field 'xpath=//input[@id='password']'.</msg>
-<arg>xpath=//input[@id='password']</arg>
-<arg>${password}</arg>
+<msg time="2025-04-21T13:53:14.168176" level="INFO">Typing text 'AnhTester@2023#' into text field '//input[@id='password']'.</msg>
+<arg>${locator}</arg>
+<arg>${text}</arg>
 <doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
-<status status="PASS" start="2025-04-16T22:37:21.331336" elapsed="0.163286"/>
+<status status="PASS" start="2025-04-21T13:53:14.167889" elapsed="0.128964"/>
 </kw>
+<kw name="Sleep" owner="BuiltIn">
+<msg time="2025-04-21T13:53:15.297763" level="INFO">Slept 1 second.</msg>
+<arg>${DELAY_FAST}</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<status status="PASS" start="2025-04-21T13:53:14.297193" elapsed="1.000757"/>
+</kw>
+<arg>//input[@id='password']</arg>
 <arg>AnhTester@2023#</arg>
-<status status="PASS" start="2025-04-16T22:37:21.330790" elapsed="0.164082"/>
+<status status="PASS" start="2025-04-21T13:53:14.102678" elapsed="1.195480"/>
 </kw>
-<kw name="Click Login Button" owner="login_steps">
-<kw name="Click Button" owner="SeleniumLibrary">
-<msg time="2025-04-16T22:37:21.496274" level="INFO">Clicking button 'xpath=//button[normalize-space()='Login']'.</msg>
-<arg>xpath=//button[normalize-space()='Login']</arg>
-<doc>Clicks the button identified by ``locator``.</doc>
-<status status="PASS" start="2025-04-16T22:37:21.495963" elapsed="0.129049"/>
+<msg time="2025-04-21T13:53:15.298354" level="INFO">▶️ [Row 6] Action: clickButton | Locator: //button[normalize-space()='Login']</msg>
+<kw name="clickButton" owner="common_keywords">
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>${locator}</arg>
+<arg>timeout=10s</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" start="2025-04-21T13:53:15.299262" elapsed="0.028950"/>
 </kw>
-<status status="PASS" start="2025-04-16T22:37:21.495443" elapsed="0.129968"/>
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2025-04-21T13:53:15.328840" level="INFO">Clicking element '//button[normalize-space()='Login']'.</msg>
+<arg>${locator}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2025-04-21T13:53:15.328517" elapsed="1.605205"/>
 </kw>
 <kw name="Sleep" owner="BuiltIn">
-<msg time="2025-04-16T22:37:24.633483" level="INFO">Slept 3 seconds.</msg>
-<arg>3s</arg>
+<msg time="2025-04-21T13:53:19.935205" level="INFO">Slept 3 seconds.</msg>
+<arg>${DELAY_MEDIUM}</arg>
 <doc>Pauses the test executed for the given time.</doc>
-<status status="PASS" start="2025-04-16T22:37:21.631266" elapsed="3.002358"/>
+<status status="PASS" start="2025-04-21T13:53:16.934076" elapsed="3.001530"/>
 </kw>
-<kw name="Verify Dashboard URL" owner="login_steps">
+<arg>//button[normalize-space()='Login']</arg>
+<status status="PASS" start="2025-04-21T13:53:15.298733" elapsed="4.637160"/>
+</kw>
+<msg time="2025-04-21T13:53:19.936106" level="INFO">▶️ [Row 7] Action: verifyCurrentUrl | Args: ['https://cms.anhtester.com/admin']</msg>
+<kw name="verifyCurrentUrl" owner="common_keywords">
 <kw name="Location Should Be" owner="SeleniumLibrary">
-<msg time="2025-04-16T22:37:24.643484" level="INFO">Current location is 'https://cms.anhtester.com/admin'.</msg>
+<msg time="2025-04-21T13:53:19.944709" level="INFO">Current location is 'https://cms.anhtester.com/admin'.</msg>
 <arg>${expected_url}</arg>
 <doc>Verifies that the current URL is exactly ``url``.</doc>
-<status status="PASS" start="2025-04-16T22:37:24.634911" elapsed="0.008739"/>
-</kw>
-<arg>${ADMIN_URL}</arg>
-<status status="PASS" start="2025-04-16T22:37:24.634349" elapsed="0.009490"/>
+<status status="PASS" start="2025-04-21T13:53:19.937245" elapsed="0.007590"/>
 </kw>
 <kw name="Sleep" owner="BuiltIn">
-<msg time="2025-04-16T22:37:27.645339" level="INFO">Slept 3 seconds.</msg>
-<arg>3s</arg>
+<msg time="2025-04-21T13:53:22.945650" level="INFO">Slept 3 seconds.</msg>
+<arg>${DELAY_MEDIUM}</arg>
 <doc>Pauses the test executed for the given time.</doc>
-<status status="PASS" start="2025-04-16T22:37:24.644327" elapsed="3.001136"/>
+<status status="PASS" start="2025-04-21T13:53:19.945030" elapsed="3.000882"/>
 </kw>
-<kw name="Go To Logout Page" owner="login_steps">
+<arg>https://cms.anhtester.com/admin</arg>
+<status status="PASS" start="2025-04-21T13:53:19.936540" elapsed="3.009639"/>
+</kw>
+<msg time="2025-04-21T13:53:22.946808" level="INFO">▶️ [Row 9] Action: getUrl | Args: ['https://cms.anhtester.com/logout']</msg>
+<kw name="getUrl" owner="common_keywords">
 <kw name="Go To" owner="SeleniumLibrary">
-<msg time="2025-04-16T22:37:27.646557" level="INFO">Opening url 'https://cms.anhtester.com/logout'</msg>
-<arg>${LOGOUT_URL}</arg>
+<msg time="2025-04-21T13:53:22.949043" level="INFO">Opening url 'https://cms.anhtester.com/logout'</msg>
+<arg>${url}</arg>
 <doc>Navigates the current browser window to the provided ``url``.</doc>
-<status status="PASS" start="2025-04-16T22:37:27.646366" elapsed="0.493412"/>
+<status status="PASS" start="2025-04-21T13:53:22.948589" elapsed="0.525240"/>
 </kw>
-<status status="PASS" start="2025-04-16T22:37:27.645928" elapsed="0.494064"/>
+<kw name="Sleep" owner="BuiltIn">
+<msg time="2025-04-21T13:53:26.475712" level="INFO">Slept 3 seconds.</msg>
+<arg>${DELAY_MEDIUM}</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<status status="PASS" start="2025-04-21T13:53:23.474184" elapsed="3.001783"/>
 </kw>
-<status status="PASS" start="2025-04-16T22:37:20.214255" elapsed="7.932402"/>
+<arg>https://cms.anhtester.com/logout</arg>
+<status status="PASS" start="2025-04-21T13:53:22.947350" elapsed="3.528883"/>
+</kw>
+<arg>./data/cmsanhtester.xlsx</arg>
+<arg>L_1</arg>
+<arg>Login</arg>
+<status status="PASS" start="2025-04-21T13:53:05.373559" elapsed="21.102943"/>
+</kw>
+<status status="PASS" start="2025-04-21T13:53:05.367041" elapsed="21.110329"/>
 </test>
-<test id="s1-s1-t2" name="L_2" line="18">
-<kw name="Go To Login Page" owner="login_steps">
+<test id="s1-s1-t2" name="L_2" line="11">
+<kw name="Run Horizontal Test From Excel" owner="excel_keywords">
+<msg time="2025-04-21T13:53:26.569657" level="INFO">▶️ [Row 2] Action: getUrl | Args: ['https://cms.anhtester.com/users/login']</msg>
+<kw name="getUrl" owner="common_keywords">
 <kw name="Go To" owner="SeleniumLibrary">
-<msg time="2025-04-16T22:37:28.156625" level="INFO">Opening url 'https://cms.anhtester.com/users/login'</msg>
-<arg>${LOGIN_URL}</arg>
+<msg time="2025-04-21T13:53:26.570619" level="INFO">Opening url 'https://cms.anhtester.com/users/login'</msg>
+<arg>${url}</arg>
 <doc>Navigates the current browser window to the provided ``url``.</doc>
-<status status="PASS" start="2025-04-16T22:37:28.156301" elapsed="0.493044"/>
+<status status="PASS" start="2025-04-21T13:53:26.570427" elapsed="0.486368"/>
 </kw>
-<status status="PASS" start="2025-04-16T22:37:28.155734" elapsed="0.493845"/>
+<kw name="Sleep" owner="BuiltIn">
+<msg time="2025-04-21T13:53:30.058730" level="INFO">Slept 3 seconds.</msg>
+<arg>${DELAY_MEDIUM}</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<status status="PASS" start="2025-04-21T13:53:27.057136" elapsed="3.002104"/>
 </kw>
-<kw name="Input Email Field" owner="login_steps">
+<arg>https://cms.anhtester.com/users/login</arg>
+<status status="PASS" start="2025-04-21T13:53:26.570006" elapsed="3.489827"/>
+</kw>
+<msg time="2025-04-21T13:53:30.060537" level="INFO">▶️ [Row 4] Action: enterText | Args: ["//input[@id='email']", 'customer2025@gmail.com']</msg>
+<kw name="enterText" owner="common_keywords">
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>${locator}</arg>
+<arg>timeout=10s</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" start="2025-04-21T13:53:30.062824" elapsed="0.035722"/>
+</kw>
 <kw name="Input Text" owner="SeleniumLibrary">
-<msg time="2025-04-16T22:37:28.655968" level="INFO">Typing text 'customer2025@gmail.com' into text field 'xpath=//input[@id='email']'.</msg>
-<arg>xpath=//input[@id='email']</arg>
-<arg>${email}</arg>
+<msg time="2025-04-21T13:53:30.099365" level="INFO">Typing text 'customer2025@gmail.com' into text field '//input[@id='email']'.</msg>
+<arg>${locator}</arg>
+<arg>${text}</arg>
 <doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
-<status status="PASS" start="2025-04-16T22:37:28.655429" elapsed="0.151108"/>
+<status status="PASS" start="2025-04-21T13:53:30.098874" elapsed="0.147396"/>
 </kw>
+<kw name="Sleep" owner="BuiltIn">
+<msg time="2025-04-21T13:53:31.247325" level="INFO">Slept 1 second.</msg>
+<arg>${DELAY_FAST}</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<status status="PASS" start="2025-04-21T13:53:30.246481" elapsed="1.001000"/>
+</kw>
+<arg>//input[@id='email']</arg>
 <arg>customer2025@gmail.com</arg>
-<status status="PASS" start="2025-04-16T22:37:28.654420" elapsed="0.152319"/>
+<status status="PASS" start="2025-04-21T13:53:30.061380" elapsed="1.186228"/>
 </kw>
-<kw name="Input Password Field" owner="login_steps">
+<msg time="2025-04-21T13:53:31.247725" level="INFO">▶️ [Row 5] Action: enterText | Args: ["//input[@id='password']", '123456']</msg>
+<kw name="enterText" owner="common_keywords">
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>${locator}</arg>
+<arg>timeout=10s</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" start="2025-04-21T13:53:31.248402" elapsed="0.018796"/>
+</kw>
 <kw name="Input Text" owner="SeleniumLibrary">
-<msg time="2025-04-16T22:37:28.809980" level="INFO">Typing text '123456' into text field 'xpath=//input[@id='password']'.</msg>
-<arg>xpath=//input[@id='password']</arg>
-<arg>${password}</arg>
+<msg time="2025-04-21T13:53:31.267693" level="INFO">Typing text '123456' into text field '//input[@id='password']'.</msg>
+<arg>${locator}</arg>
+<arg>${text}</arg>
 <doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
-<status status="PASS" start="2025-04-16T22:37:28.809356" elapsed="0.138649"/>
-</kw>
-<arg>123456</arg>
-<status status="PASS" start="2025-04-16T22:37:28.807721" elapsed="0.140415"/>
-</kw>
-<kw name="Click Login Button" owner="login_steps">
-<kw name="Click Button" owner="SeleniumLibrary">
-<msg time="2025-04-16T22:37:28.949363" level="INFO">Clicking button 'xpath=//button[normalize-space()='Login']'.</msg>
-<arg>xpath=//button[normalize-space()='Login']</arg>
-<doc>Clicks the button identified by ``locator``.</doc>
-<status status="PASS" start="2025-04-16T22:37:28.949084" elapsed="0.840202"/>
-</kw>
-<status status="PASS" start="2025-04-16T22:37:28.948559" elapsed="0.840966"/>
+<status status="PASS" start="2025-04-21T13:53:31.267414" elapsed="0.104613"/>
 </kw>
 <kw name="Sleep" owner="BuiltIn">
-<msg time="2025-04-16T22:37:32.801355" level="INFO">Slept 3 seconds.</msg>
-<arg>3s</arg>
+<msg time="2025-04-21T13:53:32.373294" level="INFO">Slept 1 second.</msg>
+<arg>${DELAY_FAST}</arg>
 <doc>Pauses the test executed for the given time.</doc>
-<status status="PASS" start="2025-04-16T22:37:29.800721" elapsed="3.000815"/>
+<status status="PASS" start="2025-04-21T13:53:31.372368" elapsed="1.001106"/>
 </kw>
-<kw name="Verify Dashboard URL" owner="login_steps">
+<arg>//input[@id='password']</arg>
+<arg>123456</arg>
+<status status="PASS" start="2025-04-21T13:53:31.247975" elapsed="1.125678"/>
+</kw>
+<msg time="2025-04-21T13:53:32.373814" level="INFO">▶️ [Row 6] Action: clickButton | Locator: //button[normalize-space()='Login']</msg>
+<kw name="clickButton" owner="common_keywords">
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>${locator}</arg>
+<arg>timeout=10s</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" start="2025-04-21T13:53:32.374709" elapsed="0.030761"/>
+</kw>
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2025-04-21T13:53:32.406023" level="INFO">Clicking element '//button[normalize-space()='Login']'.</msg>
+<arg>${locator}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2025-04-21T13:53:32.405725" elapsed="0.072957"/>
+</kw>
+<kw name="Sleep" owner="BuiltIn">
+<msg time="2025-04-21T13:53:35.480167" level="INFO">Slept 3 seconds.</msg>
+<arg>${DELAY_MEDIUM}</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<status status="PASS" start="2025-04-21T13:53:32.479154" elapsed="3.001623"/>
+</kw>
+<arg>//button[normalize-space()='Login']</arg>
+<status status="PASS" start="2025-04-21T13:53:32.374203" elapsed="3.107542"/>
+</kw>
+<msg time="2025-04-21T13:53:35.482420" level="INFO">▶️ [Row 7] Action: verifyCurrentUrl | Args: ['https://cms.anhtester.com/dashboard']</msg>
+<kw name="verifyCurrentUrl" owner="common_keywords">
 <kw name="Location Should Be" owner="SeleniumLibrary">
-<msg time="2025-04-16T22:37:32.812727" level="INFO">Current location is 'https://cms.anhtester.com/dashboard'.</msg>
+<msg time="2025-04-21T13:53:35.508721" level="INFO">Current location is 'https://cms.anhtester.com/dashboard'.</msg>
 <arg>${expected_url}</arg>
 <doc>Verifies that the current URL is exactly ``url``.</doc>
-<status status="PASS" start="2025-04-16T22:37:32.803405" elapsed="0.009689"/>
-</kw>
-<arg>${DASHBOARD_URL}</arg>
-<status status="PASS" start="2025-04-16T22:37:32.802665" elapsed="0.010638"/>
+<status status="PASS" start="2025-04-21T13:53:35.485173" elapsed="0.023895"/>
 </kw>
 <kw name="Sleep" owner="BuiltIn">
-<msg time="2025-04-16T22:37:35.814231" level="INFO">Slept 3 seconds.</msg>
-<arg>3s</arg>
+<msg time="2025-04-21T13:53:38.511272" level="INFO">Slept 3 seconds.</msg>
+<arg>${DELAY_MEDIUM}</arg>
 <doc>Pauses the test executed for the given time.</doc>
-<status status="PASS" start="2025-04-16T22:37:32.813753" elapsed="3.000600"/>
+<status status="PASS" start="2025-04-21T13:53:35.509633" elapsed="3.001831"/>
 </kw>
-<kw name="Go To Logout Page" owner="login_steps">
+<arg>https://cms.anhtester.com/dashboard</arg>
+<status status="PASS" start="2025-04-21T13:53:35.483537" elapsed="3.028165"/>
+</kw>
+<msg time="2025-04-21T13:53:38.511883" level="INFO">▶️ [Row 9] Action: getUrl | Args: ['https://cms.anhtester.com/logout']</msg>
+<kw name="getUrl" owner="common_keywords">
 <kw name="Go To" owner="SeleniumLibrary">
-<msg time="2025-04-16T22:37:35.815575" level="INFO">Opening url 'https://cms.anhtester.com/logout'</msg>
-<arg>${LOGOUT_URL}</arg>
+<msg time="2025-04-21T13:53:38.513046" level="INFO">Opening url 'https://cms.anhtester.com/logout'</msg>
+<arg>${url}</arg>
 <doc>Navigates the current browser window to the provided ``url``.</doc>
-<status status="PASS" start="2025-04-16T22:37:35.815357" elapsed="1.550335"/>
+<status status="PASS" start="2025-04-21T13:53:38.512801" elapsed="1.260191"/>
 </kw>
-<status status="PASS" start="2025-04-16T22:37:35.814892" elapsed="1.551003"/>
+<kw name="Sleep" owner="BuiltIn">
+<msg time="2025-04-21T13:53:42.774203" level="INFO">Slept 3 seconds.</msg>
+<arg>${DELAY_MEDIUM}</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<status status="PASS" start="2025-04-21T13:53:39.773412" elapsed="3.001045"/>
 </kw>
-<status status="PASS" start="2025-04-16T22:37:28.153760" elapsed="9.212634"/>
+<arg>https://cms.anhtester.com/logout</arg>
+<status status="PASS" start="2025-04-21T13:53:38.512252" elapsed="4.262471"/>
+</kw>
+<arg>./data/cmsanhtester.xlsx</arg>
+<arg>L_2</arg>
+<arg>Login</arg>
+<status status="PASS" start="2025-04-21T13:53:26.480889" elapsed="16.294043"/>
+</kw>
+<status status="PASS" start="2025-04-21T13:53:26.479715" elapsed="16.296112"/>
 </test>
-<kw name="Close Browser" owner="SeleniumLibrary" type="TEARDOWN">
-<doc>Closes the current browser.</doc>
-<status status="PASS" start="2025-04-16T22:37:37.369793" elapsed="2.606316"/>
+<test id="s1-s1-t3" name="L_3" line="13">
+<kw name="Run Horizontal Test From Excel" owner="excel_keywords">
+<msg time="2025-04-21T13:53:42.852442" level="INFO">▶️ [Row 2] Action: getUrl | Args: ['https://cms.anhtester.com/users/login']</msg>
+<kw name="getUrl" owner="common_keywords">
+<kw name="Go To" owner="SeleniumLibrary">
+<msg time="2025-04-21T13:53:42.853222" level="INFO">Opening url 'https://cms.anhtester.com/users/login'</msg>
+<arg>${url}</arg>
+<doc>Navigates the current browser window to the provided ``url``.</doc>
+<status status="PASS" start="2025-04-21T13:53:42.853050" elapsed="0.470004"/>
 </kw>
-<status status="PASS" start="2025-04-16T22:37:15.763433" elapsed="24.212799"/>
+<kw name="Sleep" owner="BuiltIn">
+<msg time="2025-04-21T13:53:46.325739" level="INFO">Slept 3 seconds.</msg>
+<arg>${DELAY_MEDIUM}</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<status status="PASS" start="2025-04-21T13:53:43.323442" elapsed="3.002677"/>
+</kw>
+<arg>https://cms.anhtester.com/users/login</arg>
+<status status="PASS" start="2025-04-21T13:53:42.852713" elapsed="3.473845"/>
+</kw>
+<msg time="2025-04-21T13:53:46.327107" level="INFO">▶️ [Row 4] Action: enterText | Args: ["//input[@id='email']", 'seller@example.com']</msg>
+<kw name="enterText" owner="common_keywords">
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>${locator}</arg>
+<arg>timeout=10s</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" start="2025-04-21T13:53:46.328855" elapsed="0.047999"/>
+</kw>
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2025-04-21T13:53:46.378419" level="INFO">Typing text 'seller@example.com' into text field '//input[@id='email']'.</msg>
+<arg>${locator}</arg>
+<arg>${text}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2025-04-21T13:53:46.377558" elapsed="0.161391"/>
+</kw>
+<kw name="Sleep" owner="BuiltIn">
+<msg time="2025-04-21T13:53:47.539793" level="INFO">Slept 1 second.</msg>
+<arg>${DELAY_FAST}</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<status status="PASS" start="2025-04-21T13:53:46.539135" elapsed="1.001158"/>
+</kw>
+<arg>//input[@id='email']</arg>
+<arg>seller@example.com</arg>
+<status status="PASS" start="2025-04-21T13:53:46.327734" elapsed="1.213202"/>
+</kw>
+<msg time="2025-04-21T13:53:47.541490" level="INFO">▶️ [Row 5] Action: enterText | Args: ["//input[@id='password']", '123456']</msg>
+<kw name="enterText" owner="common_keywords">
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>${locator}</arg>
+<arg>timeout=10s</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" start="2025-04-21T13:53:47.543842" elapsed="0.044692"/>
+</kw>
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2025-04-21T13:53:47.589731" level="INFO">Typing text '123456' into text field '//input[@id='password']'.</msg>
+<arg>${locator}</arg>
+<arg>${text}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2025-04-21T13:53:47.589069" elapsed="0.127930"/>
+</kw>
+<kw name="Sleep" owner="BuiltIn">
+<msg time="2025-04-21T13:53:48.718063" level="INFO">Slept 1 second.</msg>
+<arg>${DELAY_FAST}</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<status status="PASS" start="2025-04-21T13:53:47.717206" elapsed="1.001121"/>
+</kw>
+<arg>//input[@id='password']</arg>
+<arg>123456</arg>
+<status status="PASS" start="2025-04-21T13:53:47.542380" elapsed="1.176230"/>
+</kw>
+<msg time="2025-04-21T13:53:48.718891" level="INFO">▶️ [Row 6] Action: clickButton | Locator: //button[normalize-space()='Login']</msg>
+<kw name="clickButton" owner="common_keywords">
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>${locator}</arg>
+<arg>timeout=10s</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" start="2025-04-21T13:53:48.720938" elapsed="0.042372"/>
+</kw>
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2025-04-21T13:53:48.765059" level="INFO">Clicking element '//button[normalize-space()='Login']'.</msg>
+<arg>${locator}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2025-04-21T13:53:48.764135" elapsed="1.325484"/>
+</kw>
+<kw name="Sleep" owner="BuiltIn">
+<msg time="2025-04-21T13:53:53.090936" level="INFO">Slept 3 seconds.</msg>
+<arg>${DELAY_MEDIUM}</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<status status="PASS" start="2025-04-21T13:53:50.089823" elapsed="3.001312"/>
+</kw>
+<arg>//button[normalize-space()='Login']</arg>
+<status status="PASS" start="2025-04-21T13:53:48.719498" elapsed="4.371827"/>
+</kw>
+<msg time="2025-04-21T13:53:53.091465" level="INFO">▶️ [Row 7] Action: verifyCurrentUrl | Args: ['https://cms.anhtester.com/seller/dashboard']</msg>
+<kw name="verifyCurrentUrl" owner="common_keywords">
+<kw name="Location Should Be" owner="SeleniumLibrary">
+<msg time="2025-04-21T13:53:53.098852" level="INFO">Current location is 'https://cms.anhtester.com/seller/dashboard'.</msg>
+<arg>${expected_url}</arg>
+<doc>Verifies that the current URL is exactly ``url``.</doc>
+<status status="PASS" start="2025-04-21T13:53:53.092155" elapsed="0.006833"/>
+</kw>
+<kw name="Sleep" owner="BuiltIn">
+<msg time="2025-04-21T13:53:56.099919" level="INFO">Slept 3 seconds.</msg>
+<arg>${DELAY_MEDIUM}</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<status status="PASS" start="2025-04-21T13:53:53.099165" elapsed="3.000932"/>
+</kw>
+<arg>https://cms.anhtester.com/seller/dashboard</arg>
+<status status="PASS" start="2025-04-21T13:53:53.091726" elapsed="3.008540"/>
+</kw>
+<msg time="2025-04-21T13:53:56.100435" level="INFO">▶️ [Row 9] Action: getUrl | Args: ['https://cms.anhtester.com/logout']</msg>
+<kw name="getUrl" owner="common_keywords">
+<kw name="Go To" owner="SeleniumLibrary">
+<msg time="2025-04-21T13:53:56.101406" level="INFO">Opening url 'https://cms.anhtester.com/logout'</msg>
+<arg>${url}</arg>
+<doc>Navigates the current browser window to the provided ``url``.</doc>
+<status status="PASS" start="2025-04-21T13:53:56.101182" elapsed="1.257173"/>
+</kw>
+<kw name="Sleep" owner="BuiltIn">
+<msg time="2025-04-21T13:54:00.362162" level="INFO">Slept 3 seconds.</msg>
+<arg>${DELAY_MEDIUM}</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<status status="PASS" start="2025-04-21T13:53:57.360619" elapsed="3.001733"/>
+</kw>
+<arg>https://cms.anhtester.com/logout</arg>
+<status status="PASS" start="2025-04-21T13:53:56.100726" elapsed="4.261825"/>
+</kw>
+<arg>./data/cmsanhtester.xlsx</arg>
+<arg>L_3</arg>
+<arg>Login</arg>
+<status status="PASS" start="2025-04-21T13:53:42.781345" elapsed="17.581331"/>
+</kw>
+<status status="PASS" start="2025-04-21T13:53:42.780160" elapsed="17.583149"/>
+</test>
+<test id="s1-s1-t4" name="L_4" line="15">
+<kw name="Run Horizontal Test From Excel" owner="excel_keywords">
+<msg time="2025-04-21T13:54:00.432488" level="INFO">▶️ [Row 2] Action: getUrl | Args: ['https://cms.anhtester.com/users/login']</msg>
+<kw name="getUrl" owner="common_keywords">
+<kw name="Go To" owner="SeleniumLibrary">
+<msg time="2025-04-21T13:54:00.433297" level="INFO">Opening url 'https://cms.anhtester.com/users/login'</msg>
+<arg>${url}</arg>
+<doc>Navigates the current browser window to the provided ``url``.</doc>
+<status status="PASS" start="2025-04-21T13:54:00.433085" elapsed="0.593697"/>
+</kw>
+<kw name="Sleep" owner="BuiltIn">
+<msg time="2025-04-21T13:54:04.030015" level="INFO">Slept 3 seconds.</msg>
+<arg>${DELAY_MEDIUM}</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<status status="PASS" start="2025-04-21T13:54:01.028964" elapsed="3.001424"/>
+</kw>
+<arg>https://cms.anhtester.com/users/login</arg>
+<status status="PASS" start="2025-04-21T13:54:00.432737" elapsed="3.597978"/>
+</kw>
+<msg time="2025-04-21T13:54:04.031060" level="INFO">▶️ [Row 4] Action: enterText | Args: ["//input[@id='email']", '']</msg>
+<kw name="enterText" owner="common_keywords">
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>${locator}</arg>
+<arg>timeout=10s</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" start="2025-04-21T13:54:04.032656" elapsed="0.040784"/>
+</kw>
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2025-04-21T13:54:04.074418" level="INFO">Typing text '' into text field '//input[@id='email']'.</msg>
+<arg>${locator}</arg>
+<arg>${text}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2025-04-21T13:54:04.073921" elapsed="0.130182"/>
+</kw>
+<kw name="Sleep" owner="BuiltIn">
+<msg time="2025-04-21T13:54:05.204737" level="INFO">Slept 1 second.</msg>
+<arg>${DELAY_FAST}</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<status status="PASS" start="2025-04-21T13:54:04.204326" elapsed="1.000541"/>
+</kw>
+<arg>//input[@id='email']</arg>
+<status status="PASS" start="2025-04-21T13:54:04.031576" elapsed="1.173432"/>
+</kw>
+<msg time="2025-04-21T13:54:05.205109" level="INFO">▶️ [Row 5] Action: enterText | Args: ["//input[@id='password']", '123456']</msg>
+<kw name="enterText" owner="common_keywords">
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>${locator}</arg>
+<arg>timeout=10s</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" start="2025-04-21T13:54:05.205643" elapsed="0.014902"/>
+</kw>
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2025-04-21T13:54:05.221061" level="INFO">Typing text '123456' into text field '//input[@id='password']'.</msg>
+<arg>${locator}</arg>
+<arg>${text}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2025-04-21T13:54:05.220788" elapsed="0.078738"/>
+</kw>
+<kw name="Sleep" owner="BuiltIn">
+<msg time="2025-04-21T13:54:06.300491" level="INFO">Slept 1 second.</msg>
+<arg>${DELAY_FAST}</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<status status="PASS" start="2025-04-21T13:54:05.299832" elapsed="1.000828"/>
+</kw>
+<arg>//input[@id='password']</arg>
+<arg>123456</arg>
+<status status="PASS" start="2025-04-21T13:54:05.205295" elapsed="1.095542"/>
+</kw>
+<msg time="2025-04-21T13:54:06.301004" level="INFO">▶️ [Row 6] Action: clickButton | Locator: //button[normalize-space()='Login']</msg>
+<kw name="clickButton" owner="common_keywords">
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>${locator}</arg>
+<arg>timeout=10s</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" start="2025-04-21T13:54:06.301780" elapsed="0.047895"/>
+</kw>
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2025-04-21T13:54:06.350128" level="INFO">Clicking element '//button[normalize-space()='Login']'.</msg>
+<arg>${locator}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2025-04-21T13:54:06.349893" elapsed="0.062758"/>
+</kw>
+<kw name="Sleep" owner="BuiltIn">
+<msg time="2025-04-21T13:54:09.414268" level="INFO">Slept 3 seconds.</msg>
+<arg>${DELAY_MEDIUM}</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<status status="PASS" start="2025-04-21T13:54:06.412836" elapsed="3.001694"/>
+</kw>
+<arg>//button[normalize-space()='Login']</arg>
+<status status="PASS" start="2025-04-21T13:54:06.301288" elapsed="3.113542"/>
+</kw>
+<msg time="2025-04-21T13:54:09.415086" level="INFO">⏩ [Row 7] Skipped: No locator and no value for action verifyCurrentUrl</msg>
+<msg time="2025-04-21T13:54:09.415345" level="INFO">⏩ [Row 9] Skipped: No locator and no value for action getUrl</msg>
+<arg>./data/cmsanhtester.xlsx</arg>
+<arg>L_4</arg>
+<arg>Login</arg>
+<status status="PASS" start="2025-04-21T13:54:00.365448" elapsed="9.050033"/>
+</kw>
+<status status="PASS" start="2025-04-21T13:54:00.364732" elapsed="9.051498"/>
+</test>
+<test id="s1-s1-t5" name="L_5" line="17">
+<kw name="Run Horizontal Test From Excel" owner="excel_keywords">
+<msg time="2025-04-21T13:54:09.481722" level="INFO">▶️ [Row 2] Action: getUrl | Args: ['https://cms.anhtester.com/users/login']</msg>
+<kw name="getUrl" owner="common_keywords">
+<kw name="Go To" owner="SeleniumLibrary">
+<msg time="2025-04-21T13:54:09.482545" level="INFO">Opening url 'https://cms.anhtester.com/users/login'</msg>
+<arg>${url}</arg>
+<doc>Navigates the current browser window to the provided ``url``.</doc>
+<status status="PASS" start="2025-04-21T13:54:09.482384" elapsed="0.487901"/>
+</kw>
+<kw name="Sleep" owner="BuiltIn">
+<msg time="2025-04-21T13:54:12.971527" level="INFO">Slept 3 seconds.</msg>
+<arg>${DELAY_MEDIUM}</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<status status="PASS" start="2025-04-21T13:54:09.970880" elapsed="3.000770"/>
+</kw>
+<arg>https://cms.anhtester.com/users/login</arg>
+<status status="PASS" start="2025-04-21T13:54:09.481963" elapsed="3.489842"/>
+</kw>
+<msg time="2025-04-21T13:54:12.971926" level="INFO">▶️ [Row 4] Action: enterText | Args: ["//input[@id='email']", 'anhtester@email.com']</msg>
+<kw name="enterText" owner="common_keywords">
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>${locator}</arg>
+<arg>timeout=10s</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" start="2025-04-21T13:54:12.972905" elapsed="0.017788"/>
+</kw>
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2025-04-21T13:54:12.991594" level="INFO">Typing text 'anhtester@email.com' into text field '//input[@id='email']'.</msg>
+<arg>${locator}</arg>
+<arg>${text}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2025-04-21T13:54:12.991125" elapsed="0.092396"/>
+</kw>
+<kw name="Sleep" owner="BuiltIn">
+<msg time="2025-04-21T13:54:14.084647" level="INFO">Slept 1 second.</msg>
+<arg>${DELAY_FAST}</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<status status="PASS" start="2025-04-21T13:54:13.083732" elapsed="1.001135"/>
+</kw>
+<arg>//input[@id='email']</arg>
+<arg>anhtester@email.com</arg>
+<status status="PASS" start="2025-04-21T13:54:12.972245" elapsed="1.112834"/>
+</kw>
+<msg time="2025-04-21T13:54:14.085318" level="INFO">▶️ [Row 5] Action: enterText | Args: ["//input[@id='password']", '']</msg>
+<kw name="enterText" owner="common_keywords">
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>${locator}</arg>
+<arg>timeout=10s</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" start="2025-04-21T13:54:14.086406" elapsed="0.024411"/>
+</kw>
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2025-04-21T13:54:14.111741" level="INFO">Typing text '' into text field '//input[@id='password']'.</msg>
+<arg>${locator}</arg>
+<arg>${text}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2025-04-21T13:54:14.111188" elapsed="0.103079"/>
+</kw>
+<kw name="Sleep" owner="BuiltIn">
+<msg time="2025-04-21T13:54:15.215210" level="INFO">Slept 1 second.</msg>
+<arg>${DELAY_FAST}</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<status status="PASS" start="2025-04-21T13:54:14.214541" elapsed="1.000791"/>
+</kw>
+<arg>//input[@id='password']</arg>
+<status status="PASS" start="2025-04-21T13:54:14.085713" elapsed="1.129758"/>
+</kw>
+<msg time="2025-04-21T13:54:15.215569" level="INFO">▶️ [Row 6] Action: clickButton | Locator: //button[normalize-space()='Login']</msg>
+<kw name="clickButton" owner="common_keywords">
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>${locator}</arg>
+<arg>timeout=10s</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" start="2025-04-21T13:54:15.216158" elapsed="0.017935"/>
+</kw>
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2025-04-21T13:54:15.234599" level="INFO">Clicking element '//button[normalize-space()='Login']'.</msg>
+<arg>${locator}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2025-04-21T13:54:15.234343" elapsed="0.072960"/>
+</kw>
+<kw name="Sleep" owner="BuiltIn">
+<msg time="2025-04-21T13:54:18.310489" level="INFO">Slept 3 seconds.</msg>
+<arg>${DELAY_MEDIUM}</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<status status="PASS" start="2025-04-21T13:54:15.308814" elapsed="3.003088"/>
+</kw>
+<arg>//button[normalize-space()='Login']</arg>
+<status status="PASS" start="2025-04-21T13:54:15.215761" elapsed="3.097083"/>
+</kw>
+<msg time="2025-04-21T13:54:18.313474" level="INFO">⏩ [Row 7] Skipped: No locator and no value for action verifyCurrentUrl</msg>
+<msg time="2025-04-21T13:54:18.313963" level="INFO">⏩ [Row 9] Skipped: No locator and no value for action getUrl</msg>
+<arg>./data/cmsanhtester.xlsx</arg>
+<arg>L_5</arg>
+<arg>Login</arg>
+<status status="PASS" start="2025-04-21T13:54:09.418761" elapsed="8.895754"/>
+</kw>
+<status status="PASS" start="2025-04-21T13:54:09.418011" elapsed="8.898458"/>
+</test>
+<test id="s1-s1-t6" name="L_6" line="19">
+<kw name="Run Horizontal Test From Excel" owner="excel_keywords">
+<msg time="2025-04-21T13:54:18.399165" level="INFO">▶️ [Row 2] Action: getUrl | Args: ['https://cms.anhtester.com/users/login']</msg>
+<kw name="getUrl" owner="common_keywords">
+<kw name="Go To" owner="SeleniumLibrary">
+<msg time="2025-04-21T13:54:18.400161" level="INFO">Opening url 'https://cms.anhtester.com/users/login'</msg>
+<arg>${url}</arg>
+<doc>Navigates the current browser window to the provided ``url``.</doc>
+<status status="PASS" start="2025-04-21T13:54:18.399977" elapsed="0.620958"/>
+</kw>
+<kw name="Sleep" owner="BuiltIn">
+<msg time="2025-04-21T13:54:22.022716" level="INFO">Slept 3 seconds.</msg>
+<arg>${DELAY_MEDIUM}</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<status status="PASS" start="2025-04-21T13:54:19.021258" elapsed="3.001664"/>
+</kw>
+<arg>https://cms.anhtester.com/users/login</arg>
+<status status="PASS" start="2025-04-21T13:54:18.399520" elapsed="3.623556"/>
+</kw>
+<msg time="2025-04-21T13:54:22.023215" level="INFO">▶️ [Row 4] Action: enterText | Args: ["//input[@id='email']", 'seller@example.com']</msg>
+<kw name="enterText" owner="common_keywords">
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<msg time="2025-04-21T13:54:32.349662" level="INFO" html="true">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="selenium-screenshot-9.png"&gt;&lt;img src="selenium-screenshot-9.png" width="800px"&gt;&lt;/a&gt;</msg>
+<msg time="2025-04-21T13:54:32.349973" level="FAIL">Element '//input[@id='email']' not visible after 10 seconds.</msg>
+<arg>${locator}</arg>
+<arg>timeout=10s</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="FAIL" start="2025-04-21T13:54:22.023998" elapsed="10.333660">Element '//input[@id='email']' not visible after 10 seconds.</status>
+</kw>
+<kw name="Input Text" owner="SeleniumLibrary">
+<arg>${locator}</arg>
+<arg>${text}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="NOT RUN" start="2025-04-21T13:54:32.357929" elapsed="0.000109"/>
+</kw>
+<kw name="Sleep" owner="BuiltIn">
+<arg>${DELAY_FAST}</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<status status="NOT RUN" start="2025-04-21T13:54:32.358275" elapsed="0.000090"/>
+</kw>
+<arg>//input[@id='email']</arg>
+<arg>seller@example.com</arg>
+<status status="FAIL" start="2025-04-21T13:54:22.023532" elapsed="10.335145">Element '//input[@id='email']' not visible after 10 seconds.</status>
+</kw>
+<msg time="2025-04-21T13:54:32.359152" level="ERROR">❌ [Row 4] Failed: enterText with args ["//input[@id='email']", 'seller@example.com']: Element '//input[@id='email']' not visible after 10 seconds.</msg>
+<arg>./data/cmsanhtester.xlsx</arg>
+<arg>L_6</arg>
+<arg>Login</arg>
+<status status="FAIL" start="2025-04-21T13:54:18.323503" elapsed="14.036390">Element '//input[@id='email']' not visible after 10 seconds.</status>
+</kw>
+<status status="FAIL" start="2025-04-21T13:54:18.320635" elapsed="14.039701">Element '//input[@id='email']' not visible after 10 seconds.</status>
+</test>
+<test id="s1-s1-t7" name="L_7" line="21">
+<kw name="Run Horizontal Test From Excel" owner="excel_keywords">
+<msg time="2025-04-21T13:54:32.417063" level="INFO">▶️ [Row 2] Action: getUrl | Args: ['https://cms.anhtester.com/users/login']</msg>
+<kw name="getUrl" owner="common_keywords">
+<kw name="Go To" owner="SeleniumLibrary">
+<msg time="2025-04-21T13:54:32.417780" level="INFO">Opening url 'https://cms.anhtester.com/users/login'</msg>
+<arg>${url}</arg>
+<doc>Navigates the current browser window to the provided ``url``.</doc>
+<status status="PASS" start="2025-04-21T13:54:32.417629" elapsed="0.518166"/>
+</kw>
+<kw name="Sleep" owner="BuiltIn">
+<msg time="2025-04-21T13:54:35.937136" level="INFO">Slept 3 seconds.</msg>
+<arg>${DELAY_MEDIUM}</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<status status="PASS" start="2025-04-21T13:54:32.936119" elapsed="3.001493"/>
+</kw>
+<arg>https://cms.anhtester.com/users/login</arg>
+<status status="PASS" start="2025-04-21T13:54:32.417298" elapsed="3.520903"/>
+</kw>
+<msg time="2025-04-21T13:54:35.938877" level="INFO">▶️ [Row 4] Action: enterText | Args: ["//input[@id='email']", 'customer15042025@example.com']</msg>
+<kw name="enterText" owner="common_keywords">
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>${locator}</arg>
+<arg>timeout=10s</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" start="2025-04-21T13:54:35.941666" elapsed="0.050517"/>
+</kw>
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2025-04-21T13:54:35.993088" level="INFO">Typing text 'customer15042025@example.com' into text field '//input[@id='email']'.</msg>
+<arg>${locator}</arg>
+<arg>${text}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2025-04-21T13:54:35.992546" elapsed="0.203945"/>
+</kw>
+<kw name="Sleep" owner="BuiltIn">
+<msg time="2025-04-21T13:54:37.197304" level="INFO">Slept 1 second.</msg>
+<arg>${DELAY_FAST}</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<status status="PASS" start="2025-04-21T13:54:36.196681" elapsed="1.000866"/>
+</kw>
+<arg>//input[@id='email']</arg>
+<arg>customer15042025@example.com</arg>
+<status status="PASS" start="2025-04-21T13:54:35.939628" elapsed="1.258166"/>
+</kw>
+<msg time="2025-04-21T13:54:37.198021" level="INFO">▶️ [Row 5] Action: enterText | Args: ["//input[@id='password']", '123456']</msg>
+<kw name="enterText" owner="common_keywords">
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>${locator}</arg>
+<arg>timeout=10s</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" start="2025-04-21T13:54:37.199196" elapsed="0.041343"/>
+</kw>
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2025-04-21T13:54:37.241508" level="INFO">Typing text '123456' into text field '//input[@id='password']'.</msg>
+<arg>${locator}</arg>
+<arg>${text}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2025-04-21T13:54:37.240945" elapsed="0.147855"/>
+</kw>
+<kw name="Sleep" owner="BuiltIn">
+<msg time="2025-04-21T13:54:38.390087" level="INFO">Slept 1 second.</msg>
+<arg>${DELAY_FAST}</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<status status="PASS" start="2025-04-21T13:54:37.389128" elapsed="1.001315"/>
+</kw>
+<arg>//input[@id='password']</arg>
+<arg>123456</arg>
+<status status="PASS" start="2025-04-21T13:54:37.198440" elapsed="1.192479"/>
+</kw>
+<msg time="2025-04-21T13:54:38.391340" level="INFO">▶️ [Row 6] Action: clickButton | Locator: //button[normalize-space()='Login']</msg>
+<kw name="clickButton" owner="common_keywords">
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>${locator}</arg>
+<arg>timeout=10s</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" start="2025-04-21T13:54:38.392842" elapsed="0.043565"/>
+</kw>
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2025-04-21T13:54:38.436984" level="INFO">Clicking element '//button[normalize-space()='Login']'.</msg>
+<arg>${locator}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2025-04-21T13:54:38.436665" elapsed="0.825765"/>
+</kw>
+<kw name="Sleep" owner="BuiltIn">
+<msg time="2025-04-21T13:54:42.263725" level="INFO">Slept 3 seconds.</msg>
+<arg>${DELAY_MEDIUM}</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<status status="PASS" start="2025-04-21T13:54:39.262735" elapsed="3.001403"/>
+</kw>
+<arg>//button[normalize-space()='Login']</arg>
+<status status="PASS" start="2025-04-21T13:54:38.391881" elapsed="3.872763"/>
+</kw>
+<msg time="2025-04-21T13:54:42.264920" level="INFO">⏩ [Row 7] Skipped: No locator and no value for action verifyCurrentUrl</msg>
+<msg time="2025-04-21T13:54:42.265149" level="INFO">⏩ [Row 9] Skipped: No locator and no value for action getUrl</msg>
+<arg>./data/cmsanhtester.xlsx</arg>
+<arg>L_7</arg>
+<arg>Login</arg>
+<status status="PASS" start="2025-04-21T13:54:32.362218" elapsed="9.903188"/>
+</kw>
+<status status="PASS" start="2025-04-21T13:54:32.361449" elapsed="9.905346"/>
+</test>
+<test id="s1-s1-t8" name="L_8" line="23">
+<kw name="Run Horizontal Test From Excel" owner="excel_keywords">
+<msg time="2025-04-21T13:54:42.361992" level="INFO">▶️ [Row 2] Action: getUrl | Args: ['https://cms.anhtester.com/users/login']</msg>
+<kw name="getUrl" owner="common_keywords">
+<kw name="Go To" owner="SeleniumLibrary">
+<msg time="2025-04-21T13:54:42.362826" level="INFO">Opening url 'https://cms.anhtester.com/users/login'</msg>
+<arg>${url}</arg>
+<doc>Navigates the current browser window to the provided ``url``.</doc>
+<status status="PASS" start="2025-04-21T13:54:42.362623" elapsed="0.501329"/>
+</kw>
+<kw name="Sleep" owner="BuiltIn">
+<msg time="2025-04-21T13:54:45.864949" level="INFO">Slept 3 seconds.</msg>
+<arg>${DELAY_MEDIUM}</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<status status="PASS" start="2025-04-21T13:54:42.864246" elapsed="3.000860"/>
+</kw>
+<arg>https://cms.anhtester.com/users/login</arg>
+<status status="PASS" start="2025-04-21T13:54:42.362253" elapsed="3.502984"/>
+</kw>
+<msg time="2025-04-21T13:54:45.865359" level="INFO">▶️ [Row 4] Action: enterText | Args: ["//input[@id='email']", 'customer@@example..com']</msg>
+<kw name="enterText" owner="common_keywords">
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>${locator}</arg>
+<arg>timeout=10s</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" start="2025-04-21T13:54:45.866105" elapsed="0.018668"/>
+</kw>
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2025-04-21T13:54:45.885268" level="INFO">Typing text 'customer@@example..com' into text field '//input[@id='email']'.</msg>
+<arg>${locator}</arg>
+<arg>${text}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2025-04-21T13:54:45.884996" elapsed="0.144209"/>
+</kw>
+<kw name="Sleep" owner="BuiltIn">
+<msg time="2025-04-21T13:54:47.030459" level="INFO">Slept 1 second.</msg>
+<arg>${DELAY_FAST}</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<status status="PASS" start="2025-04-21T13:54:46.029398" elapsed="1.001242"/>
+</kw>
+<arg>//input[@id='email']</arg>
+<arg>customer@@example..com</arg>
+<status status="PASS" start="2025-04-21T13:54:45.865680" elapsed="1.165138"/>
+</kw>
+<msg time="2025-04-21T13:54:47.030985" level="INFO">▶️ [Row 5] Action: enterText | Args: ["//input[@id='password']", '123456']</msg>
+<kw name="enterText" owner="common_keywords">
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>${locator}</arg>
+<arg>timeout=10s</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" start="2025-04-21T13:54:47.032009" elapsed="0.029600"/>
+</kw>
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2025-04-21T13:54:47.062334" level="INFO">Typing text '123456' into text field '//input[@id='password']'.</msg>
+<arg>${locator}</arg>
+<arg>${text}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2025-04-21T13:54:47.061909" elapsed="0.163635"/>
+</kw>
+<kw name="Sleep" owner="BuiltIn">
+<msg time="2025-04-21T13:54:48.226591" level="INFO">Slept 1 second.</msg>
+<arg>${DELAY_FAST}</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<status status="PASS" start="2025-04-21T13:54:47.225735" elapsed="1.001433"/>
+</kw>
+<arg>//input[@id='password']</arg>
+<arg>123456</arg>
+<status status="PASS" start="2025-04-21T13:54:47.031465" elapsed="1.196234"/>
+</kw>
+<msg time="2025-04-21T13:54:48.228197" level="INFO">▶️ [Row 6] Action: clickButton | Locator: //button[normalize-space()='Login']</msg>
+<kw name="clickButton" owner="common_keywords">
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>${locator}</arg>
+<arg>timeout=10s</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" start="2025-04-21T13:54:48.229805" elapsed="0.033265"/>
+</kw>
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2025-04-21T13:54:48.263671" level="INFO">Clicking element '//button[normalize-space()='Login']'.</msg>
+<arg>${locator}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2025-04-21T13:54:48.263343" elapsed="0.107544"/>
+</kw>
+<kw name="Sleep" owner="BuiltIn">
+<msg time="2025-04-21T13:54:51.374014" level="INFO">Slept 3 seconds.</msg>
+<arg>${DELAY_MEDIUM}</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<status status="PASS" start="2025-04-21T13:54:48.371324" elapsed="3.003133"/>
+</kw>
+<arg>//button[normalize-space()='Login']</arg>
+<status status="PASS" start="2025-04-21T13:54:48.228826" elapsed="3.146183"/>
+</kw>
+<msg time="2025-04-21T13:54:51.375393" level="INFO">⏩ [Row 7] Skipped: No locator and no value for action verifyCurrentUrl</msg>
+<msg time="2025-04-21T13:54:51.375639" level="INFO">⏩ [Row 9] Skipped: No locator and no value for action getUrl</msg>
+<arg>./data/cmsanhtester.xlsx</arg>
+<arg>L_8</arg>
+<arg>Login</arg>
+<status status="PASS" start="2025-04-21T13:54:42.271811" elapsed="9.104024"/>
+</kw>
+<status status="PASS" start="2025-04-21T13:54:42.269839" elapsed="9.106982"/>
+</test>
+<status status="FAIL" start="2025-04-21T13:53:01.649426" elapsed="109.729229"/>
 </suite>
-<status status="PASS" start="2025-04-16T22:37:15.699825" elapsed="24.278257"/>
+<status status="FAIL" start="2025-04-21T13:53:01.593037" elapsed="109.787524"/>
 </suite>
 <statistics>
 <total>
-<stat pass="2" fail="0" skip="0">All Tests</stat>
+<stat pass="7" fail="1" skip="0">All Tests</stat>
 </total>
 <tag>
 </tag>
 <suite>
-<stat name="Testsuites" id="s1" pass="2" fail="0" skip="0">Testsuites</stat>
-<stat name="Login" id="s1-s1" pass="2" fail="0" skip="0">Testsuites.Login</stat>
+<stat name="Testsuites" id="s1" pass="7" fail="1" skip="0">Testsuites</stat>
+<stat name="Login" id="s1-s1" pass="7" fail="1" skip="0">Testsuites.Login</stat>
 </suite>
 </statistics>
 <errors>
+<msg time="2025-04-21T13:54:32.359152" level="ERROR">❌ [Row 4] Failed: enterText with args ["//input[@id='email']", 'seller@example.com']: Element '//input[@id='email']' not visible after 10 seconds.</msg>
 </errors>
 </robot>
