@@ -29,9 +29,8 @@ verifyCurrentUrl
     Sleep    ${DELAY_MEDIUM}
 
 verifyTextDisplayed
-    [Arguments]    ${locator}
-    Wait Until Element Is Visible    ${locator}    timeout=10s
-    Element Should Be Visible    ${locator}
+    [Arguments]    ${text}
+    Page Should Contain    ${text}
     Sleep    ${DELAY_MEDIUM}
 
 checkCheckbox

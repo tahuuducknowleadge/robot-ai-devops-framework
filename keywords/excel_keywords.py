@@ -3,7 +3,7 @@ from robot.api.deco import keyword
 from robot.libraries.BuiltIn import BuiltIn
 
 # Các action không cần value (chạy nếu value == "TRUE")
-NO_VALUE_ACTIONS = {"clickButton", "verifyTextDisplayed", "checkCheckbox"}
+NO_VALUE_ACTIONS = {"clickButton", "checkCheckbox"}
 
 def normalize_locator(raw_locator: str) -> str:
     """Tự động thêm prefix 'xpath=' nếu cần."""
