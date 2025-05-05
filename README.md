@@ -23,9 +23,9 @@ Framework kiểm thử chức năng hướng dữ liệu (data-driven) sử dụ
 ## ⚙️ Công Nghệ Sử Dụng
 **Framework:** Robot Framework  
 **WebDriver:** SeleniumLibrary  
-**Dữ liệu test:** JSON / Excel / CSV  
+**Dữ liệu test:** JSON / Excel / CSV  (openpyxl)
 **Báo cáo:** Robot Report, Allure (nâng cao)  
-**Sinh dữ liệu:** Faker  
+**Sinh dữ liệu:** Faker (pip3 install faker)
 **AI hỗ trợ:** ChatGPT, OpenCV, Tesseract  
 **CI/CD:** GitHub Actions / Jenkins  
 
@@ -34,6 +34,11 @@ Framework kiểm thử chức năng hướng dữ liệu (data-driven) sử dụ
 python -m venv venv
 source venv/bin/activate  # Windows: venv\Scripts\activate
 pip install -r requirements.txt
+robotframework
+robotframework-seleniumlibrary
+robotframework-jsonlibrary
+robotframework openpyxl
+
 
 ## ▶️ Chạy Test  
 robot testsuites/login.robot          # Chạy 1 file
