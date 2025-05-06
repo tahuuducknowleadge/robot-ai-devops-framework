@@ -8,7 +8,20 @@ ${DELAY_SLOW}      5s
 
 *** Keywords ***
 Open Chrome Browser
-    Open Browser    about:blank    chrome
+    Log    Starting to open Chrome browser    level=INFO
+    ${chrome_options}=    Evaluate    sys.modules['selenium.webdriver'].ChromeOptions()    modules=sys
+    Run Keyword And Ignore Error    Call Method    ${chrome_options}    add_argument    --disable-notifications
+    Run Keyword And Ignore Error    Call Method    ${chrome_options}    add_argument    --password-store=basic
+    # Tắt các flags liên quan đến Password Manager
+    Run Keyword And Ignore Error    Call Method    ${chrome_options}    add_argument    --disable-features=PasswordManagerEnabled,PasswordLeakDetection,SafetyCheck,PasswordCheckup
+    Run Keyword And Ignore Error    Call Method    ${chrome_options}    add_argument    --incognito
+    # Thêm flag để tắt Password Manager
+    Run Keyword And Ignore Error    Call Method    ${chrome_options}    add_argument    --flag-switches-begin
+    Run Keyword And Ignore Error    Call Method    ${chrome_options}    add_argument    --disable-password-manager
+    Run Keyword And Ignore Error    Call Method    ${chrome_options}    add_argument    --flag-switches-end
+    Log    Chrome options set: ${chrome_options}    level=INFO
+    Run Keyword And Ignore Error    Open Browser    about:blank    chrome    options=${chrome_options}
+    Log    Browser opened successfully    level=INFO
     Maximize Browser Window
 
 enterText
@@ -42,6 +55,11 @@ getUrl
     [Arguments]    ${url}
     Go To    ${url}
     Sleep    ${DELAY_MEDIUM}
+
+closeAlert
+    [Arguments]    ${action}=ACCEPT
+    Handle Alert    ${action}    timeout=10s
+    Sleep    ${DELAY_FAST}
 
 Sleep After Test
     Sleep    3s
