@@ -1,0 +1,668 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<robot generator="Robot 7.2.2 (Python 3.13.3 on win32)" generated="2025-05-21T17:10:40.856886" rpa="false" schemaversion="5">
+<suite id="s1" name="Login Tests Data Json" source="C:\Users\tahuu\robot-ai-devops-framework\data\..\testsuites\login_tests_data_json.robot">
+<test id="s1-t1" name="L_1" line="6">
+<kw name="Login With User">
+<kw name="Open Chrome Browser" owner="common_keywords">
+<kw name="Log" owner="BuiltIn">
+<msg time="2025-05-21T17:10:41.433086" level="INFO">Starting to open Chrome browser</msg>
+<arg>Starting to open Chrome browser</arg>
+<arg>level=INFO</arg>
+<doc>Logs the given message with the given level.</doc>
+<status status="PASS" start="2025-05-21T17:10:41.432850" elapsed="0.000325"/>
+</kw>
+<kw name="Evaluate" owner="BuiltIn">
+<msg time="2025-05-21T17:10:41.435881" level="INFO">${chrome_options} = &lt;selenium.webdriver.chrome.options.Options object at 0x0000014AB41B9A90&gt;</msg>
+<var>${chrome_options}</var>
+<arg>sys.modules['selenium.webdriver'].ChromeOptions()</arg>
+<arg>modules=sys</arg>
+<doc>Evaluates the given expression in Python and returns the result.</doc>
+<status status="PASS" start="2025-05-21T17:10:41.435145" elapsed="0.000893"/>
+</kw>
+<kw name="Run Keyword And Ignore Error" owner="BuiltIn">
+<kw name="Call Method" owner="BuiltIn">
+<arg>${chrome_options}</arg>
+<arg>add_argument</arg>
+<arg>--disable-notifications</arg>
+<doc>Calls the named method of the given object with the provided arguments.</doc>
+<status status="PASS" start="2025-05-21T17:10:41.438112" elapsed="0.000286"/>
+</kw>
+<arg>Call Method</arg>
+<arg>${chrome_options}</arg>
+<arg>add_argument</arg>
+<arg>--disable-notifications</arg>
+<doc>Runs the given keyword with the given arguments and ignores possible error.</doc>
+<status status="PASS" start="2025-05-21T17:10:41.437605" elapsed="0.001046"/>
+</kw>
+<kw name="Run Keyword And Ignore Error" owner="BuiltIn">
+<kw name="Call Method" owner="BuiltIn">
+<msg time="2025-05-21T17:10:41.439769" level="FAIL">Calling method 'add_argument' failed: TypeError: ArgOptions.add_argument() got an unexpected keyword argument '--password-store'</msg>
+<arg>${chrome_options}</arg>
+<arg>add_argument</arg>
+<arg>--password-store=basic</arg>
+<doc>Calls the named method of the given object with the provided arguments.</doc>
+<status status="FAIL" start="2025-05-21T17:10:41.439207" elapsed="0.001006">Calling method 'add_argument' failed: TypeError: ArgOptions.add_argument() got an unexpected keyword argument '--password-store'</status>
+</kw>
+<arg>Call Method</arg>
+<arg>${chrome_options}</arg>
+<arg>add_argument</arg>
+<arg>--password-store=basic</arg>
+<doc>Runs the given keyword with the given arguments and ignores possible error.</doc>
+<status status="PASS" start="2025-05-21T17:10:41.438921" elapsed="0.002626"/>
+</kw>
+<kw name="Run Keyword And Ignore Error" owner="BuiltIn">
+<kw name="Call Method" owner="BuiltIn">
+<msg time="2025-05-21T17:10:41.443530" level="FAIL">Calling method 'add_argument' failed: TypeError: ArgOptions.add_argument() got an unexpected keyword argument '--disable-features'</msg>
+<arg>${chrome_options}</arg>
+<arg>add_argument</arg>
+<arg>--disable-features=PasswordManagerEnabled,PasswordLeakDetection,SafetyCheck,PasswordCheckup</arg>
+<doc>Calls the named method of the given object with the provided arguments.</doc>
+<status status="FAIL" start="2025-05-21T17:10:41.442844" elapsed="0.001005">Calling method 'add_argument' failed: TypeError: ArgOptions.add_argument() got an unexpected keyword argument '--disable-features'</status>
+</kw>
+<arg>Call Method</arg>
+<arg>${chrome_options}</arg>
+<arg>add_argument</arg>
+<arg>--disable-features=PasswordManagerEnabled,PasswordLeakDetection,SafetyCheck,PasswordCheckup</arg>
+<doc>Runs the given keyword with the given arguments and ignores possible error.</doc>
+<status status="PASS" start="2025-05-21T17:10:41.442302" elapsed="0.003912"/>
+</kw>
+<kw name="Run Keyword And Ignore Error" owner="BuiltIn">
+<kw name="Call Method" owner="BuiltIn">
+<arg>${chrome_options}</arg>
+<arg>add_argument</arg>
+<arg>--incognito</arg>
+<doc>Calls the named method of the given object with the provided arguments.</doc>
+<status status="PASS" start="2025-05-21T17:10:41.447203" elapsed="0.000360"/>
+</kw>
+<arg>Call Method</arg>
+<arg>${chrome_options}</arg>
+<arg>add_argument</arg>
+<arg>--incognito</arg>
+<doc>Runs the given keyword with the given arguments and ignores possible error.</doc>
+<status status="PASS" start="2025-05-21T17:10:41.446731" elapsed="0.001089"/>
+</kw>
+<kw name="Run Keyword And Ignore Error" owner="BuiltIn">
+<kw name="Call Method" owner="BuiltIn">
+<arg>${chrome_options}</arg>
+<arg>add_argument</arg>
+<arg>--flag-switches-begin</arg>
+<doc>Calls the named method of the given object with the provided arguments.</doc>
+<status status="PASS" start="2025-05-21T17:10:41.448396" elapsed="0.000360"/>
+</kw>
+<arg>Call Method</arg>
+<arg>${chrome_options}</arg>
+<arg>add_argument</arg>
+<arg>--flag-switches-begin</arg>
+<doc>Runs the given keyword with the given arguments and ignores possible error.</doc>
+<status status="PASS" start="2025-05-21T17:10:41.448148" elapsed="0.000888"/>
+</kw>
+<kw name="Run Keyword And Ignore Error" owner="BuiltIn">
+<kw name="Call Method" owner="BuiltIn">
+<arg>${chrome_options}</arg>
+<arg>add_argument</arg>
+<arg>--disable-password-manager</arg>
+<doc>Calls the named method of the given object with the provided arguments.</doc>
+<status status="PASS" start="2025-05-21T17:10:41.449886" elapsed="0.001009"/>
+</kw>
+<arg>Call Method</arg>
+<arg>${chrome_options}</arg>
+<arg>add_argument</arg>
+<arg>--disable-password-manager</arg>
+<doc>Runs the given keyword with the given arguments and ignores possible error.</doc>
+<status status="PASS" start="2025-05-21T17:10:41.449351" elapsed="0.001791"/>
+</kw>
+<kw name="Run Keyword And Ignore Error" owner="BuiltIn">
+<kw name="Call Method" owner="BuiltIn">
+<arg>${chrome_options}</arg>
+<arg>add_argument</arg>
+<arg>--flag-switches-end</arg>
+<doc>Calls the named method of the given object with the provided arguments.</doc>
+<status status="PASS" start="2025-05-21T17:10:41.452115" elapsed="0.000233"/>
+</kw>
+<arg>Call Method</arg>
+<arg>${chrome_options}</arg>
+<arg>add_argument</arg>
+<arg>--flag-switches-end</arg>
+<doc>Runs the given keyword with the given arguments and ignores possible error.</doc>
+<status status="PASS" start="2025-05-21T17:10:41.451805" elapsed="0.000789"/>
+</kw>
+<kw name="Log" owner="BuiltIn">
+<msg time="2025-05-21T17:10:41.453192" level="INFO">Chrome options set: &lt;selenium.webdriver.chrome.options.Options object at 0x0000014AB41B9A90&gt;</msg>
+<arg>Chrome options set: ${chrome_options}</arg>
+<arg>level=INFO</arg>
+<doc>Logs the given message with the given level.</doc>
+<status status="PASS" start="2025-05-21T17:10:41.452873" elapsed="0.000399"/>
+</kw>
+<kw name="Run Keyword And Ignore Error" owner="BuiltIn">
+<kw name="Open Browser" owner="SeleniumLibrary">
+<msg time="2025-05-21T17:10:41.455597" level="INFO">Opening browser 'chrome' to base url 'about:blank'.</msg>
+<arg>about:blank</arg>
+<arg>chrome</arg>
+<arg>options=${chrome_options}</arg>
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<status status="PASS" start="2025-05-21T17:10:41.455186" elapsed="2.223548"/>
+</kw>
+<arg>Open Browser</arg>
+<arg>about:blank</arg>
+<arg>chrome</arg>
+<arg>options=${chrome_options}</arg>
+<doc>Runs the given keyword with the given arguments and ignores possible error.</doc>
+<status status="PASS" start="2025-05-21T17:10:41.454546" elapsed="2.226508"/>
+</kw>
+<kw name="Log" owner="BuiltIn">
+<msg time="2025-05-21T17:10:43.682169" level="INFO">Browser opened successfully</msg>
+<arg>Browser opened successfully</arg>
+<arg>level=INFO</arg>
+<doc>Logs the given message with the given level.</doc>
+<status status="PASS" start="2025-05-21T17:10:43.681679" elapsed="0.000651"/>
+</kw>
+<kw name="Maximize Browser Window" owner="SeleniumLibrary">
+<doc>Maximizes current browser window.</doc>
+<status status="PASS" start="2025-05-21T17:10:43.718417" elapsed="0.084804"/>
+</kw>
+<status status="PASS" start="2025-05-21T17:10:41.432063" elapsed="2.371960"/>
+</kw>
+<kw name="getUrl" owner="common_keywords">
+<kw name="Go To" owner="SeleniumLibrary">
+<msg time="2025-05-21T17:10:43.805912" level="INFO">Opening url 'https://cms.anhtester.com/users/login'</msg>
+<arg>${url}</arg>
+<doc>Navigates the current browser window to the provided ``url``.</doc>
+<status status="PASS" start="2025-05-21T17:10:43.805549" elapsed="0.895137"/>
+</kw>
+<kw name="Sleep" owner="BuiltIn">
+<msg time="2025-05-21T17:10:47.704264" level="INFO">Slept 3 seconds.</msg>
+<arg>${DELAY_MEDIUM}</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<status status="PASS" start="2025-05-21T17:10:44.703028" elapsed="3.001703"/>
+</kw>
+<arg>https://cms.anhtester.com/users/login</arg>
+<status status="PASS" start="2025-05-21T17:10:43.804818" elapsed="3.905859"/>
+</kw>
+<kw name="clickButton" owner="common_keywords">
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>${locator}</arg>
+<arg>timeout=10s</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" start="2025-05-21T17:10:47.715630" elapsed="0.060550"/>
+</kw>
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2025-05-21T17:10:47.776878" level="INFO">Clicking element 'xpath=//button[@class="absolute-top-right bg-white shadow-lg btn btn-circle btn-icon mr-n3 mt-n3 set-session"]'.</msg>
+<arg>${locator}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2025-05-21T17:10:47.776562" elapsed="0.087938"/>
+</kw>
+<kw name="Sleep" owner="BuiltIn">
+<msg time="2025-05-21T17:10:50.945708" level="INFO">Slept 3 seconds.</msg>
+<arg>${DELAY_MEDIUM}</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<status status="PASS" start="2025-05-21T17:10:47.944489" elapsed="3.001427"/>
+</kw>
+<arg>xpath=//button[@class="absolute-top-right bg-white shadow-lg btn btn-circle btn-icon mr-n3 mt-n3 set-session"]</arg>
+<status status="PASS" start="2025-05-21T17:10:47.712816" elapsed="3.235181"/>
+</kw>
+<kw name="enterText" owner="common_keywords">
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>${locator}</arg>
+<arg>timeout=10s</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" start="2025-05-21T17:10:50.956321" elapsed="0.029096"/>
+</kw>
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2025-05-21T17:10:50.986083" level="INFO">Typing text 'anhtester@email.com' into text field 'xpath=//input[@id="email"]'.</msg>
+<arg>${locator}</arg>
+<arg>${text}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2025-05-21T17:10:50.985774" elapsed="0.162155"/>
+</kw>
+<kw name="Sleep" owner="BuiltIn">
+<msg time="2025-05-21T17:10:52.152002" level="INFO">Slept 1 second.</msg>
+<arg>${DELAY_FAST}</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<status status="PASS" start="2025-05-21T17:10:51.150552" elapsed="1.001619"/>
+</kw>
+<arg>xpath=//input[@id="email"]</arg>
+<arg>${username}</arg>
+<status status="PASS" start="2025-05-21T17:10:50.955156" elapsed="1.198650"/>
+</kw>
+<kw name="enterText" owner="common_keywords">
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>${locator}</arg>
+<arg>timeout=10s</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" start="2025-05-21T17:10:52.155316" elapsed="0.062521"/>
+</kw>
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2025-05-21T17:10:52.218762" level="INFO">Typing text 'AnhTester@2023#' into text field 'xpath=//input[@id="password"]'.</msg>
+<arg>${locator}</arg>
+<arg>${text}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2025-05-21T17:10:52.218341" elapsed="0.130058"/>
+</kw>
+<kw name="Sleep" owner="BuiltIn">
+<msg time="2025-05-21T17:10:53.351016" level="INFO">Slept 1 second.</msg>
+<arg>${DELAY_FAST}</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<status status="PASS" start="2025-05-21T17:10:52.350059" elapsed="1.001148"/>
+</kw>
+<arg>xpath=//input[@id="password"]</arg>
+<arg>${password}</arg>
+<status status="PASS" start="2025-05-21T17:10:52.154482" elapsed="1.198365"/>
+</kw>
+<kw name="clickButton" owner="common_keywords">
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>${locator}</arg>
+<arg>timeout=10s</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" start="2025-05-21T17:10:53.353971" elapsed="0.070518"/>
+</kw>
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2025-05-21T17:10:53.425509" level="INFO">Clicking element 'xpath=//button[normalize-space()="Login"]'.</msg>
+<arg>${locator}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2025-05-21T17:10:53.425022" elapsed="0.125765"/>
+</kw>
+<kw name="Sleep" owner="BuiltIn">
+<msg time="2025-05-21T17:10:56.553307" level="INFO">Slept 3 seconds.</msg>
+<arg>${DELAY_MEDIUM}</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<status status="PASS" start="2025-05-21T17:10:53.552695" elapsed="3.000767"/>
+</kw>
+<arg>xpath=//button[normalize-space()="Login"]</arg>
+<status status="PASS" start="2025-05-21T17:10:53.353376" elapsed="3.219331"/>
+</kw>
+<kw name="Run Keyword If" owner="BuiltIn">
+<kw name="verifyCurrentUrl" owner="common_keywords">
+<kw name="Location Should Be" owner="SeleniumLibrary">
+<msg time="2025-05-21T17:10:56.771941" level="INFO" html="true">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="selenium-screenshot-7.png"&gt;&lt;img src="selenium-screenshot-7.png" width="800px"&gt;&lt;/a&gt;</msg>
+<msg time="2025-05-21T17:10:56.772178" level="FAIL">Location should have been 'https://cms.anhtester.com/dashboard' but was 'https://cms.anhtester.com/admin'.</msg>
+<arg>${expected_url}</arg>
+<doc>Verifies that the current URL is exactly ``url``.</doc>
+<status status="FAIL" start="2025-05-21T17:10:56.579376" elapsed="1.108565">Location should have been 'https://cms.anhtester.com/dashboard' but was 'https://cms.anhtester.com/admin'.</status>
+</kw>
+<kw name="Sleep" owner="BuiltIn">
+<arg>${DELAY_MEDIUM}</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<status status="NOT RUN" start="2025-05-21T17:10:57.690448" elapsed="0.000228"/>
+</kw>
+<arg>${expected_url}</arg>
+<status status="FAIL" start="2025-05-21T17:10:56.573884" elapsed="1.117590">Location should have been 'https://cms.anhtester.com/dashboard' but was 'https://cms.anhtester.com/admin'.</status>
+</kw>
+<arg>"${expected_url}" != ""</arg>
+<arg>verifyCurrentUrl</arg>
+<arg>${expected_url}</arg>
+<doc>Runs the given keyword with the given arguments, if ``condition`` is true.</doc>
+<status status="FAIL" start="2025-05-21T17:10:56.573174" elapsed="1.118896">Location should have been 'https://cms.anhtester.com/dashboard' but was 'https://cms.anhtester.com/admin'.</status>
+</kw>
+<kw name="Run Keyword If" owner="BuiltIn">
+<arg>"${logout_url}" != ""</arg>
+<arg>getUrl</arg>
+<arg>${logout_url}</arg>
+<doc>Runs the given keyword with the given arguments, if ``condition`` is true.</doc>
+<status status="NOT RUN" start="2025-05-21T17:10:57.692864" elapsed="0.000281"/>
+</kw>
+<kw name="Sleep After Test" owner="common_keywords">
+<status status="NOT RUN" start="2025-05-21T17:10:57.693931" elapsed="0.000206"/>
+</kw>
+<kw name="Close Browser" owner="SeleniumLibrary">
+<doc>Closes the current browser.</doc>
+<status status="NOT RUN" start="2025-05-21T17:10:57.694746" elapsed="0.000214"/>
+</kw>
+<arg>anhtester@email.com</arg>
+<arg>AnhTester@2023#</arg>
+<arg>https://cms.anhtester.com/dashboard</arg>
+<arg>https://cms.anhtester.com/logout</arg>
+<status status="FAIL" start="2025-05-21T17:10:41.431430" elapsed="16.264195">Location should have been 'https://cms.anhtester.com/dashboard' but was 'https://cms.anhtester.com/admin'.</status>
+</kw>
+<status status="FAIL" start="2025-05-21T17:10:41.430425" elapsed="16.266371">Location should have been 'https://cms.anhtester.com/dashboard' but was 'https://cms.anhtester.com/admin'.</status>
+</test>
+<test id="s1-t2" name="L_2" line="9">
+<kw name="Login With User">
+<kw name="Open Chrome Browser" owner="common_keywords">
+<kw name="Log" owner="BuiltIn">
+<msg time="2025-05-21T17:10:57.707585" level="INFO">Starting to open Chrome browser</msg>
+<arg>Starting to open Chrome browser</arg>
+<arg>level=INFO</arg>
+<doc>Logs the given message with the given level.</doc>
+<status status="PASS" start="2025-05-21T17:10:57.707183" elapsed="0.000547"/>
+</kw>
+<kw name="Evaluate" owner="BuiltIn">
+<msg time="2025-05-21T17:10:57.710837" level="INFO">${chrome_options} = &lt;selenium.webdriver.chrome.options.Options object at 0x0000014AB4259BD0&gt;</msg>
+<var>${chrome_options}</var>
+<arg>sys.modules['selenium.webdriver'].ChromeOptions()</arg>
+<arg>modules=sys</arg>
+<doc>Evaluates the given expression in Python and returns the result.</doc>
+<status status="PASS" start="2025-05-21T17:10:57.709692" elapsed="0.001260"/>
+</kw>
+<kw name="Run Keyword And Ignore Error" owner="BuiltIn">
+<kw name="Call Method" owner="BuiltIn">
+<arg>${chrome_options}</arg>
+<arg>add_argument</arg>
+<arg>--disable-notifications</arg>
+<doc>Calls the named method of the given object with the provided arguments.</doc>
+<status status="PASS" start="2025-05-21T17:10:57.713413" elapsed="0.000381"/>
+</kw>
+<arg>Call Method</arg>
+<arg>${chrome_options}</arg>
+<arg>add_argument</arg>
+<arg>--disable-notifications</arg>
+<doc>Runs the given keyword with the given arguments and ignores possible error.</doc>
+<status status="PASS" start="2025-05-21T17:10:57.712971" elapsed="0.001245"/>
+</kw>
+<kw name="Run Keyword And Ignore Error" owner="BuiltIn">
+<kw name="Call Method" owner="BuiltIn">
+<msg time="2025-05-21T17:10:57.715594" level="FAIL">Calling method 'add_argument' failed: TypeError: ArgOptions.add_argument() got an unexpected keyword argument '--password-store'</msg>
+<arg>${chrome_options}</arg>
+<arg>add_argument</arg>
+<arg>--password-store=basic</arg>
+<doc>Calls the named method of the given object with the provided arguments.</doc>
+<status status="FAIL" start="2025-05-21T17:10:57.715090" elapsed="0.000702">Calling method 'add_argument' failed: TypeError: ArgOptions.add_argument() got an unexpected keyword argument '--password-store'</status>
+</kw>
+<arg>Call Method</arg>
+<arg>${chrome_options}</arg>
+<arg>add_argument</arg>
+<arg>--password-store=basic</arg>
+<doc>Runs the given keyword with the given arguments and ignores possible error.</doc>
+<status status="PASS" start="2025-05-21T17:10:57.714677" elapsed="0.002552"/>
+</kw>
+<kw name="Run Keyword And Ignore Error" owner="BuiltIn">
+<kw name="Call Method" owner="BuiltIn">
+<msg time="2025-05-21T17:10:57.718576" level="FAIL">Calling method 'add_argument' failed: TypeError: ArgOptions.add_argument() got an unexpected keyword argument '--disable-features'</msg>
+<arg>${chrome_options}</arg>
+<arg>add_argument</arg>
+<arg>--disable-features=PasswordManagerEnabled,PasswordLeakDetection,SafetyCheck,PasswordCheckup</arg>
+<doc>Calls the named method of the given object with the provided arguments.</doc>
+<status status="FAIL" start="2025-05-21T17:10:57.718109" elapsed="0.000680">Calling method 'add_argument' failed: TypeError: ArgOptions.add_argument() got an unexpected keyword argument '--disable-features'</status>
+</kw>
+<arg>Call Method</arg>
+<arg>${chrome_options}</arg>
+<arg>add_argument</arg>
+<arg>--disable-features=PasswordManagerEnabled,PasswordLeakDetection,SafetyCheck,PasswordCheckup</arg>
+<doc>Runs the given keyword with the given arguments and ignores possible error.</doc>
+<status status="PASS" start="2025-05-21T17:10:57.717700" elapsed="0.008947"/>
+</kw>
+<kw name="Run Keyword And Ignore Error" owner="BuiltIn">
+<kw name="Call Method" owner="BuiltIn">
+<arg>${chrome_options}</arg>
+<arg>add_argument</arg>
+<arg>--incognito</arg>
+<doc>Calls the named method of the given object with the provided arguments.</doc>
+<status status="PASS" start="2025-05-21T17:10:57.727708" elapsed="0.000386"/>
+</kw>
+<arg>Call Method</arg>
+<arg>${chrome_options}</arg>
+<arg>add_argument</arg>
+<arg>--incognito</arg>
+<doc>Runs the given keyword with the given arguments and ignores possible error.</doc>
+<status status="PASS" start="2025-05-21T17:10:57.727255" elapsed="0.001232"/>
+</kw>
+<kw name="Run Keyword And Ignore Error" owner="BuiltIn">
+<kw name="Call Method" owner="BuiltIn">
+<arg>${chrome_options}</arg>
+<arg>add_argument</arg>
+<arg>--flag-switches-begin</arg>
+<doc>Calls the named method of the given object with the provided arguments.</doc>
+<status status="PASS" start="2025-05-21T17:10:57.729384" elapsed="0.000684"/>
+</kw>
+<arg>Call Method</arg>
+<arg>${chrome_options}</arg>
+<arg>add_argument</arg>
+<arg>--flag-switches-begin</arg>
+<doc>Runs the given keyword with the given arguments and ignores possible error.</doc>
+<status status="PASS" start="2025-05-21T17:10:57.728960" elapsed="0.001599"/>
+</kw>
+<kw name="Run Keyword And Ignore Error" owner="BuiltIn">
+<kw name="Call Method" owner="BuiltIn">
+<arg>${chrome_options}</arg>
+<arg>add_argument</arg>
+<arg>--disable-password-manager</arg>
+<doc>Calls the named method of the given object with the provided arguments.</doc>
+<status status="PASS" start="2025-05-21T17:10:57.731432" elapsed="0.000368"/>
+</kw>
+<arg>Call Method</arg>
+<arg>${chrome_options}</arg>
+<arg>add_argument</arg>
+<arg>--disable-password-manager</arg>
+<doc>Runs the given keyword with the given arguments and ignores possible error.</doc>
+<status status="PASS" start="2025-05-21T17:10:57.731055" elapsed="0.001141"/>
+</kw>
+<kw name="Run Keyword And Ignore Error" owner="BuiltIn">
+<kw name="Call Method" owner="BuiltIn">
+<arg>${chrome_options}</arg>
+<arg>add_argument</arg>
+<arg>--flag-switches-end</arg>
+<doc>Calls the named method of the given object with the provided arguments.</doc>
+<status status="PASS" start="2025-05-21T17:10:57.732997" elapsed="0.000325"/>
+</kw>
+<arg>Call Method</arg>
+<arg>${chrome_options}</arg>
+<arg>add_argument</arg>
+<arg>--flag-switches-end</arg>
+<doc>Runs the given keyword with the given arguments and ignores possible error.</doc>
+<status status="PASS" start="2025-05-21T17:10:57.732648" elapsed="0.001015"/>
+</kw>
+<kw name="Log" owner="BuiltIn">
+<msg time="2025-05-21T17:10:57.734511" level="INFO">Chrome options set: &lt;selenium.webdriver.chrome.options.Options object at 0x0000014AB4259BD0&gt;</msg>
+<arg>Chrome options set: ${chrome_options}</arg>
+<arg>level=INFO</arg>
+<doc>Logs the given message with the given level.</doc>
+<status status="PASS" start="2025-05-21T17:10:57.734116" elapsed="0.000514"/>
+</kw>
+<kw name="Run Keyword And Ignore Error" owner="BuiltIn">
+<kw name="Open Browser" owner="SeleniumLibrary">
+<msg time="2025-05-21T17:10:57.737342" level="INFO">Opening browser 'chrome' to base url 'about:blank'.</msg>
+<arg>about:blank</arg>
+<arg>chrome</arg>
+<arg>options=${chrome_options}</arg>
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<status status="PASS" start="2025-05-21T17:10:57.736800" elapsed="2.170736"/>
+</kw>
+<arg>Open Browser</arg>
+<arg>about:blank</arg>
+<arg>chrome</arg>
+<arg>options=${chrome_options}</arg>
+<doc>Runs the given keyword with the given arguments and ignores possible error.</doc>
+<status status="PASS" start="2025-05-21T17:10:57.736343" elapsed="2.173364"/>
+</kw>
+<kw name="Log" owner="BuiltIn">
+<msg time="2025-05-21T17:10:59.910672" level="INFO">Browser opened successfully</msg>
+<arg>Browser opened successfully</arg>
+<arg>level=INFO</arg>
+<doc>Logs the given message with the given level.</doc>
+<status status="PASS" start="2025-05-21T17:10:59.910285" elapsed="0.000513"/>
+</kw>
+<kw name="Maximize Browser Window" owner="SeleniumLibrary">
+<doc>Maximizes current browser window.</doc>
+<status status="PASS" start="2025-05-21T17:10:59.912203" elapsed="0.070909"/>
+</kw>
+<status status="PASS" start="2025-05-21T17:10:57.706500" elapsed="2.277231"/>
+</kw>
+<kw name="getUrl" owner="common_keywords">
+<kw name="Go To" owner="SeleniumLibrary">
+<msg time="2025-05-21T17:10:59.985589" level="INFO">Opening url 'https://cms.anhtester.com/users/login'</msg>
+<arg>${url}</arg>
+<doc>Navigates the current browser window to the provided ``url``.</doc>
+<status status="PASS" start="2025-05-21T17:10:59.985107" elapsed="0.890338"/>
+</kw>
+<kw name="Sleep" owner="BuiltIn">
+<msg time="2025-05-21T17:11:03.878031" level="INFO">Slept 3 seconds.</msg>
+<arg>${DELAY_MEDIUM}</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<status status="PASS" start="2025-05-21T17:11:00.877210" elapsed="3.001027"/>
+</kw>
+<arg>https://cms.anhtester.com/users/login</arg>
+<status status="PASS" start="2025-05-21T17:10:59.984390" elapsed="3.895956"/>
+</kw>
+<kw name="clickButton" owner="common_keywords">
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>${locator}</arg>
+<arg>timeout=10s</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" start="2025-05-21T17:11:03.881758" elapsed="0.034359"/>
+</kw>
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2025-05-21T17:11:03.917008" level="INFO">Clicking element 'xpath=//button[@class="absolute-top-right bg-white shadow-lg btn btn-circle btn-icon mr-n3 mt-n3 set-session"]'.</msg>
+<arg>${locator}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2025-05-21T17:11:03.916657" elapsed="0.137451"/>
+</kw>
+<kw name="Sleep" owner="BuiltIn">
+<msg time="2025-05-21T17:11:07.056930" level="INFO">Slept 3 seconds.</msg>
+<arg>${DELAY_MEDIUM}</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<status status="PASS" start="2025-05-21T17:11:04.056287" elapsed="3.000819"/>
+</kw>
+<arg>xpath=//button[@class="absolute-top-right bg-white shadow-lg btn btn-circle btn-icon mr-n3 mt-n3 set-session"]</arg>
+<status status="PASS" start="2025-05-21T17:11:03.881052" elapsed="3.177855"/>
+</kw>
+<kw name="enterText" owner="common_keywords">
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>${locator}</arg>
+<arg>timeout=10s</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" start="2025-05-21T17:11:07.060122" elapsed="0.035351"/>
+</kw>
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2025-05-21T17:11:07.096541" level="INFO">Typing text 'customer2025@gmail.com' into text field 'xpath=//input[@id="email"]'.</msg>
+<arg>${locator}</arg>
+<arg>${text}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2025-05-21T17:11:07.096039" elapsed="0.190451"/>
+</kw>
+<kw name="Sleep" owner="BuiltIn">
+<msg time="2025-05-21T17:11:08.328315" level="INFO">Slept 1 second.</msg>
+<arg>${DELAY_FAST}</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<status status="PASS" start="2025-05-21T17:11:07.326924" elapsed="1.001682"/>
+</kw>
+<arg>xpath=//input[@id="email"]</arg>
+<arg>${username}</arg>
+<status status="PASS" start="2025-05-21T17:11:07.059447" elapsed="1.292213"/>
+</kw>
+<kw name="enterText" owner="common_keywords">
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>${locator}</arg>
+<arg>timeout=10s</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" start="2025-05-21T17:11:08.359774" elapsed="0.053984"/>
+</kw>
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2025-05-21T17:11:08.414865" level="INFO">Typing text '123456' into text field 'xpath=//input[@id="password"]'.</msg>
+<arg>${locator}</arg>
+<arg>${text}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2025-05-21T17:11:08.414322" elapsed="0.119325"/>
+</kw>
+<kw name="Sleep" owner="BuiltIn">
+<msg time="2025-05-21T17:11:09.536518" level="INFO">Slept 1 second.</msg>
+<arg>${DELAY_FAST}</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<status status="PASS" start="2025-05-21T17:11:08.535641" elapsed="1.001017"/>
+</kw>
+<arg>xpath=//input[@id="password"]</arg>
+<arg>${password}</arg>
+<status status="PASS" start="2025-05-21T17:11:08.358830" elapsed="1.179592"/>
+</kw>
+<kw name="clickButton" owner="common_keywords">
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>${locator}</arg>
+<arg>timeout=10s</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" start="2025-05-21T17:11:09.539809" elapsed="0.056123"/>
+</kw>
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2025-05-21T17:11:09.597036" level="INFO">Clicking element 'xpath=//button[normalize-space()="Login"]'.</msg>
+<arg>${locator}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2025-05-21T17:11:09.596548" elapsed="1.395436"/>
+</kw>
+<kw name="Sleep" owner="BuiltIn">
+<msg time="2025-05-21T17:11:13.995080" level="INFO">Slept 3 seconds.</msg>
+<arg>${DELAY_MEDIUM}</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<status status="PASS" start="2025-05-21T17:11:10.993879" elapsed="3.001390"/>
+</kw>
+<arg>xpath=//button[normalize-space()="Login"]</arg>
+<status status="PASS" start="2025-05-21T17:11:09.539066" elapsed="4.458038"/>
+</kw>
+<kw name="Run Keyword If" owner="BuiltIn">
+<kw name="verifyCurrentUrl" owner="common_keywords">
+<kw name="Location Should Be" owner="SeleniumLibrary">
+<msg time="2025-05-21T17:11:14.005237" level="INFO">Current location is 'https://cms.anhtester.com/dashboard'.</msg>
+<arg>${expected_url}</arg>
+<doc>Verifies that the current URL is exactly ``url``.</doc>
+<status status="PASS" start="2025-05-21T17:11:13.998283" elapsed="0.007067"/>
+</kw>
+<kw name="Sleep" owner="BuiltIn">
+<msg time="2025-05-21T17:11:17.106808" level="INFO">Slept 3 seconds.</msg>
+<arg>${DELAY_MEDIUM}</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<status status="PASS" start="2025-05-21T17:11:14.105327" elapsed="3.001825"/>
+</kw>
+<arg>${expected_url}</arg>
+<status status="PASS" start="2025-05-21T17:11:13.997869" elapsed="3.113373"/>
+</kw>
+<arg>"${expected_url}" != ""</arg>
+<arg>verifyCurrentUrl</arg>
+<arg>${expected_url}</arg>
+<doc>Runs the given keyword with the given arguments, if ``condition`` is true.</doc>
+<status status="PASS" start="2025-05-21T17:11:13.997448" elapsed="3.114676"/>
+</kw>
+<kw name="Run Keyword If" owner="BuiltIn">
+<kw name="getUrl" owner="common_keywords">
+<kw name="Go To" owner="SeleniumLibrary">
+<msg time="2025-05-21T17:11:17.116368" level="INFO">Opening url 'https://cms.anhtester.com/logout'</msg>
+<arg>${url}</arg>
+<doc>Navigates the current browser window to the provided ``url``.</doc>
+<status status="PASS" start="2025-05-21T17:11:17.115830" elapsed="1.636502"/>
+</kw>
+<kw name="Sleep" owner="BuiltIn">
+<msg time="2025-05-21T17:11:21.756994" level="INFO">Slept 3 seconds.</msg>
+<arg>${DELAY_MEDIUM}</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<status status="PASS" start="2025-05-21T17:11:18.755698" elapsed="3.001456"/>
+</kw>
+<arg>${logout_url}</arg>
+<status status="PASS" start="2025-05-21T17:11:17.114764" elapsed="4.660142"/>
+</kw>
+<arg>"${logout_url}" != ""</arg>
+<arg>getUrl</arg>
+<arg>${logout_url}</arg>
+<doc>Runs the given keyword with the given arguments, if ``condition`` is true.</doc>
+<status status="PASS" start="2025-05-21T17:11:17.113238" elapsed="4.662057"/>
+</kw>
+<kw name="Sleep After Test" owner="common_keywords">
+<kw name="Sleep" owner="BuiltIn">
+<msg time="2025-05-21T17:11:24.777109" level="INFO">Slept 3 seconds.</msg>
+<arg>3s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<status status="PASS" start="2025-05-21T17:11:21.776364" elapsed="3.001489"/>
+</kw>
+<status status="PASS" start="2025-05-21T17:11:21.775805" elapsed="3.007255"/>
+</kw>
+<kw name="Close Browser" owner="SeleniumLibrary">
+<doc>Closes the current browser.</doc>
+<status status="PASS" start="2025-05-21T17:11:24.784583" elapsed="2.319380"/>
+</kw>
+<arg>customer2025@gmail.com</arg>
+<arg>123456</arg>
+<arg>https://cms.anhtester.com/dashboard</arg>
+<arg>https://cms.anhtester.com/logout</arg>
+<status status="PASS" start="2025-05-21T17:10:57.705272" elapsed="29.399484"/>
+</kw>
+<status status="PASS" start="2025-05-21T17:10:57.703927" elapsed="29.402212"/>
+</test>
+<status status="FAIL" start="2025-05-21T17:10:40.965234" elapsed="46.150204"/>
+</suite>
+<statistics>
+<total>
+<stat pass="1" fail="1" skip="0">All Tests</stat>
+</total>
+<tag>
+</tag>
+<suite>
+<stat name="Login Tests Data Json" id="s1" pass="1" fail="1" skip="0">Login Tests Data Json</stat>
+</suite>
+</statistics>
+<errors>
+</errors>
+</robot>

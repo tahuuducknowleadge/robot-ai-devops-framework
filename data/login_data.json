@@ -1,0 +1,18 @@
+[
+    {
+        "test_case_name": "L_1",
+        "login_url": "https://cms.anhtester.com/users/login",
+        "username": "anhtester@email.com",
+        "password": "AnhTester@2023#",
+        "expected_url": "https://cms.anhtester.com/dashboard",
+        "logout_url": "https://cms.anhtester.com/logout"
+    },
+    {
+        "test_case_name": "L_2",
+        "login_url": "https://cms.anhtester.com/users/login",
+        "username": "customer2025@gmail.com",
+        "password": "123456",
+        "expected_url": "https://cms.anhtester.com/dashboard",
+        "logout_url": "https://cms.anhtester.com/logout"
+    }
+]
