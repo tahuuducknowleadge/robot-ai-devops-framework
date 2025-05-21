@@ -20,27 +20,42 @@ jobs:
       - name: Install Google Chrome and ChromeDriver
         run: |
           sudo apt-get update
-          sudo apt-get install -y wget unzip jq xvfb libxi6
+          sudo apt-get install -y wget unzip jq xvfb libxi6 libgconf-2-4
+          
+          # Cài đặt Google Chrome
           wget https://dl.google.com/linux/direct/google-chrome-stable_current_amd64.deb
           sudo dpkg -i google-chrome-stable_current_amd64.deb || sudo apt-get -f install -y
-          CHROME_VERSION=$(google-chrome --version | grep -oP '\d+\.\d+\.\d+' | head -1)
+          
+          # Lấy phiên bản Chrome hiện tại
+          CHROME_VERSION=$(google-chrome --version | grep -oP '\d+\.\d+\.\d+\.\d+')
+          MAJOR_VERSION=$(echo "$CHROME_VERSION" | cut -d '.' -f 1)
           echo "Detected Chrome version: $CHROME_VERSION"
-          DRIVER_URL=$(curl -s "https://googlechromelabs.github.io/chrome-for-testing/last-known-good-versions-with-downloads.json" | jq -r --arg VER "$CHROME_VERSION" '.channels.Stable.downloads.chromedriver[] | select(.platform == "linux64") | .url' | head -1)
+
+          # Lấy đúng phiên bản ChromeDriver tương ứng với Chrome major version
+          DRIVER_URL=$(curl -s "https://googlechromelabs.github.io/chrome-for-testing/known-good-versions-with-downloads.json" | \
+            jq -r --arg ver "$MAJOR_VERSION" '
+              .versions[] | select(.version | startswith($ver)) | 
+              .downloads.chromedriver[] | select(.platform == "linux64") | .url' | head -1)
+
+          echo "Downloading ChromeDriver from $DRIVER_URL"
           wget -O chromedriver.zip "$DRIVER_URL"
           unzip chromedriver.zip
           sudo mv chromedriver-linux64/chromedriver /usr/local/bin/
           chmod +x /usr/local/bin/chromedriver
+          
+          # Xác minh phiên bản
           chromedriver --version
           google-chrome --version
 
-      - name: Install dependencies
+      - name: Install Python dependencies
         run: |
           pip install -r requirements.txt
           npm install -g allure-commandline
 
-      - name: Run Robot Framework tests with Allure
+      - name: Run Robot Framework tests with Allure (headless mode)
         run: |
-          robot --listener allure_robotframework:output/allure-results --outputdir output testsuites/
+          # Chạy bằng X virtual framebuffer để hỗ trợ GUI headless
+          xvfb-run robot --listener allure_robotframework:output/allure-results --outputdir output testsuites/
 
       - name: Generate Allure Report
         run: |
