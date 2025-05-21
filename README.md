@@ -4,8 +4,8 @@ Framework kiểm thử chức năng hướng dữ liệu (data-driven) sử dụ
 ## 🚀 Mục Tiêu  
 ✅ Tự động hoá kiểm thử chức năng website bằng Robot Framework 
 ✅ Tách riêng dữ liệu test (Excel, JSON...) ra khỏi logic test 
-✅ Tích hợp công cụ AI: Faker, OpenCV, Tesseract, ChatGPT API (tuỳ chọn) 
-✅ Tích hợp DevOps: GitHub Actions hoặc Jenkins 
+✅ Tích hợp công cụ AI: Faker, ChatGPT API 
+✅ Tích hợp DevOps: GitHub Actions 
 ✅ Cấu trúc rõ ràng, dễ mở rộng
 
 ## 📁 Cấu Trúc Thư Mục
@@ -25,9 +25,9 @@ Framework kiểm thử chức năng hướng dữ liệu (data-driven) sử dụ
 **WebDriver:** SeleniumLibrary  
 **Dữ liệu test:** JSON / Excel / CSV  (openpyxl)
 **Báo cáo:** Robot Report, Allure (nâng cao)  
-**Sinh dữ liệu:** Faker (pip3 install faker)
-**AI hỗ trợ:** ChatGPT, OpenCV, Tesseract  
-**CI/CD:** GitHub Actions / Jenkins  
+**AI Sinh dữ liệu:** Faker (pip3 install faker)
+**AI hỗ trợ:** ChatGPT
+**CI/CD:** GitHub Actions 
 
 ## 📌 Cài Đặt
 ```bash

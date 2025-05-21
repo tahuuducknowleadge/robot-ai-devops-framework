@@ -1,6 +1,9 @@
 robotframework
 robotframework-seleniumlibrary
 robotframework-jsonlibrary
-robotframework openpyxl
+robotframework-openpyxl
 allure-robotframework
 selenium
+faker
+requests
+pandas
