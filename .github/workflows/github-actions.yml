@@ -17,6 +17,18 @@ jobs:
         with:
           python-version: '3.11'
 
+      - name: Install Google Chrome and ChromeDriver
+        run: |
+          sudo apt-get update
+          sudo apt-get install -y wget unzip xvfb libxi6 libgconf-2-4
+          wget https://dl.google.com/linux/direct/google-chrome-stable_current_amd64.deb
+          sudo dpkg -i google-chrome-stable_current_amd64.deb || sudo apt-get -f install -y
+          wget -O chromedriver.zip https://chromedriver.storage.googleapis.com/$(curl -sS chromedriver.storage.googleapis.com/LATEST_RELEASE)/chromedriver_linux64.zip
+          unzip chromedriver.zip
+          sudo mv chromedriver /usr/local/bin/
+          chromedriver --version
+          google-chrome --version
+
       - name: Install dependencies
         run: |
           pip install -r requirements.txt
@@ -28,9 +40,9 @@ jobs:
 
       - name: Generate Allure Report
         run: |
-          allure generate output/allure-results -o output/allure-report --clean
+          allure generate output/allure-results -o output/allure --clean
 
-      - name: Deploy to GitHub Pages
+      - name: Deploy Allure Report to GitHub Pages
         uses: peaceiris/actions-gh-pages@v3
         with:
           github_token: ${{ secrets.GITHUB_TOKEN }}
