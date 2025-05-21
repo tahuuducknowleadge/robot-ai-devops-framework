@@ -4,3 +4,4 @@ robotframework-jsonlibrary
 openpyxl
 allure-robotframework
 selenium
+faker
