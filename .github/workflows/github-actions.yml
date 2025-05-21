@@ -1,0 +1,37 @@
+name: Robot Tests with Allure
+
+on:
+  push:
+    branches: [ main ]  # Thay bằng nhánh chính của repo nếu không phải "main"
+
+jobs:
+  test:
+    runs-on: ubuntu-latest
+
+    steps:
+    - name: Checkout repository
+      uses: actions/checkout@v3
+
+    - name: Set up Python
+      uses: actions/setup-python@v4
+      with:
+        python-version: '3.11'  # Hoặc phiên bản Python em đang dùng (3.13 nếu cần)
+
+    - name: Install dependencies
+      run: |
+        pip install -r requirements.txt
+        npm install -g allure-commandline
+
+    - name: Run Robot tests with Allure listener
+      run: |
+        robot --listener allure_robotframework:output/allure-results --outputdir output testsuites/
+
+    - name: Generate Allure Report
+      run: |
+        allure generate output/allure-results -o output/allure-report --clean
+
+    - name: Upload Allure Report Artifact
+      uses: actions/upload-artifact@v3
+      with:
+        name: allure-report
+        path: output/allure-report

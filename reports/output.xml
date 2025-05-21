@@ -1,0 +1,1665 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<robot generator="Robot 6.0.2 (Python 3.13.3 on win32)" generated="20250521 11:01:35.941" rpa="false" schemaversion="3">
+<suite id="s1" name="Testsuites" source="C:\Users\tahuu\robot-ai-devops-framework\testsuites">
+<suite id="s1-s1" name="Login" source="C:\Users\tahuu\robot-ai-devops-framework\testsuites\login.robot">
+<kw name="Open Chrome Browser" library="common_keywords" type="SETUP">
+<kw name="Log" library="BuiltIn">
+<arg>Starting to open Chrome browser</arg>
+<arg>level=INFO</arg>
+<doc>Logs the given message with the given level.</doc>
+<msg timestamp="20250521 11:01:38.197" level="INFO">Starting to open Chrome browser</msg>
+<status status="PASS" starttime="20250521 11:01:38.196" endtime="20250521 11:01:38.197"/>
+</kw>
+<kw name="Evaluate" library="BuiltIn">
+<var>${chrome_options}</var>
+<arg>sys.modules['selenium.webdriver'].ChromeOptions()</arg>
+<arg>modules=sys</arg>
+<doc>Evaluates the given expression in Python and returns the result.</doc>
+<msg timestamp="20250521 11:01:38.199" level="INFO">${chrome_options} = &lt;selenium.webdriver.chrome.options.Options object at 0x0000027D7EBF16A0&gt;</msg>
+<status status="PASS" starttime="20250521 11:01:38.198" endtime="20250521 11:01:38.199"/>
+</kw>
+<kw name="Run Keyword And Ignore Error" library="BuiltIn">
+<arg>Call Method</arg>
+<arg>${chrome_options}</arg>
+<arg>add_argument</arg>
+<arg>--disable-notifications</arg>
+<doc>Runs the given keyword with the given arguments and ignores possible error.</doc>
+<kw name="Call Method" library="BuiltIn">
+<arg>${chrome_options}</arg>
+<arg>add_argument</arg>
+<arg>--disable-notifications</arg>
+<doc>Calls the named method of the given object with the provided arguments.</doc>
+<status status="PASS" starttime="20250521 11:01:38.202" endtime="20250521 11:01:38.202"/>
+</kw>
+<status status="PASS" starttime="20250521 11:01:38.201" endtime="20250521 11:01:38.203"/>
+</kw>
+<kw name="Run Keyword And Ignore Error" library="BuiltIn">
+<arg>Call Method</arg>
+<arg>${chrome_options}</arg>
+<arg>add_argument</arg>
+<arg>--password-store=basic</arg>
+<doc>Runs the given keyword with the given arguments and ignores possible error.</doc>
+<kw name="Call Method" library="BuiltIn">
+<arg>${chrome_options}</arg>
+<arg>add_argument</arg>
+<arg>--password-store=basic</arg>
+<doc>Calls the named method of the given object with the provided arguments.</doc>
+<msg timestamp="20250521 11:01:38.205" level="FAIL">Calling method 'add_argument' failed: TypeError: ArgOptions.add_argument() got an unexpected keyword argument '--password-store'</msg>
+<status status="FAIL" starttime="20250521 11:01:38.204" endtime="20250521 11:01:38.205"/>
+</kw>
+<status status="PASS" starttime="20250521 11:01:38.203" endtime="20250521 11:01:38.206"/>
+</kw>
+<kw name="Run Keyword And Ignore Error" library="BuiltIn">
+<arg>Call Method</arg>
+<arg>${chrome_options}</arg>
+<arg>add_argument</arg>
+<arg>--disable-features=PasswordManagerEnabled,PasswordLeakDetection,SafetyCheck,PasswordCheckup</arg>
+<doc>Runs the given keyword with the given arguments and ignores possible error.</doc>
+<kw name="Call Method" library="BuiltIn">
+<arg>${chrome_options}</arg>
+<arg>add_argument</arg>
+<arg>--disable-features=PasswordManagerEnabled,PasswordLeakDetection,SafetyCheck,PasswordCheckup</arg>
+<doc>Calls the named method of the given object with the provided arguments.</doc>
+<msg timestamp="20250521 11:01:38.208" level="FAIL">Calling method 'add_argument' failed: TypeError: ArgOptions.add_argument() got an unexpected keyword argument '--disable-features'</msg>
+<status status="FAIL" starttime="20250521 11:01:38.207" endtime="20250521 11:01:38.208"/>
+</kw>
+<status status="PASS" starttime="20250521 11:01:38.207" endtime="20250521 11:01:38.209"/>
+</kw>
+<kw name="Run Keyword And Ignore Error" library="BuiltIn">
+<arg>Call Method</arg>
+<arg>${chrome_options}</arg>
+<arg>add_argument</arg>
+<arg>--incognito</arg>
+<doc>Runs the given keyword with the given arguments and ignores possible error.</doc>
+<kw name="Call Method" library="BuiltIn">
+<arg>${chrome_options}</arg>
+<arg>add_argument</arg>
+<arg>--incognito</arg>
+<doc>Calls the named method of the given object with the provided arguments.</doc>
+<status status="PASS" starttime="20250521 11:01:38.210" endtime="20250521 11:01:38.211"/>
+</kw>
+<status status="PASS" starttime="20250521 11:01:38.210" endtime="20250521 11:01:38.211"/>
+</kw>
+<kw name="Run Keyword And Ignore Error" library="BuiltIn">
+<arg>Call Method</arg>
+<arg>${chrome_options}</arg>
+<arg>add_argument</arg>
+<arg>--flag-switches-begin</arg>
+<doc>Runs the given keyword with the given arguments and ignores possible error.</doc>
+<kw name="Call Method" library="BuiltIn">
+<arg>${chrome_options}</arg>
+<arg>add_argument</arg>
+<arg>--flag-switches-begin</arg>
+<doc>Calls the named method of the given object with the provided arguments.</doc>
+<status status="PASS" starttime="20250521 11:01:38.213" endtime="20250521 11:01:38.213"/>
+</kw>
+<status status="PASS" starttime="20250521 11:01:38.212" endtime="20250521 11:01:38.214"/>
+</kw>
+<kw name="Run Keyword And Ignore Error" library="BuiltIn">
+<arg>Call Method</arg>
+<arg>${chrome_options}</arg>
+<arg>add_argument</arg>
+<arg>--disable-password-manager</arg>
+<doc>Runs the given keyword with the given arguments and ignores possible error.</doc>
+<kw name="Call Method" library="BuiltIn">
+<arg>${chrome_options}</arg>
+<arg>add_argument</arg>
+<arg>--disable-password-manager</arg>
+<doc>Calls the named method of the given object with the provided arguments.</doc>
+<status status="PASS" starttime="20250521 11:01:38.215" endtime="20250521 11:01:38.221"/>
+</kw>
+<status status="PASS" starttime="20250521 11:01:38.214" endtime="20250521 11:01:38.222"/>
+</kw>
+<kw name="Run Keyword And Ignore Error" library="BuiltIn">
+<arg>Call Method</arg>
+<arg>${chrome_options}</arg>
+<arg>add_argument</arg>
+<arg>--flag-switches-end</arg>
+<doc>Runs the given keyword with the given arguments and ignores possible error.</doc>
+<kw name="Call Method" library="BuiltIn">
+<arg>${chrome_options}</arg>
+<arg>add_argument</arg>
+<arg>--flag-switches-end</arg>
+<doc>Calls the named method of the given object with the provided arguments.</doc>
+<status status="PASS" starttime="20250521 11:01:38.224" endtime="20250521 11:01:38.225"/>
+</kw>
+<status status="PASS" starttime="20250521 11:01:38.224" endtime="20250521 11:01:38.225"/>
+</kw>
+<kw name="Log" library="BuiltIn">
+<arg>Chrome options set: ${chrome_options}</arg>
+<arg>level=INFO</arg>
+<doc>Logs the given message with the given level.</doc>
+<msg timestamp="20250521 11:01:38.226" level="INFO">Chrome options set: &lt;selenium.webdriver.chrome.options.Options object at 0x0000027D7EBF16A0&gt;</msg>
+<status status="PASS" starttime="20250521 11:01:38.226" endtime="20250521 11:01:38.226"/>
+</kw>
+<kw name="Run Keyword And Ignore Error" library="BuiltIn">
+<arg>Open Browser</arg>
+<arg>about:blank</arg>
+<arg>chrome</arg>
+<arg>options=${chrome_options}</arg>
+<doc>Runs the given keyword with the given arguments and ignores possible error.</doc>
+<kw name="Open Browser" library="SeleniumLibrary">
+<arg>about:blank</arg>
+<arg>chrome</arg>
+<arg>options=${chrome_options}</arg>
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<msg timestamp="20250521 11:01:38.243" level="INFO">Opening browser 'chrome' to base url 'about:blank'.</msg>
+<status status="PASS" starttime="20250521 11:01:38.240" endtime="20250521 11:01:52.258"/>
+</kw>
+<status status="PASS" starttime="20250521 11:01:38.239" endtime="20250521 11:01:52.260"/>
+</kw>
+<kw name="Log" library="BuiltIn">
+<arg>Browser opened successfully</arg>
+<arg>level=INFO</arg>
+<doc>Logs the given message with the given level.</doc>
+<msg timestamp="20250521 11:01:52.261" level="INFO">Browser opened successfully</msg>
+<status status="PASS" starttime="20250521 11:01:52.261" endtime="20250521 11:01:52.261"/>
+</kw>
+<kw name="Maximize Browser Window" library="SeleniumLibrary">
+<doc>Maximizes current browser window.</doc>
+<status status="PASS" starttime="20250521 11:01:52.263" endtime="20250521 11:01:52.315"/>
+</kw>
+<status status="PASS" starttime="20250521 11:01:38.194" endtime="20250521 11:01:52.316"/>
+</kw>
+<test id="s1-s1-t1" name="L_1" line="9">
+<kw name="Log" library="BuiltIn">
+<arg>Starting test L_1</arg>
+<doc>Logs the given message with the given level.</doc>
+<msg timestamp="20250521 11:01:52.345" level="INFO">Starting test L_1</msg>
+<status status="PASS" starttime="20250521 11:01:52.344" endtime="20250521 11:01:52.345"/>
+</kw>
+<kw name="Run Horizontal Test From Excel" library="excel_keywords">
+<arg>./data/cmsanhtester.xlsx</arg>
+<arg>L_1</arg>
+<arg>Login</arg>
+<msg timestamp="20250521 11:01:52.495" level="INFO">▶️ [Row 2] Action: getUrl | Args: ['https://cms.anhtester.com/users/login']</msg>
+<kw name="getUrl" library="common_keywords">
+<arg>https://cms.anhtester.com/users/login</arg>
+<kw name="Go To" library="SeleniumLibrary">
+<arg>${url}</arg>
+<doc>Navigates the current browser window to the provided ``url``.</doc>
+<msg timestamp="20250521 11:01:52.497" level="INFO">Opening url 'https://cms.anhtester.com/users/login'</msg>
+<status status="PASS" starttime="20250521 11:01:52.496" endtime="20250521 11:01:53.775"/>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<arg>${DELAY_MEDIUM}</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<msg timestamp="20250521 11:01:56.779" level="INFO">Slept 3 seconds</msg>
+<status status="PASS" starttime="20250521 11:01:53.776" endtime="20250521 11:01:56.780"/>
+</kw>
+<status status="PASS" starttime="20250521 11:01:52.496" endtime="20250521 11:01:56.803"/>
+</kw>
+<msg timestamp="20250521 11:01:56.804" level="INFO">▶️ [Row 3] Action: clickButton | Locator: //button[@class='absolute-top-right bg-white shadow-lg btn btn-circle btn-icon mr-n3 mt-n3 set-session']</msg>
+<kw name="clickButton" library="common_keywords">
+<arg>//button[@class='absolute-top-right bg-white shadow-lg btn btn-circle btn-icon mr-n3 mt-n3 set-session']</arg>
+<kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
+<arg>${locator}</arg>
+<arg>timeout=10s</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" starttime="20250521 11:01:56.805" endtime="20250521 11:01:56.858"/>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>${locator}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20250521 11:01:56.859" level="INFO">Clicking element '//button[@class='absolute-top-right bg-white shadow-lg btn btn-circle btn-icon mr-n3 mt-n3 set-session']'.</msg>
+<status status="PASS" starttime="20250521 11:01:56.858" endtime="20250521 11:01:56.988"/>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<arg>${DELAY_MEDIUM}</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<msg timestamp="20250521 11:01:59.991" level="INFO">Slept 3 seconds</msg>
+<status status="PASS" starttime="20250521 11:01:56.990" endtime="20250521 11:01:59.992"/>
+</kw>
+<status status="PASS" starttime="20250521 11:01:56.804" endtime="20250521 11:01:59.996"/>
+</kw>
+<msg timestamp="20250521 11:01:59.998" level="INFO">▶️ [Row 4] Action: enterText | Args: ["//input[@id='email']", 'anhtester@email.com']</msg>
+<kw name="enterText" library="common_keywords">
+<arg>//input[@id='email']</arg>
+<arg>anhtester@email.com</arg>
+<kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
+<arg>${locator}</arg>
+<arg>timeout=10s</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" starttime="20250521 11:02:00.001" endtime="20250521 11:02:00.066"/>
+</kw>
+<kw name="Input Text" library="SeleniumLibrary">
+<arg>${locator}</arg>
+<arg>${text}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<msg timestamp="20250521 11:02:00.067" level="INFO">Typing text 'anhtester@email.com' into text field '//input[@id='email']'.</msg>
+<status status="PASS" starttime="20250521 11:02:00.066" endtime="20250521 11:02:00.241"/>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<arg>${DELAY_FAST}</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<msg timestamp="20250521 11:02:01.244" level="INFO">Slept 1 second</msg>
+<status status="PASS" starttime="20250521 11:02:00.243" endtime="20250521 11:02:01.244"/>
+</kw>
+<status status="PASS" starttime="20250521 11:01:59.999" endtime="20250521 11:02:01.246"/>
+</kw>
+<msg timestamp="20250521 11:02:01.247" level="INFO">▶️ [Row 5] Action: enterText | Args: ["//input[@id='password']", 'AnhTester@2023#']</msg>
+<kw name="enterText" library="common_keywords">
+<arg>//input[@id='password']</arg>
+<arg>AnhTester@2023#</arg>
+<kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
+<arg>${locator}</arg>
+<arg>timeout=10s</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" starttime="20250521 11:02:01.248" endtime="20250521 11:02:01.341"/>
+</kw>
+<kw name="Input Text" library="SeleniumLibrary">
+<arg>${locator}</arg>
+<arg>${text}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<msg timestamp="20250521 11:02:01.342" level="INFO">Typing text 'AnhTester@2023#' into text field '//input[@id='password']'.</msg>
+<status status="PASS" starttime="20250521 11:02:01.341" endtime="20250521 11:02:01.488"/>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<arg>${DELAY_FAST}</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<msg timestamp="20250521 11:02:02.491" level="INFO">Slept 1 second</msg>
+<status status="PASS" starttime="20250521 11:02:01.490" endtime="20250521 11:02:02.491"/>
+</kw>
+<status status="PASS" starttime="20250521 11:02:01.247" endtime="20250521 11:02:02.492"/>
+</kw>
+<msg timestamp="20250521 11:02:02.493" level="INFO">▶️ [Row 6] Action: clickButton | Locator: //button[normalize-space()='Login']</msg>
+<kw name="clickButton" library="common_keywords">
+<arg>//button[normalize-space()='Login']</arg>
+<kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
+<arg>${locator}</arg>
+<arg>timeout=10s</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" starttime="20250521 11:02:02.494" endtime="20250521 11:02:02.542"/>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>${locator}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20250521 11:02:02.543" level="INFO">Clicking element '//button[normalize-space()='Login']'.</msg>
+<status status="PASS" starttime="20250521 11:02:02.542" endtime="20250521 11:02:04.108"/>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<arg>${DELAY_MEDIUM}</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<msg timestamp="20250521 11:02:07.110" level="INFO">Slept 3 seconds</msg>
+<status status="PASS" starttime="20250521 11:02:04.109" endtime="20250521 11:02:07.111"/>
+</kw>
+<status status="PASS" starttime="20250521 11:02:02.493" endtime="20250521 11:02:07.112"/>
+</kw>
+<msg timestamp="20250521 11:02:07.113" level="INFO">▶️ [Row 7] Action: verifyCurrentUrl | Args: ['https://cms.anhtester.com/admin']</msg>
+<kw name="verifyCurrentUrl" library="common_keywords">
+<arg>https://cms.anhtester.com/admin</arg>
+<kw name="Location Should Be" library="SeleniumLibrary">
+<arg>${expected_url}</arg>
+<doc>Verifies that the current URL is exactly ``url``.</doc>
+<msg timestamp="20250521 11:02:07.124" level="INFO">Current location is 'https://cms.anhtester.com/admin'.</msg>
+<status status="PASS" starttime="20250521 11:02:07.113" endtime="20250521 11:02:07.124"/>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<arg>${DELAY_MEDIUM}</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<msg timestamp="20250521 11:02:10.126" level="INFO">Slept 3 seconds</msg>
+<status status="PASS" starttime="20250521 11:02:07.125" endtime="20250521 11:02:10.126"/>
+</kw>
+<status status="PASS" starttime="20250521 11:02:07.113" endtime="20250521 11:02:10.144"/>
+</kw>
+<msg timestamp="20250521 11:02:10.145" level="INFO">⏩ [Row 8] Skipped: No locator and no value for action verifyTextDisplayed</msg>
+<msg timestamp="20250521 11:02:10.146" level="INFO">▶️ [Row 9] Action: getUrl | Args: ['https://cms.anhtester.com/logout']</msg>
+<kw name="getUrl" library="common_keywords">
+<arg>https://cms.anhtester.com/logout</arg>
+<kw name="Go To" library="SeleniumLibrary">
+<arg>${url}</arg>
+<doc>Navigates the current browser window to the provided ``url``.</doc>
+<msg timestamp="20250521 11:02:10.149" level="INFO">Opening url 'https://cms.anhtester.com/logout'</msg>
+<status status="PASS" starttime="20250521 11:02:10.148" endtime="20250521 11:02:10.662"/>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<arg>${DELAY_MEDIUM}</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<msg timestamp="20250521 11:02:13.665" level="INFO">Slept 3 seconds</msg>
+<status status="PASS" starttime="20250521 11:02:10.664" endtime="20250521 11:02:13.665"/>
+</kw>
+<status status="PASS" starttime="20250521 11:02:10.147" endtime="20250521 11:02:13.668"/>
+</kw>
+<status status="PASS" starttime="20250521 11:01:52.357" endtime="20250521 11:02:13.669"/>
+</kw>
+<status status="PASS" starttime="20250521 11:01:52.316" endtime="20250521 11:02:13.674"/>
+</test>
+<test id="s1-s1-t2" name="L_2" line="12">
+<kw name="Log" library="BuiltIn">
+<arg>Starting test L_2</arg>
+<doc>Logs the given message with the given level.</doc>
+<msg timestamp="20250521 11:02:13.689" level="INFO">Starting test L_2</msg>
+<status status="PASS" starttime="20250521 11:02:13.688" endtime="20250521 11:02:13.689"/>
+</kw>
+<kw name="Run Horizontal Test From Excel" library="excel_keywords">
+<arg>./data/cmsanhtester.xlsx</arg>
+<arg>L_2</arg>
+<arg>Login</arg>
+<msg timestamp="20250521 11:02:13.746" level="INFO">▶️ [Row 2] Action: getUrl | Args: ['https://cms.anhtester.com/users/login']</msg>
+<kw name="getUrl" library="common_keywords">
+<arg>https://cms.anhtester.com/users/login</arg>
+<kw name="Go To" library="SeleniumLibrary">
+<arg>${url}</arg>
+<doc>Navigates the current browser window to the provided ``url``.</doc>
+<msg timestamp="20250521 11:02:13.747" level="INFO">Opening url 'https://cms.anhtester.com/users/login'</msg>
+<status status="PASS" starttime="20250521 11:02:13.747" endtime="20250521 11:02:14.208"/>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<arg>${DELAY_MEDIUM}</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<msg timestamp="20250521 11:02:17.212" level="INFO">Slept 3 seconds</msg>
+<status status="PASS" starttime="20250521 11:02:14.210" endtime="20250521 11:02:17.212"/>
+</kw>
+<status status="PASS" starttime="20250521 11:02:13.747" endtime="20250521 11:02:17.217"/>
+</kw>
+<msg timestamp="20250521 11:02:17.222" level="INFO">▶️ [Row 4] Action: enterText | Args: ["//input[@id='email']", 'customer2025@gmail.com']</msg>
+<kw name="enterText" library="common_keywords">
+<arg>//input[@id='email']</arg>
+<arg>customer2025@gmail.com</arg>
+<kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
+<arg>${locator}</arg>
+<arg>timeout=10s</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" starttime="20250521 11:02:17.225" endtime="20250521 11:02:17.266"/>
+</kw>
+<kw name="Input Text" library="SeleniumLibrary">
+<arg>${locator}</arg>
+<arg>${text}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<msg timestamp="20250521 11:02:17.267" level="INFO">Typing text 'customer2025@gmail.com' into text field '//input[@id='email']'.</msg>
+<status status="PASS" starttime="20250521 11:02:17.266" endtime="20250521 11:02:17.414"/>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<arg>${DELAY_FAST}</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<msg timestamp="20250521 11:02:18.416" level="INFO">Slept 1 second</msg>
+<status status="PASS" starttime="20250521 11:02:17.415" endtime="20250521 11:02:18.416"/>
+</kw>
+<status status="PASS" starttime="20250521 11:02:17.222" endtime="20250521 11:02:18.420"/>
+</kw>
+<msg timestamp="20250521 11:02:18.422" level="INFO">▶️ [Row 5] Action: enterText | Args: ["//input[@id='password']", '123456']</msg>
+<kw name="enterText" library="common_keywords">
+<arg>//input[@id='password']</arg>
+<arg>123456</arg>
+<kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
+<arg>${locator}</arg>
+<arg>timeout=10s</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" starttime="20250521 11:02:18.424" endtime="20250521 11:02:18.462"/>
+</kw>
+<kw name="Input Text" library="SeleniumLibrary">
+<arg>${locator}</arg>
+<arg>${text}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<msg timestamp="20250521 11:02:18.463" level="INFO">Typing text '123456' into text field '//input[@id='password']'.</msg>
+<status status="PASS" starttime="20250521 11:02:18.463" endtime="20250521 11:02:18.593"/>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<arg>${DELAY_FAST}</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<msg timestamp="20250521 11:02:19.595" level="INFO">Slept 1 second</msg>
+<status status="PASS" starttime="20250521 11:02:18.594" endtime="20250521 11:02:19.595"/>
+</kw>
+<status status="PASS" starttime="20250521 11:02:18.423" endtime="20250521 11:02:19.599"/>
+</kw>
+<msg timestamp="20250521 11:02:19.601" level="INFO">▶️ [Row 6] Action: clickButton | Locator: //button[normalize-space()='Login']</msg>
+<kw name="clickButton" library="common_keywords">
+<arg>//button[normalize-space()='Login']</arg>
+<kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
+<arg>${locator}</arg>
+<arg>timeout=10s</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" starttime="20250521 11:02:19.604" endtime="20250521 11:02:19.647"/>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>${locator}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20250521 11:02:19.649" level="INFO">Clicking element '//button[normalize-space()='Login']'.</msg>
+<status status="PASS" starttime="20250521 11:02:19.648" endtime="20250521 11:02:20.381"/>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<arg>${DELAY_MEDIUM}</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<msg timestamp="20250521 11:02:23.421" level="INFO">Slept 3 seconds</msg>
+<status status="PASS" starttime="20250521 11:02:20.420" endtime="20250521 11:02:23.421"/>
+</kw>
+<status status="PASS" starttime="20250521 11:02:19.601" endtime="20250521 11:02:23.423"/>
+</kw>
+<msg timestamp="20250521 11:02:23.424" level="INFO">▶️ [Row 7] Action: verifyCurrentUrl | Args: ['https://cms.anhtester.com/dashboard']</msg>
+<kw name="verifyCurrentUrl" library="common_keywords">
+<arg>https://cms.anhtester.com/dashboard</arg>
+<kw name="Location Should Be" library="SeleniumLibrary">
+<arg>${expected_url}</arg>
+<doc>Verifies that the current URL is exactly ``url``.</doc>
+<msg timestamp="20250521 11:02:23.436" level="INFO">Current location is 'https://cms.anhtester.com/dashboard'.</msg>
+<status status="PASS" starttime="20250521 11:02:23.425" endtime="20250521 11:02:23.436"/>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<arg>${DELAY_MEDIUM}</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<msg timestamp="20250521 11:02:26.439" level="INFO">Slept 3 seconds</msg>
+<status status="PASS" starttime="20250521 11:02:23.438" endtime="20250521 11:02:26.439"/>
+</kw>
+<status status="PASS" starttime="20250521 11:02:23.424" endtime="20250521 11:02:26.443"/>
+</kw>
+<msg timestamp="20250521 11:02:26.444" level="INFO">⏩ [Row 8] Skipped: No locator and no value for action verifyTextDisplayed</msg>
+<msg timestamp="20250521 11:02:26.445" level="INFO">▶️ [Row 9] Action: getUrl | Args: ['https://cms.anhtester.com/logout']</msg>
+<kw name="getUrl" library="common_keywords">
+<arg>https://cms.anhtester.com/logout</arg>
+<kw name="Go To" library="SeleniumLibrary">
+<arg>${url}</arg>
+<doc>Navigates the current browser window to the provided ``url``.</doc>
+<msg timestamp="20250521 11:02:26.447" level="INFO">Opening url 'https://cms.anhtester.com/logout'</msg>
+<status status="PASS" starttime="20250521 11:02:26.447" endtime="20250521 11:02:27.815"/>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<arg>${DELAY_MEDIUM}</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<msg timestamp="20250521 11:02:30.819" level="INFO">Slept 3 seconds</msg>
+<status status="PASS" starttime="20250521 11:02:27.817" endtime="20250521 11:02:30.819"/>
+</kw>
+<status status="PASS" starttime="20250521 11:02:26.445" endtime="20250521 11:02:30.823"/>
+</kw>
+<status status="PASS" starttime="20250521 11:02:13.693" endtime="20250521 11:02:30.824"/>
+</kw>
+<status status="PASS" starttime="20250521 11:02:13.686" endtime="20250521 11:02:30.830"/>
+</test>
+<test id="s1-s1-t3" name="L_3" line="15">
+<kw name="Log" library="BuiltIn">
+<arg>Starting test L_3</arg>
+<doc>Logs the given message with the given level.</doc>
+<msg timestamp="20250521 11:02:30.851" level="INFO">Starting test L_3</msg>
+<status status="PASS" starttime="20250521 11:02:30.850" endtime="20250521 11:02:30.851"/>
+</kw>
+<kw name="Run Horizontal Test From Excel" library="excel_keywords">
+<arg>./data/cmsanhtester.xlsx</arg>
+<arg>L_3</arg>
+<arg>Login</arg>
+<msg timestamp="20250521 11:02:30.926" level="INFO">▶️ [Row 2] Action: getUrl | Args: ['https://cms.anhtester.com/users/login']</msg>
+<kw name="getUrl" library="common_keywords">
+<arg>https://cms.anhtester.com/users/login</arg>
+<kw name="Go To" library="SeleniumLibrary">
+<arg>${url}</arg>
+<doc>Navigates the current browser window to the provided ``url``.</doc>
+<msg timestamp="20250521 11:02:30.927" level="INFO">Opening url 'https://cms.anhtester.com/users/login'</msg>
+<status status="PASS" starttime="20250521 11:02:30.927" endtime="20250521 11:02:31.414"/>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<arg>${DELAY_MEDIUM}</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<msg timestamp="20250521 11:02:34.421" level="INFO">Slept 3 seconds</msg>
+<status status="PASS" starttime="20250521 11:02:31.420" endtime="20250521 11:02:34.422"/>
+</kw>
+<status status="PASS" starttime="20250521 11:02:30.927" endtime="20250521 11:02:34.426"/>
+</kw>
+<msg timestamp="20250521 11:02:34.429" level="INFO">▶️ [Row 4] Action: enterText | Args: ["//input[@id='email']", 'seller@example.com']</msg>
+<kw name="enterText" library="common_keywords">
+<arg>//input[@id='email']</arg>
+<arg>seller@example.com</arg>
+<kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
+<arg>${locator}</arg>
+<arg>timeout=10s</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" starttime="20250521 11:02:34.433" endtime="20250521 11:02:34.479"/>
+</kw>
+<kw name="Input Text" library="SeleniumLibrary">
+<arg>${locator}</arg>
+<arg>${text}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<msg timestamp="20250521 11:02:34.481" level="INFO">Typing text 'seller@example.com' into text field '//input[@id='email']'.</msg>
+<status status="PASS" starttime="20250521 11:02:34.480" endtime="20250521 11:02:34.633"/>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<arg>${DELAY_FAST}</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<msg timestamp="20250521 11:02:35.636" level="INFO">Slept 1 second</msg>
+<status status="PASS" starttime="20250521 11:02:34.634" endtime="20250521 11:02:35.636"/>
+</kw>
+<status status="PASS" starttime="20250521 11:02:34.430" endtime="20250521 11:02:35.641"/>
+</kw>
+<msg timestamp="20250521 11:02:35.643" level="INFO">▶️ [Row 5] Action: enterText | Args: ["//input[@id='password']", '123456']</msg>
+<kw name="enterText" library="common_keywords">
+<arg>//input[@id='password']</arg>
+<arg>123456</arg>
+<kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
+<arg>${locator}</arg>
+<arg>timeout=10s</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" starttime="20250521 11:02:35.646" endtime="20250521 11:02:35.691"/>
+</kw>
+<kw name="Input Text" library="SeleniumLibrary">
+<arg>${locator}</arg>
+<arg>${text}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<msg timestamp="20250521 11:02:35.691" level="INFO">Typing text '123456' into text field '//input[@id='password']'.</msg>
+<status status="PASS" starttime="20250521 11:02:35.691" endtime="20250521 11:02:35.795"/>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<arg>${DELAY_FAST}</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<msg timestamp="20250521 11:02:36.798" level="INFO">Slept 1 second</msg>
+<status status="PASS" starttime="20250521 11:02:35.796" endtime="20250521 11:02:36.798"/>
+</kw>
+<status status="PASS" starttime="20250521 11:02:35.644" endtime="20250521 11:02:36.800"/>
+</kw>
+<msg timestamp="20250521 11:02:36.800" level="INFO">▶️ [Row 6] Action: clickButton | Locator: //button[normalize-space()='Login']</msg>
+<kw name="clickButton" library="common_keywords">
+<arg>//button[normalize-space()='Login']</arg>
+<kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
+<arg>${locator}</arg>
+<arg>timeout=10s</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" starttime="20250521 11:02:36.801" endtime="20250521 11:02:36.832"/>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>${locator}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20250521 11:02:36.833" level="INFO">Clicking element '//button[normalize-space()='Login']'.</msg>
+<status status="PASS" starttime="20250521 11:02:36.832" endtime="20250521 11:02:38.555"/>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<arg>${DELAY_MEDIUM}</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<msg timestamp="20250521 11:02:41.558" level="INFO">Slept 3 seconds</msg>
+<status status="PASS" starttime="20250521 11:02:38.557" endtime="20250521 11:02:41.558"/>
+</kw>
+<status status="PASS" starttime="20250521 11:02:36.800" endtime="20250521 11:02:41.560"/>
+</kw>
+<msg timestamp="20250521 11:02:41.560" level="INFO">▶️ [Row 7] Action: verifyCurrentUrl | Args: ['https://cms.anhtester.com/seller/dashboard']</msg>
+<kw name="verifyCurrentUrl" library="common_keywords">
+<arg>https://cms.anhtester.com/seller/dashboard</arg>
+<kw name="Location Should Be" library="SeleniumLibrary">
+<arg>${expected_url}</arg>
+<doc>Verifies that the current URL is exactly ``url``.</doc>
+<msg timestamp="20250521 11:02:41.571" level="INFO">Current location is 'https://cms.anhtester.com/seller/dashboard'.</msg>
+<status status="PASS" starttime="20250521 11:02:41.561" endtime="20250521 11:02:41.571"/>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<arg>${DELAY_MEDIUM}</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<msg timestamp="20250521 11:02:44.575" level="INFO">Slept 3 seconds</msg>
+<status status="PASS" starttime="20250521 11:02:41.574" endtime="20250521 11:02:44.575"/>
+</kw>
+<status status="PASS" starttime="20250521 11:02:41.560" endtime="20250521 11:02:44.576"/>
+</kw>
+<msg timestamp="20250521 11:02:44.577" level="INFO">⏩ [Row 8] Skipped: No locator and no value for action verifyTextDisplayed</msg>
+<msg timestamp="20250521 11:02:44.577" level="INFO">▶️ [Row 9] Action: getUrl | Args: ['https://cms.anhtester.com/logout']</msg>
+<kw name="getUrl" library="common_keywords">
+<arg>https://cms.anhtester.com/logout</arg>
+<kw name="Go To" library="SeleniumLibrary">
+<arg>${url}</arg>
+<doc>Navigates the current browser window to the provided ``url``.</doc>
+<msg timestamp="20250521 11:02:44.578" level="INFO">Opening url 'https://cms.anhtester.com/logout'</msg>
+<status status="PASS" starttime="20250521 11:02:44.578" endtime="20250521 11:02:45.876"/>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<arg>${DELAY_MEDIUM}</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<msg timestamp="20250521 11:02:48.880" level="INFO">Slept 3 seconds</msg>
+<status status="PASS" starttime="20250521 11:02:45.878" endtime="20250521 11:02:48.880"/>
+</kw>
+<status status="PASS" starttime="20250521 11:02:44.577" endtime="20250521 11:02:48.882"/>
+</kw>
+<status status="PASS" starttime="20250521 11:02:30.854" endtime="20250521 11:02:48.882"/>
+</kw>
+<status status="PASS" starttime="20250521 11:02:30.846" endtime="20250521 11:02:48.887"/>
+</test>
+<test id="s1-s1-t4" name="L_4" line="18">
+<kw name="Log" library="BuiltIn">
+<arg>Starting test L_4</arg>
+<doc>Logs the given message with the given level.</doc>
+<msg timestamp="20250521 11:02:48.912" level="INFO">Starting test L_4</msg>
+<status status="PASS" starttime="20250521 11:02:48.911" endtime="20250521 11:02:48.912"/>
+</kw>
+<kw name="Run Horizontal Test From Excel" library="excel_keywords">
+<arg>./data/cmsanhtester.xlsx</arg>
+<arg>L_4</arg>
+<arg>Login</arg>
+<msg timestamp="20250521 11:02:48.986" level="INFO">▶️ [Row 2] Action: getUrl | Args: ['https://cms.anhtester.com/users/login']</msg>
+<kw name="getUrl" library="common_keywords">
+<arg>https://cms.anhtester.com/users/login</arg>
+<kw name="Go To" library="SeleniumLibrary">
+<arg>${url}</arg>
+<doc>Navigates the current browser window to the provided ``url``.</doc>
+<msg timestamp="20250521 11:02:48.987" level="INFO">Opening url 'https://cms.anhtester.com/users/login'</msg>
+<status status="PASS" starttime="20250521 11:02:48.987" endtime="20250521 11:02:49.423"/>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<arg>${DELAY_MEDIUM}</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<msg timestamp="20250521 11:02:52.451" level="INFO">Slept 3 seconds</msg>
+<status status="PASS" starttime="20250521 11:02:49.450" endtime="20250521 11:02:52.451"/>
+</kw>
+<status status="PASS" starttime="20250521 11:02:48.987" endtime="20250521 11:02:52.453"/>
+</kw>
+<msg timestamp="20250521 11:02:52.453" level="INFO">▶️ [Row 4] Action: enterText | Args: ["//input[@id='email']", '']</msg>
+<kw name="enterText" library="common_keywords">
+<arg>//input[@id='email']</arg>
+<kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
+<arg>${locator}</arg>
+<arg>timeout=10s</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" starttime="20250521 11:02:52.454" endtime="20250521 11:02:52.481"/>
+</kw>
+<kw name="Input Text" library="SeleniumLibrary">
+<arg>${locator}</arg>
+<arg>${text}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<msg timestamp="20250521 11:02:52.483" level="INFO">Typing text '' into text field '//input[@id='email']'.</msg>
+<status status="PASS" starttime="20250521 11:02:52.482" endtime="20250521 11:02:52.601"/>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<arg>${DELAY_FAST}</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<msg timestamp="20250521 11:02:53.605" level="INFO">Slept 1 second</msg>
+<status status="PASS" starttime="20250521 11:02:52.603" endtime="20250521 11:02:53.605"/>
+</kw>
+<status status="PASS" starttime="20250521 11:02:52.454" endtime="20250521 11:02:53.606"/>
+</kw>
+<msg timestamp="20250521 11:02:53.607" level="INFO">▶️ [Row 5] Action: enterText | Args: ["//input[@id='password']", '123456']</msg>
+<kw name="enterText" library="common_keywords">
+<arg>//input[@id='password']</arg>
+<arg>123456</arg>
+<kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
+<arg>${locator}</arg>
+<arg>timeout=10s</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" starttime="20250521 11:02:53.608" endtime="20250521 11:02:53.662"/>
+</kw>
+<kw name="Input Text" library="SeleniumLibrary">
+<arg>${locator}</arg>
+<arg>${text}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<msg timestamp="20250521 11:02:53.664" level="INFO">Typing text '123456' into text field '//input[@id='password']'.</msg>
+<status status="PASS" starttime="20250521 11:02:53.663" endtime="20250521 11:02:53.796"/>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<arg>${DELAY_FAST}</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<msg timestamp="20250521 11:02:54.799" level="INFO">Slept 1 second</msg>
+<status status="PASS" starttime="20250521 11:02:53.798" endtime="20250521 11:02:54.799"/>
+</kw>
+<status status="PASS" starttime="20250521 11:02:53.607" endtime="20250521 11:02:54.800"/>
+</kw>
+<msg timestamp="20250521 11:02:54.801" level="INFO">▶️ [Row 6] Action: clickButton | Locator: //button[normalize-space()='Login']</msg>
+<kw name="clickButton" library="common_keywords">
+<arg>//button[normalize-space()='Login']</arg>
+<kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
+<arg>${locator}</arg>
+<arg>timeout=10s</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" starttime="20250521 11:02:54.802" endtime="20250521 11:02:54.824"/>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>${locator}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20250521 11:02:54.824" level="INFO">Clicking element '//button[normalize-space()='Login']'.</msg>
+<status status="PASS" starttime="20250521 11:02:54.824" endtime="20250521 11:02:54.896"/>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<arg>${DELAY_MEDIUM}</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<msg timestamp="20250521 11:02:57.900" level="INFO">Slept 3 seconds</msg>
+<status status="PASS" starttime="20250521 11:02:54.898" endtime="20250521 11:02:57.900"/>
+</kw>
+<status status="PASS" starttime="20250521 11:02:54.801" endtime="20250521 11:02:57.901"/>
+</kw>
+<msg timestamp="20250521 11:02:57.902" level="INFO">⏩ [Row 7] Skipped: No locator and no value for action verifyCurrentUrl</msg>
+<msg timestamp="20250521 11:02:57.902" level="INFO">▶️ [Row 8] Action: verifyTextDisplayed | Args: ['The email field is required when phone is not present.']</msg>
+<kw name="verifyTextDisplayed" library="common_keywords">
+<arg>The email field is required when phone is not present.</arg>
+<kw name="Page Should Contain" library="SeleniumLibrary">
+<arg>${text}</arg>
+<doc>Verifies that current page contains ``text``.</doc>
+<msg timestamp="20250521 11:02:57.929" level="INFO">Current page contains text 'The email field is required when phone is not present.'.</msg>
+<status status="PASS" starttime="20250521 11:02:57.903" endtime="20250521 11:02:57.929"/>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<arg>${DELAY_MEDIUM}</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<msg timestamp="20250521 11:03:00.932" level="INFO">Slept 3 seconds</msg>
+<status status="PASS" starttime="20250521 11:02:57.931" endtime="20250521 11:03:00.932"/>
+</kw>
+<status status="PASS" starttime="20250521 11:02:57.902" endtime="20250521 11:03:00.934"/>
+</kw>
+<msg timestamp="20250521 11:03:00.934" level="INFO">⏩ [Row 9] Skipped: No locator and no value for action getUrl</msg>
+<status status="PASS" starttime="20250521 11:02:48.919" endtime="20250521 11:03:00.935"/>
+</kw>
+<status status="PASS" starttime="20250521 11:02:48.905" endtime="20250521 11:03:00.937"/>
+</test>
+<test id="s1-s1-t5" name="L_5" line="21">
+<kw name="Log" library="BuiltIn">
+<arg>Starting test L_5</arg>
+<doc>Logs the given message with the given level.</doc>
+<msg timestamp="20250521 11:03:00.947" level="INFO">Starting test L_5</msg>
+<status status="PASS" starttime="20250521 11:03:00.946" endtime="20250521 11:03:00.947"/>
+</kw>
+<kw name="Run Horizontal Test From Excel" library="excel_keywords">
+<arg>./data/cmsanhtester.xlsx</arg>
+<arg>L_5</arg>
+<arg>Login</arg>
+<msg timestamp="20250521 11:03:01.004" level="INFO">▶️ [Row 2] Action: getUrl | Args: ['https://cms.anhtester.com/users/login']</msg>
+<kw name="getUrl" library="common_keywords">
+<arg>https://cms.anhtester.com/users/login</arg>
+<kw name="Go To" library="SeleniumLibrary">
+<arg>${url}</arg>
+<doc>Navigates the current browser window to the provided ``url``.</doc>
+<msg timestamp="20250521 11:03:01.005" level="INFO">Opening url 'https://cms.anhtester.com/users/login'</msg>
+<status status="PASS" starttime="20250521 11:03:01.005" endtime="20250521 11:03:01.594"/>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<arg>${DELAY_MEDIUM}</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<msg timestamp="20250521 11:03:04.600" level="INFO">Slept 3 seconds</msg>
+<status status="PASS" starttime="20250521 11:03:01.599" endtime="20250521 11:03:04.600"/>
+</kw>
+<status status="PASS" starttime="20250521 11:03:01.005" endtime="20250521 11:03:04.603"/>
+</kw>
+<msg timestamp="20250521 11:03:04.605" level="INFO">▶️ [Row 4] Action: enterText | Args: ["//input[@id='email']", 'anhtester@email.com']</msg>
+<kw name="enterText" library="common_keywords">
+<arg>//input[@id='email']</arg>
+<arg>anhtester@email.com</arg>
+<kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
+<arg>${locator}</arg>
+<arg>timeout=10s</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" starttime="20250521 11:03:04.606" endtime="20250521 11:03:04.640"/>
+</kw>
+<kw name="Input Text" library="SeleniumLibrary">
+<arg>${locator}</arg>
+<arg>${text}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<msg timestamp="20250521 11:03:04.642" level="INFO">Typing text 'anhtester@email.com' into text field '//input[@id='email']'.</msg>
+<status status="PASS" starttime="20250521 11:03:04.641" endtime="20250521 11:03:04.789"/>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<arg>${DELAY_FAST}</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<msg timestamp="20250521 11:03:05.791" level="INFO">Slept 1 second</msg>
+<status status="PASS" starttime="20250521 11:03:04.790" endtime="20250521 11:03:05.791"/>
+</kw>
+<status status="PASS" starttime="20250521 11:03:04.605" endtime="20250521 11:03:05.795"/>
+</kw>
+<msg timestamp="20250521 11:03:05.796" level="INFO">▶️ [Row 5] Action: enterText | Args: ["//input[@id='password']", '']</msg>
+<kw name="enterText" library="common_keywords">
+<arg>//input[@id='password']</arg>
+<kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
+<arg>${locator}</arg>
+<arg>timeout=10s</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" starttime="20250521 11:03:05.798" endtime="20250521 11:03:05.842"/>
+</kw>
+<kw name="Input Text" library="SeleniumLibrary">
+<arg>${locator}</arg>
+<arg>${text}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<msg timestamp="20250521 11:03:05.843" level="INFO">Typing text '' into text field '//input[@id='password']'.</msg>
+<status status="PASS" starttime="20250521 11:03:05.842" endtime="20250521 11:03:05.931"/>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<arg>${DELAY_FAST}</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<msg timestamp="20250521 11:03:06.935" level="INFO">Slept 1 second</msg>
+<status status="PASS" starttime="20250521 11:03:05.933" endtime="20250521 11:03:06.935"/>
+</kw>
+<status status="PASS" starttime="20250521 11:03:05.797" endtime="20250521 11:03:06.937"/>
+</kw>
+<msg timestamp="20250521 11:03:06.938" level="INFO">▶️ [Row 6] Action: clickButton | Locator: //button[normalize-space()='Login']</msg>
+<kw name="clickButton" library="common_keywords">
+<arg>//button[normalize-space()='Login']</arg>
+<kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
+<arg>${locator}</arg>
+<arg>timeout=10s</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" starttime="20250521 11:03:06.939" endtime="20250521 11:03:07.021"/>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>${locator}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20250521 11:03:07.023" level="INFO">Clicking element '//button[normalize-space()='Login']'.</msg>
+<status status="PASS" starttime="20250521 11:03:07.022" endtime="20250521 11:03:07.567"/>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<arg>${DELAY_MEDIUM}</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<msg timestamp="20250521 11:03:10.570" level="INFO">Slept 3 seconds</msg>
+<status status="PASS" starttime="20250521 11:03:07.569" endtime="20250521 11:03:10.571"/>
+</kw>
+<status status="PASS" starttime="20250521 11:03:06.938" endtime="20250521 11:03:10.575"/>
+</kw>
+<msg timestamp="20250521 11:03:10.576" level="INFO">⏩ [Row 7] Skipped: No locator and no value for action verifyCurrentUrl</msg>
+<msg timestamp="20250521 11:03:10.577" level="INFO">▶️ [Row 8] Action: verifyTextDisplayed | Args: ['The password field is required']</msg>
+<kw name="verifyTextDisplayed" library="common_keywords">
+<arg>The password field is required</arg>
+<kw name="Page Should Contain" library="SeleniumLibrary">
+<arg>${text}</arg>
+<doc>Verifies that current page contains ``text``.</doc>
+<msg timestamp="20250521 11:03:10.746" level="INFO" html="true">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="selenium-screenshot-1.png"&gt;&lt;img src="selenium-screenshot-1.png" width="800px"&gt;&lt;/a&gt;</msg>
+<msg timestamp="20250521 11:03:10.746" level="FAIL">Page should have contained text 'The password field is required' but did not.</msg>
+<status status="FAIL" starttime="20250521 11:03:10.579" endtime="20250521 11:03:10.754"/>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<arg>${DELAY_MEDIUM}</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<status status="NOT RUN" starttime="20250521 11:03:10.756" endtime="20250521 11:03:10.756"/>
+</kw>
+<status status="FAIL" starttime="20250521 11:03:10.577" endtime="20250521 11:03:10.756"/>
+</kw>
+<msg timestamp="20250521 11:03:10.757" level="ERROR">❌ [Row 8] Failed: verifyTextDisplayed with args ['The password field is required']: Page should have contained text 'The password field is required' but did not.</msg>
+<status status="FAIL" starttime="20250521 11:03:00.952" endtime="20250521 11:03:10.769"/>
+</kw>
+<status status="FAIL" starttime="20250521 11:03:00.945" endtime="20250521 11:03:10.771">Page should have contained text 'The password field is required' but did not.</status>
+</test>
+<test id="s1-s1-t6" name="L_6" line="24">
+<kw name="Log" library="BuiltIn">
+<arg>Starting test L_6</arg>
+<doc>Logs the given message with the given level.</doc>
+<msg timestamp="20250521 11:03:10.778" level="INFO">Starting test L_6</msg>
+<status status="PASS" starttime="20250521 11:03:10.778" endtime="20250521 11:03:10.778"/>
+</kw>
+<kw name="Run Horizontal Test From Excel" library="excel_keywords">
+<arg>./data/cmsanhtester.xlsx</arg>
+<arg>L_6</arg>
+<arg>Login</arg>
+<msg timestamp="20250521 11:03:10.838" level="INFO">▶️ [Row 2] Action: getUrl | Args: ['https://cms.anhtester.com/users/login']</msg>
+<kw name="getUrl" library="common_keywords">
+<arg>https://cms.anhtester.com/users/login</arg>
+<kw name="Go To" library="SeleniumLibrary">
+<arg>${url}</arg>
+<doc>Navigates the current browser window to the provided ``url``.</doc>
+<msg timestamp="20250521 11:03:10.839" level="INFO">Opening url 'https://cms.anhtester.com/users/login'</msg>
+<status status="PASS" starttime="20250521 11:03:10.839" endtime="20250521 11:03:11.264"/>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<arg>${DELAY_MEDIUM}</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<msg timestamp="20250521 11:03:14.269" level="INFO">Slept 3 seconds</msg>
+<status status="PASS" starttime="20250521 11:03:11.267" endtime="20250521 11:03:14.269"/>
+</kw>
+<status status="PASS" starttime="20250521 11:03:10.839" endtime="20250521 11:03:14.272"/>
+</kw>
+<msg timestamp="20250521 11:03:14.274" level="INFO">▶️ [Row 4] Action: enterText | Args: ["//input[@id='email']", 'seller@example.com']</msg>
+<kw name="enterText" library="common_keywords">
+<arg>//input[@id='email']</arg>
+<arg>seller@example.com</arg>
+<kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
+<arg>${locator}</arg>
+<arg>timeout=10s</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" starttime="20250521 11:03:14.275" endtime="20250521 11:03:14.315"/>
+</kw>
+<kw name="Input Text" library="SeleniumLibrary">
+<arg>${locator}</arg>
+<arg>${text}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<msg timestamp="20250521 11:03:14.316" level="INFO">Typing text 'seller@example.com' into text field '//input[@id='email']'.</msg>
+<status status="PASS" starttime="20250521 11:03:14.315" endtime="20250521 11:03:14.452"/>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<arg>${DELAY_FAST}</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<msg timestamp="20250521 11:03:15.456" level="INFO">Slept 1 second</msg>
+<status status="PASS" starttime="20250521 11:03:14.454" endtime="20250521 11:03:15.456"/>
+</kw>
+<status status="PASS" starttime="20250521 11:03:14.274" endtime="20250521 11:03:15.461"/>
+</kw>
+<msg timestamp="20250521 11:03:15.463" level="INFO">▶️ [Row 5] Action: enterText | Args: ["//input[@id='password']", '1234567']</msg>
+<kw name="enterText" library="common_keywords">
+<arg>//input[@id='password']</arg>
+<arg>1234567</arg>
+<kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
+<arg>${locator}</arg>
+<arg>timeout=10s</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" starttime="20250521 11:03:15.465" endtime="20250521 11:03:15.505"/>
+</kw>
+<kw name="Input Text" library="SeleniumLibrary">
+<arg>${locator}</arg>
+<arg>${text}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<msg timestamp="20250521 11:03:15.506" level="INFO">Typing text '1234567' into text field '//input[@id='password']'.</msg>
+<status status="PASS" starttime="20250521 11:03:15.505" endtime="20250521 11:03:15.626"/>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<arg>${DELAY_FAST}</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<msg timestamp="20250521 11:03:16.630" level="INFO">Slept 1 second</msg>
+<status status="PASS" starttime="20250521 11:03:15.628" endtime="20250521 11:03:16.630"/>
+</kw>
+<status status="PASS" starttime="20250521 11:03:15.464" endtime="20250521 11:03:16.632"/>
+</kw>
+<msg timestamp="20250521 11:03:16.632" level="INFO">▶️ [Row 6] Action: clickButton | Locator: //button[normalize-space()='Login']</msg>
+<kw name="clickButton" library="common_keywords">
+<arg>//button[normalize-space()='Login']</arg>
+<kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
+<arg>${locator}</arg>
+<arg>timeout=10s</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" starttime="20250521 11:03:16.633" endtime="20250521 11:03:16.656"/>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>${locator}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20250521 11:03:16.656" level="INFO">Clicking element '//button[normalize-space()='Login']'.</msg>
+<status status="PASS" starttime="20250521 11:03:16.656" endtime="20250521 11:03:17.442"/>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<arg>${DELAY_MEDIUM}</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<msg timestamp="20250521 11:03:20.451" level="INFO">Slept 3 seconds</msg>
+<status status="PASS" starttime="20250521 11:03:17.444" endtime="20250521 11:03:20.452"/>
+</kw>
+<status status="PASS" starttime="20250521 11:03:16.632" endtime="20250521 11:03:20.455"/>
+</kw>
+<msg timestamp="20250521 11:03:20.457" level="INFO">⏩ [Row 7] Skipped: No locator and no value for action verifyCurrentUrl</msg>
+<msg timestamp="20250521 11:03:20.457" level="INFO">▶️ [Row 8] Action: verifyTextDisplayed | Args: ['Invalid login credentials']</msg>
+<kw name="verifyTextDisplayed" library="common_keywords">
+<arg>Invalid login credentials</arg>
+<kw name="Page Should Contain" library="SeleniumLibrary">
+<arg>${text}</arg>
+<doc>Verifies that current page contains ``text``.</doc>
+<msg timestamp="20250521 11:03:20.499" level="INFO">Current page contains text 'Invalid login credentials'.</msg>
+<status status="PASS" starttime="20250521 11:03:20.459" endtime="20250521 11:03:20.499"/>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<arg>${DELAY_MEDIUM}</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<msg timestamp="20250521 11:03:23.502" level="INFO">Slept 3 seconds</msg>
+<status status="PASS" starttime="20250521 11:03:20.501" endtime="20250521 11:03:23.502"/>
+</kw>
+<status status="PASS" starttime="20250521 11:03:20.458" endtime="20250521 11:03:23.504"/>
+</kw>
+<msg timestamp="20250521 11:03:23.505" level="INFO">⏩ [Row 9] Skipped: No locator and no value for action getUrl</msg>
+<status status="PASS" starttime="20250521 11:03:10.782" endtime="20250521 11:03:23.505"/>
+</kw>
+<status status="PASS" starttime="20250521 11:03:10.777" endtime="20250521 11:03:23.508"/>
+</test>
+<test id="s1-s1-t7" name="L_7" line="27">
+<kw name="Log" library="BuiltIn">
+<arg>Starting test L_7</arg>
+<doc>Logs the given message with the given level.</doc>
+<msg timestamp="20250521 11:03:23.529" level="INFO">Starting test L_7</msg>
+<status status="PASS" starttime="20250521 11:03:23.527" endtime="20250521 11:03:23.529"/>
+</kw>
+<kw name="Run Horizontal Test From Excel" library="excel_keywords">
+<arg>./data/cmsanhtester.xlsx</arg>
+<arg>L_7</arg>
+<arg>Login</arg>
+<msg timestamp="20250521 11:03:23.607" level="INFO">▶️ [Row 2] Action: getUrl | Args: ['https://cms.anhtester.com/users/login']</msg>
+<kw name="getUrl" library="common_keywords">
+<arg>https://cms.anhtester.com/users/login</arg>
+<kw name="Go To" library="SeleniumLibrary">
+<arg>${url}</arg>
+<doc>Navigates the current browser window to the provided ``url``.</doc>
+<msg timestamp="20250521 11:03:23.607" level="INFO">Opening url 'https://cms.anhtester.com/users/login'</msg>
+<status status="PASS" starttime="20250521 11:03:23.607" endtime="20250521 11:03:23.986"/>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<arg>${DELAY_MEDIUM}</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<msg timestamp="20250521 11:03:27.001" level="INFO">Slept 3 seconds</msg>
+<status status="PASS" starttime="20250521 11:03:24.000" endtime="20250521 11:03:27.002"/>
+</kw>
+<status status="PASS" starttime="20250521 11:03:23.607" endtime="20250521 11:03:27.006"/>
+</kw>
+<msg timestamp="20250521 11:03:27.008" level="INFO">▶️ [Row 4] Action: enterText | Args: ["//input[@id='email']", 'customer15042025@example.com']</msg>
+<kw name="enterText" library="common_keywords">
+<arg>//input[@id='email']</arg>
+<arg>customer15042025@example.com</arg>
+<kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
+<arg>${locator}</arg>
+<arg>timeout=10s</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" starttime="20250521 11:03:27.010" endtime="20250521 11:03:27.051"/>
+</kw>
+<kw name="Input Text" library="SeleniumLibrary">
+<arg>${locator}</arg>
+<arg>${text}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<msg timestamp="20250521 11:03:27.052" level="INFO">Typing text 'customer15042025@example.com' into text field '//input[@id='email']'.</msg>
+<status status="PASS" starttime="20250521 11:03:27.051" endtime="20250521 11:03:27.205"/>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<arg>${DELAY_FAST}</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<msg timestamp="20250521 11:03:28.209" level="INFO">Slept 1 second</msg>
+<status status="PASS" starttime="20250521 11:03:27.207" endtime="20250521 11:03:28.209"/>
+</kw>
+<status status="PASS" starttime="20250521 11:03:27.009" endtime="20250521 11:03:28.213"/>
+</kw>
+<msg timestamp="20250521 11:03:28.214" level="INFO">▶️ [Row 5] Action: enterText | Args: ["//input[@id='password']", '123456']</msg>
+<kw name="enterText" library="common_keywords">
+<arg>//input[@id='password']</arg>
+<arg>123456</arg>
+<kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
+<arg>${locator}</arg>
+<arg>timeout=10s</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" starttime="20250521 11:03:28.216" endtime="20250521 11:03:28.254"/>
+</kw>
+<kw name="Input Text" library="SeleniumLibrary">
+<arg>${locator}</arg>
+<arg>${text}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<msg timestamp="20250521 11:03:28.255" level="INFO">Typing text '123456' into text field '//input[@id='password']'.</msg>
+<status status="PASS" starttime="20250521 11:03:28.255" endtime="20250521 11:03:28.355"/>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<arg>${DELAY_FAST}</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<msg timestamp="20250521 11:03:29.358" level="INFO">Slept 1 second</msg>
+<status status="PASS" starttime="20250521 11:03:28.357" endtime="20250521 11:03:29.358"/>
+</kw>
+<status status="PASS" starttime="20250521 11:03:28.215" endtime="20250521 11:03:29.362"/>
+</kw>
+<msg timestamp="20250521 11:03:29.363" level="INFO">▶️ [Row 6] Action: clickButton | Locator: //button[normalize-space()='Login']</msg>
+<kw name="clickButton" library="common_keywords">
+<arg>//button[normalize-space()='Login']</arg>
+<kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
+<arg>${locator}</arg>
+<arg>timeout=10s</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" starttime="20250521 11:03:29.365" endtime="20250521 11:03:29.400"/>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>${locator}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20250521 11:03:29.401" level="INFO">Clicking element '//button[normalize-space()='Login']'.</msg>
+<status status="PASS" starttime="20250521 11:03:29.401" endtime="20250521 11:03:30.143"/>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<arg>${DELAY_MEDIUM}</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<msg timestamp="20250521 11:03:33.148" level="INFO">Slept 3 seconds</msg>
+<status status="PASS" starttime="20250521 11:03:30.146" endtime="20250521 11:03:33.149"/>
+</kw>
+<status status="PASS" starttime="20250521 11:03:29.364" endtime="20250521 11:03:33.153"/>
+</kw>
+<msg timestamp="20250521 11:03:33.154" level="INFO">⏩ [Row 7] Skipped: No locator and no value for action verifyCurrentUrl</msg>
+<msg timestamp="20250521 11:03:33.154" level="INFO">▶️ [Row 8] Action: verifyTextDisplayed | Args: ['Invalid login credentials']</msg>
+<kw name="verifyTextDisplayed" library="common_keywords">
+<arg>Invalid login credentials</arg>
+<kw name="Page Should Contain" library="SeleniumLibrary">
+<arg>${text}</arg>
+<doc>Verifies that current page contains ``text``.</doc>
+<msg timestamp="20250521 11:03:33.186" level="INFO">Current page contains text 'Invalid login credentials'.</msg>
+<status status="PASS" starttime="20250521 11:03:33.156" endtime="20250521 11:03:33.186"/>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<arg>${DELAY_MEDIUM}</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<msg timestamp="20250521 11:03:36.189" level="INFO">Slept 3 seconds</msg>
+<status status="PASS" starttime="20250521 11:03:33.188" endtime="20250521 11:03:36.189"/>
+</kw>
+<status status="PASS" starttime="20250521 11:03:33.155" endtime="20250521 11:03:36.191"/>
+</kw>
+<msg timestamp="20250521 11:03:36.191" level="INFO">⏩ [Row 9] Skipped: No locator and no value for action getUrl</msg>
+<status status="PASS" starttime="20250521 11:03:23.532" endtime="20250521 11:03:36.191"/>
+</kw>
+<status status="PASS" starttime="20250521 11:03:23.525" endtime="20250521 11:03:36.205"/>
+</test>
+<test id="s1-s1-t8" name="L_8" line="30">
+<kw name="Log" library="BuiltIn">
+<arg>Starting test L_8</arg>
+<doc>Logs the given message with the given level.</doc>
+<msg timestamp="20250521 11:03:36.225" level="INFO">Starting test L_8</msg>
+<status status="PASS" starttime="20250521 11:03:36.225" endtime="20250521 11:03:36.226"/>
+</kw>
+<kw name="Run Horizontal Test From Excel" library="excel_keywords">
+<arg>./data/cmsanhtester.xlsx</arg>
+<arg>L_8</arg>
+<arg>Login</arg>
+<msg timestamp="20250521 11:03:36.356" level="INFO">▶️ [Row 2] Action: getUrl | Args: ['https://cms.anhtester.com/users/login']</msg>
+<kw name="getUrl" library="common_keywords">
+<arg>https://cms.anhtester.com/users/login</arg>
+<kw name="Go To" library="SeleniumLibrary">
+<arg>${url}</arg>
+<doc>Navigates the current browser window to the provided ``url``.</doc>
+<msg timestamp="20250521 11:03:36.357" level="INFO">Opening url 'https://cms.anhtester.com/users/login'</msg>
+<status status="PASS" starttime="20250521 11:03:36.357" endtime="20250521 11:03:36.769"/>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<arg>${DELAY_MEDIUM}</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<msg timestamp="20250521 11:03:39.772" level="INFO">Slept 3 seconds</msg>
+<status status="PASS" starttime="20250521 11:03:36.771" endtime="20250521 11:03:39.773"/>
+</kw>
+<status status="PASS" starttime="20250521 11:03:36.356" endtime="20250521 11:03:39.778"/>
+</kw>
+<msg timestamp="20250521 11:03:39.781" level="INFO">▶️ [Row 4] Action: enterText | Args: ["//input[@id='email']", 'customer@@example..com']</msg>
+<kw name="enterText" library="common_keywords">
+<arg>//input[@id='email']</arg>
+<arg>customer@@example..com</arg>
+<kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
+<arg>${locator}</arg>
+<arg>timeout=10s</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" starttime="20250521 11:03:39.784" endtime="20250521 11:03:39.827"/>
+</kw>
+<kw name="Input Text" library="SeleniumLibrary">
+<arg>${locator}</arg>
+<arg>${text}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<msg timestamp="20250521 11:03:39.828" level="INFO">Typing text 'customer@@example..com' into text field '//input[@id='email']'.</msg>
+<status status="PASS" starttime="20250521 11:03:39.828" endtime="20250521 11:03:39.966"/>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<arg>${DELAY_FAST}</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<msg timestamp="20250521 11:03:40.969" level="INFO">Slept 1 second</msg>
+<status status="PASS" starttime="20250521 11:03:39.968" endtime="20250521 11:03:40.970"/>
+</kw>
+<status status="PASS" starttime="20250521 11:03:39.781" endtime="20250521 11:03:41.040"/>
+</kw>
+<msg timestamp="20250521 11:03:41.041" level="INFO">▶️ [Row 5] Action: enterText | Args: ["//input[@id='password']", '123456']</msg>
+<kw name="enterText" library="common_keywords">
+<arg>//input[@id='password']</arg>
+<arg>123456</arg>
+<kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
+<arg>${locator}</arg>
+<arg>timeout=10s</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" starttime="20250521 11:03:41.042" endtime="20250521 11:03:41.081"/>
+</kw>
+<kw name="Input Text" library="SeleniumLibrary">
+<arg>${locator}</arg>
+<arg>${text}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<msg timestamp="20250521 11:03:41.081" level="INFO">Typing text '123456' into text field '//input[@id='password']'.</msg>
+<status status="PASS" starttime="20250521 11:03:41.081" endtime="20250521 11:03:41.186"/>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<arg>${DELAY_FAST}</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<msg timestamp="20250521 11:03:42.190" level="INFO">Slept 1 second</msg>
+<status status="PASS" starttime="20250521 11:03:41.188" endtime="20250521 11:03:42.190"/>
+</kw>
+<status status="PASS" starttime="20250521 11:03:41.041" endtime="20250521 11:03:42.196"/>
+</kw>
+<msg timestamp="20250521 11:03:42.198" level="INFO">▶️ [Row 6] Action: clickButton | Locator: //button[normalize-space()='Login']</msg>
+<kw name="clickButton" library="common_keywords">
+<arg>//button[normalize-space()='Login']</arg>
+<kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
+<arg>${locator}</arg>
+<arg>timeout=10s</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" starttime="20250521 11:03:42.201" endtime="20250521 11:03:42.250"/>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>${locator}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20250521 11:03:42.250" level="INFO">Clicking element '//button[normalize-space()='Login']'.</msg>
+<status status="PASS" starttime="20250521 11:03:42.250" endtime="20250521 11:03:42.335"/>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<arg>${DELAY_MEDIUM}</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<msg timestamp="20250521 11:03:45.339" level="INFO">Slept 3 seconds</msg>
+<status status="PASS" starttime="20250521 11:03:42.339" endtime="20250521 11:03:45.340"/>
+</kw>
+<status status="PASS" starttime="20250521 11:03:42.199" endtime="20250521 11:03:45.342"/>
+</kw>
+<msg timestamp="20250521 11:03:45.343" level="INFO">⏩ [Row 7] Skipped: No locator and no value for action verifyCurrentUrl</msg>
+<msg timestamp="20250521 11:03:45.345" level="INFO">▶️ [Row 8] Action: verifyTextDisplayed | Args: ['Email invalid']</msg>
+<kw name="verifyTextDisplayed" library="common_keywords">
+<arg>Email invalid</arg>
+<kw name="Page Should Contain" library="SeleniumLibrary">
+<arg>${text}</arg>
+<doc>Verifies that current page contains ``text``.</doc>
+<msg timestamp="20250521 11:03:45.565" level="INFO" html="true">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="selenium-screenshot-2.png"&gt;&lt;img src="selenium-screenshot-2.png" width="800px"&gt;&lt;/a&gt;</msg>
+<msg timestamp="20250521 11:03:45.565" level="FAIL">Page should have contained text 'Email invalid' but did not.</msg>
+<status status="FAIL" starttime="20250521 11:03:45.346" endtime="20250521 11:03:45.567"/>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<arg>${DELAY_MEDIUM}</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<status status="NOT RUN" starttime="20250521 11:03:45.569" endtime="20250521 11:03:45.569"/>
+</kw>
+<status status="FAIL" starttime="20250521 11:03:45.346" endtime="20250521 11:03:45.569"/>
+</kw>
+<msg timestamp="20250521 11:03:45.570" level="ERROR">❌ [Row 8] Failed: verifyTextDisplayed with args ['Email invalid']: Page should have contained text 'Email invalid' but did not.</msg>
+<status status="FAIL" starttime="20250521 11:03:36.234" endtime="20250521 11:03:45.577"/>
+</kw>
+<status status="FAIL" starttime="20250521 11:03:36.218" endtime="20250521 11:03:45.582">Page should have contained text 'Email invalid' but did not.</status>
+</test>
+<status status="FAIL" starttime="20250521 11:01:36.117" endtime="20250521 11:03:45.603"/>
+</suite>
+<suite id="s1-s2" name="Register" source="C:\Users\tahuu\robot-ai-devops-framework\testsuites\register.robot">
+<kw name="Open Chrome Browser" library="common_keywords" type="SETUP">
+<kw name="Log" library="BuiltIn">
+<arg>Starting to open Chrome browser</arg>
+<arg>level=INFO</arg>
+<doc>Logs the given message with the given level.</doc>
+<msg timestamp="20250521 11:03:45.670" level="INFO">Starting to open Chrome browser</msg>
+<status status="PASS" starttime="20250521 11:03:45.669" endtime="20250521 11:03:45.670"/>
+</kw>
+<kw name="Evaluate" library="BuiltIn">
+<var>${chrome_options}</var>
+<arg>sys.modules['selenium.webdriver'].ChromeOptions()</arg>
+<arg>modules=sys</arg>
+<doc>Evaluates the given expression in Python and returns the result.</doc>
+<msg timestamp="20250521 11:03:45.675" level="INFO">${chrome_options} = &lt;selenium.webdriver.chrome.options.Options object at 0x0000027D7EB29810&gt;</msg>
+<status status="PASS" starttime="20250521 11:03:45.672" endtime="20250521 11:03:45.675"/>
+</kw>
+<kw name="Run Keyword And Ignore Error" library="BuiltIn">
+<arg>Call Method</arg>
+<arg>${chrome_options}</arg>
+<arg>add_argument</arg>
+<arg>--disable-notifications</arg>
+<doc>Runs the given keyword with the given arguments and ignores possible error.</doc>
+<kw name="Call Method" library="BuiltIn">
+<arg>${chrome_options}</arg>
+<arg>add_argument</arg>
+<arg>--disable-notifications</arg>
+<doc>Calls the named method of the given object with the provided arguments.</doc>
+<status status="PASS" starttime="20250521 11:03:45.681" endtime="20250521 11:03:45.682"/>
+</kw>
+<status status="PASS" starttime="20250521 11:03:45.680" endtime="20250521 11:03:45.683"/>
+</kw>
+<kw name="Run Keyword And Ignore Error" library="BuiltIn">
+<arg>Call Method</arg>
+<arg>${chrome_options}</arg>
+<arg>add_argument</arg>
+<arg>--password-store=basic</arg>
+<doc>Runs the given keyword with the given arguments and ignores possible error.</doc>
+<kw name="Call Method" library="BuiltIn">
+<arg>${chrome_options}</arg>
+<arg>add_argument</arg>
+<arg>--password-store=basic</arg>
+<doc>Calls the named method of the given object with the provided arguments.</doc>
+<msg timestamp="20250521 11:03:45.685" level="FAIL">Calling method 'add_argument' failed: TypeError: ArgOptions.add_argument() got an unexpected keyword argument '--password-store'</msg>
+<status status="FAIL" starttime="20250521 11:03:45.684" endtime="20250521 11:03:45.685"/>
+</kw>
+<status status="PASS" starttime="20250521 11:03:45.684" endtime="20250521 11:03:45.687"/>
+</kw>
+<kw name="Run Keyword And Ignore Error" library="BuiltIn">
+<arg>Call Method</arg>
+<arg>${chrome_options}</arg>
+<arg>add_argument</arg>
+<arg>--disable-features=PasswordManagerEnabled,PasswordLeakDetection,SafetyCheck,PasswordCheckup</arg>
+<doc>Runs the given keyword with the given arguments and ignores possible error.</doc>
+<kw name="Call Method" library="BuiltIn">
+<arg>${chrome_options}</arg>
+<arg>add_argument</arg>
+<arg>--disable-features=PasswordManagerEnabled,PasswordLeakDetection,SafetyCheck,PasswordCheckup</arg>
+<doc>Calls the named method of the given object with the provided arguments.</doc>
+<msg timestamp="20250521 11:03:45.689" level="FAIL">Calling method 'add_argument' failed: TypeError: ArgOptions.add_argument() got an unexpected keyword argument '--disable-features'</msg>
+<status status="FAIL" starttime="20250521 11:03:45.689" endtime="20250521 11:03:45.690"/>
+</kw>
+<status status="PASS" starttime="20250521 11:03:45.688" endtime="20250521 11:03:45.691"/>
+</kw>
+<kw name="Run Keyword And Ignore Error" library="BuiltIn">
+<arg>Call Method</arg>
+<arg>${chrome_options}</arg>
+<arg>add_argument</arg>
+<arg>--incognito</arg>
+<doc>Runs the given keyword with the given arguments and ignores possible error.</doc>
+<kw name="Call Method" library="BuiltIn">
+<arg>${chrome_options}</arg>
+<arg>add_argument</arg>
+<arg>--incognito</arg>
+<doc>Calls the named method of the given object with the provided arguments.</doc>
+<status status="PASS" starttime="20250521 11:03:45.696" endtime="20250521 11:03:45.697"/>
+</kw>
+<status status="PASS" starttime="20250521 11:03:45.692" endtime="20250521 11:03:45.697"/>
+</kw>
+<kw name="Run Keyword And Ignore Error" library="BuiltIn">
+<arg>Call Method</arg>
+<arg>${chrome_options}</arg>
+<arg>add_argument</arg>
+<arg>--flag-switches-begin</arg>
+<doc>Runs the given keyword with the given arguments and ignores possible error.</doc>
+<kw name="Call Method" library="BuiltIn">
+<arg>${chrome_options}</arg>
+<arg>add_argument</arg>
+<arg>--flag-switches-begin</arg>
+<doc>Calls the named method of the given object with the provided arguments.</doc>
+<status status="PASS" starttime="20250521 11:03:45.699" endtime="20250521 11:03:45.701"/>
+</kw>
+<status status="PASS" starttime="20250521 11:03:45.699" endtime="20250521 11:03:45.701"/>
+</kw>
+<kw name="Run Keyword And Ignore Error" library="BuiltIn">
+<arg>Call Method</arg>
+<arg>${chrome_options}</arg>
+<arg>add_argument</arg>
+<arg>--disable-password-manager</arg>
+<doc>Runs the given keyword with the given arguments and ignores possible error.</doc>
+<kw name="Call Method" library="BuiltIn">
+<arg>${chrome_options}</arg>
+<arg>add_argument</arg>
+<arg>--disable-password-manager</arg>
+<doc>Calls the named method of the given object with the provided arguments.</doc>
+<status status="PASS" starttime="20250521 11:03:45.702" endtime="20250521 11:03:45.703"/>
+</kw>
+<status status="PASS" starttime="20250521 11:03:45.702" endtime="20250521 11:03:45.703"/>
+</kw>
+<kw name="Run Keyword And Ignore Error" library="BuiltIn">
+<arg>Call Method</arg>
+<arg>${chrome_options}</arg>
+<arg>add_argument</arg>
+<arg>--flag-switches-end</arg>
+<doc>Runs the given keyword with the given arguments and ignores possible error.</doc>
+<kw name="Call Method" library="BuiltIn">
+<arg>${chrome_options}</arg>
+<arg>add_argument</arg>
+<arg>--flag-switches-end</arg>
+<doc>Calls the named method of the given object with the provided arguments.</doc>
+<status status="PASS" starttime="20250521 11:03:45.704" endtime="20250521 11:03:45.705"/>
+</kw>
+<status status="PASS" starttime="20250521 11:03:45.704" endtime="20250521 11:03:45.705"/>
+</kw>
+<kw name="Log" library="BuiltIn">
+<arg>Chrome options set: ${chrome_options}</arg>
+<arg>level=INFO</arg>
+<doc>Logs the given message with the given level.</doc>
+<msg timestamp="20250521 11:03:45.706" level="INFO">Chrome options set: &lt;selenium.webdriver.chrome.options.Options object at 0x0000027D7EB29810&gt;</msg>
+<status status="PASS" starttime="20250521 11:03:45.705" endtime="20250521 11:03:45.706"/>
+</kw>
+<kw name="Run Keyword And Ignore Error" library="BuiltIn">
+<arg>Open Browser</arg>
+<arg>about:blank</arg>
+<arg>chrome</arg>
+<arg>options=${chrome_options}</arg>
+<doc>Runs the given keyword with the given arguments and ignores possible error.</doc>
+<kw name="Open Browser" library="SeleniumLibrary">
+<arg>about:blank</arg>
+<arg>chrome</arg>
+<arg>options=${chrome_options}</arg>
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<msg timestamp="20250521 11:03:45.709" level="INFO">Opening browser 'chrome' to base url 'about:blank'.</msg>
+<status status="PASS" starttime="20250521 11:03:45.707" endtime="20250521 11:03:54.437"/>
+</kw>
+<status status="PASS" starttime="20250521 11:03:45.707" endtime="20250521 11:03:54.440"/>
+</kw>
+<kw name="Log" library="BuiltIn">
+<arg>Browser opened successfully</arg>
+<arg>level=INFO</arg>
+<doc>Logs the given message with the given level.</doc>
+<msg timestamp="20250521 11:03:54.441" level="INFO">Browser opened successfully</msg>
+<status status="PASS" starttime="20250521 11:03:54.440" endtime="20250521 11:03:54.441"/>
+</kw>
+<kw name="Maximize Browser Window" library="SeleniumLibrary">
+<doc>Maximizes current browser window.</doc>
+<status status="PASS" starttime="20250521 11:03:54.443" endtime="20250521 11:03:54.536"/>
+</kw>
+<status status="PASS" starttime="20250521 11:03:45.668" endtime="20250521 11:03:54.537"/>
+</kw>
+<test id="s1-s2-t1" name="R_1" line="9">
+<kw name="Log" library="BuiltIn">
+<arg>Starting test R_1</arg>
+<doc>Logs the given message with the given level.</doc>
+<msg timestamp="20250521 11:03:54.540" level="INFO">Starting test R_1</msg>
+<status status="PASS" starttime="20250521 11:03:54.540" endtime="20250521 11:03:54.540"/>
+</kw>
+<kw name="Run Horizontal Test From Excel" library="excel_keywords">
+<arg>./data/cmsanhtester.xlsx</arg>
+<arg>R_1</arg>
+<arg>Register</arg>
+<msg timestamp="20250521 11:03:54.684" level="INFO">▶️ [Row 2] Action: geturl | Args: ['https://cms.anhtester.com/users/registration']</msg>
+<kw name="getUrl" library="common_keywords">
+<arg>https://cms.anhtester.com/users/registration</arg>
+<kw name="Go To" library="SeleniumLibrary">
+<arg>${url}</arg>
+<doc>Navigates the current browser window to the provided ``url``.</doc>
+<msg timestamp="20250521 11:03:54.685" level="INFO">Opening url 'https://cms.anhtester.com/users/registration'</msg>
+<status status="PASS" starttime="20250521 11:03:54.685" endtime="20250521 11:03:55.871"/>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<arg>${DELAY_MEDIUM}</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<msg timestamp="20250521 11:03:58.875" level="INFO">Slept 3 seconds</msg>
+<status status="PASS" starttime="20250521 11:03:55.874" endtime="20250521 11:03:58.876"/>
+</kw>
+<status status="PASS" starttime="20250521 11:03:54.684" endtime="20250521 11:03:58.878"/>
+</kw>
+<msg timestamp="20250521 11:03:58.879" level="INFO">▶️ [Row 3] Action: clickButton | Locator: //button[@class='absolute-top-right bg-white shadow-lg btn btn-circle btn-icon mr-n3 mt-n3 set-session']</msg>
+<kw name="clickButton" library="common_keywords">
+<arg>//button[@class='absolute-top-right bg-white shadow-lg btn btn-circle btn-icon mr-n3 mt-n3 set-session']</arg>
+<kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
+<arg>${locator}</arg>
+<arg>timeout=10s</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" starttime="20250521 11:03:58.880" endtime="20250521 11:03:58.920"/>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>${locator}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20250521 11:03:58.922" level="INFO">Clicking element '//button[@class='absolute-top-right bg-white shadow-lg btn btn-circle btn-icon mr-n3 mt-n3 set-session']'.</msg>
+<status status="PASS" starttime="20250521 11:03:58.921" endtime="20250521 11:03:59.022"/>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<arg>${DELAY_MEDIUM}</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<msg timestamp="20250521 11:04:02.026" level="INFO">Slept 3 seconds</msg>
+<status status="PASS" starttime="20250521 11:03:59.025" endtime="20250521 11:04:02.026"/>
+</kw>
+<status status="PASS" starttime="20250521 11:03:58.880" endtime="20250521 11:04:02.029"/>
+</kw>
+<msg timestamp="20250521 11:04:02.030" level="INFO">▶️ [Row 4] Action: enterText | Args: ["//input[@placeholder='Full Name']", 'Nguyễn Thanh']</msg>
+<kw name="enterText" library="common_keywords">
+<arg>//input[@placeholder='Full Name']</arg>
+<arg>Nguyễn Thanh</arg>
+<kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
+<arg>${locator}</arg>
+<arg>timeout=10s</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" starttime="20250521 11:04:02.031" endtime="20250521 11:04:02.116"/>
+</kw>
+<kw name="Input Text" library="SeleniumLibrary">
+<arg>${locator}</arg>
+<arg>${text}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<msg timestamp="20250521 11:04:02.118" level="INFO">Typing text 'Nguyễn Thanh' into text field '//input[@placeholder='Full Name']'.</msg>
+<status status="PASS" starttime="20250521 11:04:02.117" endtime="20250521 11:04:02.321"/>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<arg>${DELAY_FAST}</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<msg timestamp="20250521 11:04:03.323" level="INFO">Slept 1 second</msg>
+<status status="PASS" starttime="20250521 11:04:02.322" endtime="20250521 11:04:03.323"/>
+</kw>
+<status status="PASS" starttime="20250521 11:04:02.030" endtime="20250521 11:04:03.365"/>
+</kw>
+<msg timestamp="20250521 11:04:03.369" level="INFO">▶️ [Row 5] Action: enterText | Args: ["//input[@placeholder='Email']", 'andersonmarc@example.org']</msg>
+<kw name="enterText" library="common_keywords">
+<arg>//input[@placeholder='Email']</arg>
+<arg>andersonmarc@example.org</arg>
+<kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
+<arg>${locator}</arg>
+<arg>timeout=10s</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" starttime="20250521 11:04:03.374" endtime="20250521 11:04:03.524"/>
+</kw>
+<kw name="Input Text" library="SeleniumLibrary">
+<arg>${locator}</arg>
+<arg>${text}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<msg timestamp="20250521 11:04:03.526" level="INFO">Typing text 'andersonmarc@example.org' into text field '//input[@placeholder='Email']'.</msg>
+<status status="PASS" starttime="20250521 11:04:03.524" endtime="20250521 11:04:03.825"/>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<arg>${DELAY_FAST}</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<msg timestamp="20250521 11:04:04.832" level="INFO">Slept 1 second</msg>
+<status status="PASS" starttime="20250521 11:04:03.830" endtime="20250521 11:04:04.832"/>
+</kw>
+<status status="PASS" starttime="20250521 11:04:03.370" endtime="20250521 11:04:04.834"/>
+</kw>
+<msg timestamp="20250521 11:04:04.835" level="INFO">▶️ [Row 6] Action: enterText | Args: ["//input[@placeholder='Password']", '123456']</msg>
+<kw name="enterText" library="common_keywords">
+<arg>//input[@placeholder='Password']</arg>
+<arg>123456</arg>
+<kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
+<arg>${locator}</arg>
+<arg>timeout=10s</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" starttime="20250521 11:04:04.836" endtime="20250521 11:04:04.903"/>
+</kw>
+<kw name="Input Text" library="SeleniumLibrary">
+<arg>${locator}</arg>
+<arg>${text}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<msg timestamp="20250521 11:04:04.904" level="INFO">Typing text '123456' into text field '//input[@placeholder='Password']'.</msg>
+<status status="PASS" starttime="20250521 11:04:04.904" endtime="20250521 11:04:05.053"/>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<arg>${DELAY_FAST}</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<msg timestamp="20250521 11:04:06.058" level="INFO">Slept 1 second</msg>
+<status status="PASS" starttime="20250521 11:04:05.056" endtime="20250521 11:04:06.059"/>
+</kw>
+<status status="PASS" starttime="20250521 11:04:04.835" endtime="20250521 11:04:06.062"/>
+</kw>
+<msg timestamp="20250521 11:04:06.063" level="INFO">▶️ [Row 7] Action: enterText | Args: ["//input[@placeholder='Confirm Password']", '123456']</msg>
+<kw name="enterText" library="common_keywords">
+<arg>//input[@placeholder='Confirm Password']</arg>
+<arg>123456</arg>
+<kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
+<arg>${locator}</arg>
+<arg>timeout=10s</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" starttime="20250521 11:04:06.064" endtime="20250521 11:04:06.154"/>
+</kw>
+<kw name="Input Text" library="SeleniumLibrary">
+<arg>${locator}</arg>
+<arg>${text}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<msg timestamp="20250521 11:04:06.156" level="INFO">Typing text '123456' into text field '//input[@placeholder='Confirm Password']'.</msg>
+<status status="PASS" starttime="20250521 11:04:06.155" endtime="20250521 11:04:06.285"/>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<arg>${DELAY_FAST}</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<msg timestamp="20250521 11:04:07.288" level="INFO">Slept 1 second</msg>
+<status status="PASS" starttime="20250521 11:04:06.287" endtime="20250521 11:04:07.288"/>
+</kw>
+<status status="PASS" starttime="20250521 11:04:06.063" endtime="20250521 11:04:07.290"/>
+</kw>
+<msg timestamp="20250521 11:04:07.291" level="INFO">▶️ [Row 8] Action: clickButton | Locator: //span[@class='aiz-square-check']</msg>
+<kw name="clickButton" library="common_keywords">
+<arg>//span[@class='aiz-square-check']</arg>
+<kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
+<arg>${locator}</arg>
+<arg>timeout=10s</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" starttime="20250521 11:04:07.292" endtime="20250521 11:04:07.332"/>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>${locator}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20250521 11:04:07.333" level="INFO">Clicking element '//span[@class='aiz-square-check']'.</msg>
+<status status="PASS" starttime="20250521 11:04:07.333" endtime="20250521 11:04:07.424"/>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<arg>${DELAY_MEDIUM}</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<msg timestamp="20250521 11:04:10.428" level="INFO">Slept 3 seconds</msg>
+<status status="PASS" starttime="20250521 11:04:07.426" endtime="20250521 11:04:10.428"/>
+</kw>
+<status status="PASS" starttime="20250521 11:04:07.291" endtime="20250521 11:04:10.431"/>
+</kw>
+<msg timestamp="20250521 11:04:10.432" level="INFO">▶️ [Row 9] Action: clickButton | Locator: //button[normalize-space()='Create Account']</msg>
+<kw name="clickButton" library="common_keywords">
+<arg>//button[normalize-space()='Create Account']</arg>
+<kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
+<arg>${locator}</arg>
+<arg>timeout=10s</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" starttime="20250521 11:04:10.433" endtime="20250521 11:04:10.470"/>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>${locator}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20250521 11:04:10.471" level="INFO">Clicking element '//button[normalize-space()='Create Account']'.</msg>
+<status status="PASS" starttime="20250521 11:04:10.470" endtime="20250521 11:04:10.556"/>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<arg>${DELAY_MEDIUM}</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<msg timestamp="20250521 11:04:13.561" level="INFO">Slept 3 seconds</msg>
+<status status="PASS" starttime="20250521 11:04:10.559" endtime="20250521 11:04:13.561"/>
+</kw>
+<status status="PASS" starttime="20250521 11:04:10.432" endtime="20250521 11:04:13.564"/>
+</kw>
+<msg timestamp="20250521 11:04:13.565" level="INFO">▶️ [Row 10] Action: verifyTextDisplayed | Args: ['Registration successful.']</msg>
+<kw name="verifyTextDisplayed" library="common_keywords">
+<arg>Registration successful.</arg>
+<kw name="Page Should Contain" library="SeleniumLibrary">
+<arg>${text}</arg>
+<doc>Verifies that current page contains ``text``.</doc>
+<msg timestamp="20250521 11:04:13.606" level="INFO">Current page contains text 'Registration successful.'.</msg>
+<status status="PASS" starttime="20250521 11:04:13.566" endtime="20250521 11:04:13.606"/>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<arg>${DELAY_MEDIUM}</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<msg timestamp="20250521 11:04:16.611" level="INFO">Slept 3 seconds</msg>
+<status status="PASS" starttime="20250521 11:04:13.610" endtime="20250521 11:04:16.612"/>
+</kw>
+<status status="PASS" starttime="20250521 11:04:13.565" endtime="20250521 11:04:16.714"/>
+</kw>
+<msg timestamp="20250521 11:04:16.715" level="INFO">▶️ [Row 11] Action: geturl | Args: ['https://cms.anhtester.com/users/login']</msg>
+<kw name="getUrl" library="common_keywords">
+<arg>https://cms.anhtester.com/users/login</arg>
+<kw name="Go To" library="SeleniumLibrary">
+<arg>${url}</arg>
+<doc>Navigates the current browser window to the provided ``url``.</doc>
+<msg timestamp="20250521 11:04:16.716" level="INFO">Opening url 'https://cms.anhtester.com/users/login'</msg>
+<status status="PASS" starttime="20250521 11:04:16.716" endtime="20250521 11:04:18.056"/>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<arg>${DELAY_MEDIUM}</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<msg timestamp="20250521 11:04:21.062" level="INFO">Slept 3 seconds</msg>
+<status status="PASS" starttime="20250521 11:04:18.060" endtime="20250521 11:04:21.062"/>
+</kw>
+<status status="PASS" starttime="20250521 11:04:16.715" endtime="20250521 11:04:21.064"/>
+</kw>
+<msg timestamp="20250521 11:04:21.065" level="INFO">▶️ [Row 12] Action: clickButton | Locator: //a[@class='text-reset d-inline-block opacity-60 py-2'][normalize-space()='Logout']</msg>
+<kw name="clickButton" library="common_keywords">
+<arg>//a[@class='text-reset d-inline-block opacity-60 py-2'][normalize-space()='Logout']</arg>
+<kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
+<arg>${locator}</arg>
+<arg>timeout=10s</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" starttime="20250521 11:04:21.066" endtime="20250521 11:04:21.139"/>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>${locator}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20250521 11:04:21.141" level="INFO">Clicking element '//a[@class='text-reset d-inline-block opacity-60 py-2'][normalize-space()='Logout']'.</msg>
+<status status="PASS" starttime="20250521 11:04:21.139" endtime="20250521 11:04:22.635"/>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<arg>${DELAY_MEDIUM}</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<msg timestamp="20250521 11:04:25.638" level="INFO">Slept 3 seconds</msg>
+<status status="PASS" starttime="20250521 11:04:22.637" endtime="20250521 11:04:25.638"/>
+</kw>
+<status status="PASS" starttime="20250521 11:04:21.065" endtime="20250521 11:04:25.666"/>
+</kw>
+<status status="PASS" starttime="20250521 11:03:54.550" endtime="20250521 11:04:25.667"/>
+</kw>
+<status status="PASS" starttime="20250521 11:03:54.538" endtime="20250521 11:04:25.669"/>
+</test>
+<status status="PASS" starttime="20250521 11:03:45.656" endtime="20250521 11:04:25.683"/>
+</suite>
+<status status="FAIL" starttime="20250521 11:01:36.082" endtime="20250521 11:04:25.715"/>
+</suite>
+<statistics>
+<total>
+<stat pass="7" fail="2" skip="0">All Tests</stat>
+</total>
+<tag>
+</tag>
+<suite>
+<stat pass="7" fail="2" skip="0" id="s1" name="Testsuites">Testsuites</stat>
+<stat pass="6" fail="2" skip="0" id="s1-s1" name="Login">Testsuites.Login</stat>
+<stat pass="1" fail="0" skip="0" id="s1-s2" name="Register">Testsuites.Register</stat>
+</suite>
+</statistics>
+<errors>
+<msg timestamp="20250521 11:03:10.757" level="ERROR">❌ [Row 8] Failed: verifyTextDisplayed with args ['The password field is required']: Page should have contained text 'The password field is required' but did not.</msg>
+<msg timestamp="20250521 11:03:45.570" level="ERROR">❌ [Row 8] Failed: verifyTextDisplayed with args ['Email invalid']: Page should have contained text 'Email invalid' but did not.</msg>
+</errors>
+</robot>

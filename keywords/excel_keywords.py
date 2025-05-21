@@ -2,6 +2,7 @@ from openpyxl import load_workbook
 from robot.api.deco import keyword
 from robot.libraries.BuiltIn import BuiltIn
 from faker import Faker
+import allure
 
 # Khởi tạo Faker (mặc định là en_US, có thể đổi thành vi_VN nếu cần)
 fake = Faker('en_US')  # Hoặc fake = Faker('vi_VN') cho dữ liệu tiếng Việt
@@ -55,54 +56,55 @@ def run_horizontal_test_from_excel(file_path, test_case_name, sheet_name="Sheet1
         if not action:
             continue
 
-        action = action.strip()
-        locator = str(locator).strip() if locator else ""
-        value_str = str(value).strip() if value is not None else ""
-        normalized_value = value_str.upper()
+        with allure.step(f"[Row {row_index}] {action} | locator={locator} | value={value}"):
+            action = action.strip()
+            locator = str(locator).strip() if locator else ""
+            value_str = str(value).strip() if value is not None else ""
+            normalized_value = value_str.upper()
 
-        is_no_value_action = action in NO_VALUE_ACTIONS
+            is_no_value_action = action in NO_VALUE_ACTIONS
 
-        # 🟡 Nếu là action không cần value → chỉ chạy khi value == TRUE
-        if is_no_value_action:
-            if normalized_value != "TRUE":
+            # 🟡 Nếu là action không cần value → chỉ chạy khi value == TRUE
+            if is_no_value_action:
+                if normalized_value != "TRUE":
+                    continue
+                if locator:
+                    locator = normalize_locator(locator)
+                    locator = BuiltIn().replace_variables(locator)
+                    BuiltIn().log(f"▶️ [Row {row_index}] Action: {action} | Locator: {locator}", level="INFO")
+                    try:
+                        BuiltIn().run_keyword(action, locator)
+                    except Exception as e:
+                        BuiltIn().log(f"❌ [Row {row_index}] Failed: {action} with locator {locator}: {str(e)}", level="ERROR")
+                        raise
                 continue
+
+            # 🟢 Với các action có value (action cần giá trị)
+            if not locator and not value_str:
+                BuiltIn().log(f"⏩ [Row {row_index}] Skipped: No locator and no value for action {action}", level="INFO")
+                continue
+
+            args = []
             if locator:
                 locator = normalize_locator(locator)
                 locator = BuiltIn().replace_variables(locator)
-                BuiltIn().log(f"▶️ [Row {row_index}] Action: {action} | Locator: {locator}", level="INFO")
-                try:
-                    BuiltIn().run_keyword(action, locator)
-                except Exception as e:
-                    BuiltIn().log(f"❌ [Row {row_index}] Failed: {action} with locator {locator}: {str(e)}", level="ERROR")
-                    raise
-            continue
+                args.append(locator)
 
-        # 🟢 Với các action có value (action cần giá trị)
-        if not locator and not value_str:
-            BuiltIn().log(f"⏩ [Row {row_index}] Skipped: No locator and no value for action {action}", level="INFO")
-            continue
+            if action == "enterText":  # Đảm bảo enterText luôn có 2 tham số
+                value_str = value_str if value_str else ""  # Dùng chuỗi rỗng làm mặc định
+                # Xử lý giá trị {faker_...} trước khi thay biến
+                value_str = process_faker_value(value_str)
+                value_str = BuiltIn().replace_variables(value_str)
+                args.append(value_str)
+            elif value_str:  # Với các action khác, chỉ thêm value nếu không trống
+                # Xử lý giá trị {faker_...} trước khi thay biến
+                value_str = process_faker_value(value_str)
+                value_str = BuiltIn().replace_variables(value_str)
+                args.append(value_str)
 
-        args = []
-        if locator:
-            locator = normalize_locator(locator)
-            locator = BuiltIn().replace_variables(locator)
-            args.append(locator)
-
-        if action == "enterText":  # Đảm bảo enterText luôn có 2 tham số
-            value_str = value_str if value_str else ""  # Dùng chuỗi rỗng làm mặc định
-            # Xử lý giá trị {faker_...} trước khi thay biến
-            value_str = process_faker_value(value_str)
-            value_str = BuiltIn().replace_variables(value_str)
-            args.append(value_str)
-        elif value_str:  # Với các action khác, chỉ thêm value nếu không trống
-            # Xử lý giá trị {faker_...} trước khi thay biến
-            value_str = process_faker_value(value_str)
-            value_str = BuiltIn().replace_variables(value_str)
-            args.append(value_str)
-
-        BuiltIn().log(f"▶️ [Row {row_index}] Action: {action} | Args: {args}", level="INFO")
-        try:
-            BuiltIn().run_keyword(action, *args)
-        except Exception as e:
-            BuiltIn().log(f"❌ [Row {row_index}] Failed: {action} with args {args}: {str(e)}", level="ERROR")
-            raise
+            BuiltIn().log(f"▶️ [Row {row_index}] Action: {action} | Args: {args}", level="INFO")
+            try:
+                BuiltIn().run_keyword(action, *args)
+            except Exception as e:
+                BuiltIn().log(f"❌ [Row {row_index}] Failed: {action} with args {args}: {str(e)}", level="ERROR")
+                raise

@@ -39,14 +39,28 @@ robotframework-seleniumlibrary
 robotframework-jsonlibrary
 robotframework openpyxl
 
+## Cài phiên bản ổn định
+pip install robotframework==6.0.2
+
+## Cài thêm thư viện hỗ trợ
+pip install allure-pytest
+
+## Thêm biến môi trường này để debug
+SET ROBOT_SYSLOG_FILE=log_robot_listener.txt
+
 
 ## ▶️ Chạy Test  
 robot testsuites/login.robot          # Chạy 1 file
 robot testsuites/                     # Chạy tất cả
 robot --outputdir reports testsuites/ # Ghi log vào thư mục reports
+robot --listener "allure_robotframework;output/allure-results" --outputdir reports testsuites/ # Lưu kết quả Allure vào thư mục reports
 
 ## 🔍 Báo Cáo  
 Sau khi test xong, mở `reports/log.html` hoặc `reports/report.html` để xem kết quả chi tiết.  
+allure generate output/allure-results -o output/allure --clean
+
+## 🔍 Mở Báo Cáo Allure  
+allure open output/allure
 
 ## 🤖 Tính Năng AI  
 Faker: tạo email, tên, địa chỉ ngẫu nhiên
