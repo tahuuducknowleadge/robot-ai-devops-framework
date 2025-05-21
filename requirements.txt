@@ -1,6 +1,6 @@
 robotframework
 robotframework-seleniumlibrary
 robotframework-jsonlibrary
-robotframework openpyxl
+openpyxl
 allure-robotframework
 selenium
