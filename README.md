@@ -55,6 +55,9 @@ robot testsuites/                     # Chạy tất cả
 robot --outputdir reports testsuites/ # Ghi log vào thư mục reports
 robot --listener "allure_robotframework;output/allure-results" --outputdir reports testsuites/ # Lưu kết quả Allure vào thư mục reports
 
+## Chạy để tạo file .robot
+python generate_robot_tests.py
+
 ## 🔍 Báo Cáo  
 Sau khi test xong, mở `reports/log.html` hoặc `reports/report.html` để xem kết quả chi tiết.  
 allure generate output/allure-results -o output/allure --clean
