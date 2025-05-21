@@ -12,17 +12,13 @@ Open Chrome Browser
     ${chrome_options}=    Evaluate    sys.modules['selenium.webdriver'].ChromeOptions()    modules=sys
     Run Keyword And Ignore Error    Call Method    ${chrome_options}    add_argument    --disable-notifications
     Run Keyword And Ignore Error    Call Method    ${chrome_options}    add_argument    --password-store=basic
+    # Tắt các flags liên quan đến Password Manager
     Run Keyword And Ignore Error    Call Method    ${chrome_options}    add_argument    --disable-features=PasswordManagerEnabled,PasswordLeakDetection,SafetyCheck,PasswordCheckup
     Run Keyword And Ignore Error    Call Method    ${chrome_options}    add_argument    --incognito
+    # Thêm flag để tắt Password Manager
     Run Keyword And Ignore Error    Call Method    ${chrome_options}    add_argument    --flag-switches-begin
     Run Keyword And Ignore Error    Call Method    ${chrome_options}    add_argument    --disable-password-manager
     Run Keyword And Ignore Error    Call Method    ${chrome_options}    add_argument    --flag-switches-end
-
-    # ➕ Thêm 3 options quan trọng cho môi trường headless hoặc CI
-    Run Keyword And Ignore Error    Call Method    ${chrome_options}    add_argument    --headless=new
-    Run Keyword And Ignore Error    Call Method    ${chrome_options}    add_argument    --no-sandbox
-    Run Keyword And Ignore Error    Call Method    ${chrome_options}    add_argument    --disable-dev-shm-usage
-
     Log    Chrome options set: ${chrome_options}    level=INFO
     Run Keyword And Ignore Error    Open Browser    about:blank    chrome    options=${chrome_options}
     Log    Browser opened successfully    level=INFO
