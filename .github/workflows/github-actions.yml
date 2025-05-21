@@ -2,7 +2,7 @@ name: Robot Tests with Allure
 
 on:
   push:
-    branches: [main] # Thay bằng nhánh chính của repo nếu không phải "main"
+    branches: [main]  # Thay bằng nhánh chính nếu không phải "main"
 
 jobs:
   test:
@@ -15,7 +15,7 @@ jobs:
       - name: Set up Python
         uses: actions/setup-python@v4
         with:
-          python-version: "3.11" # Hoặc phiên bản Python em đang dùng (3.13 nếu cần)
+          python-version: "3.11"  # Đúng với version em đang dùng
 
       - name: Install dependencies
         run: |
@@ -30,7 +30,7 @@ jobs:
         run: |
           allure generate output/allure-results -o output/allure-report --clean
 
-          - name: Upload Allure Report Artifact
+      - name: Upload Allure Report Artifact
         uses: actions/upload-artifact@v2
         with:
           name: allure-report
