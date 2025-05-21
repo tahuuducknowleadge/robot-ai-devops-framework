@@ -69,5 +69,5 @@ Tesseract: OCR popup hoặc UI không truy cập được qua DOM
 ChatGPT: sinh test case từ user story (tùy chọn nâng cao)
 
 ## 🔄 CI/CD  
-- Tự động chạy test khi push code (GitHub Actions/Jenkins) 
-- Cài dependencies → Run tests → Tạo report → Gửi thông báo Slack/Email (nếu có)  
+- Tự động chạy test khi push code (GitHub Actions) 
+- Cài dependencies → Run tests → Tạo report → Gửi thông báo Email
