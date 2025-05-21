@@ -24,14 +24,14 @@ jobs:
 
       - name: Run Robot tests with Allure listener
         run: |
-          robot --listener allure_robotframework:output/allure-results --outputdir output testsuites/
+          robot --listener "allure_robotframework;output/allure-results" --outputdir reports testsuites/
 
       - name: Generate Allure Report
         run: |
-          allure generate output/allure-results -o output/allure-report --clean
+          allure generate output/allure-results -o output/allure --clean
 
-      - name: Upload Allure Report Artifact
-        uses: actions/upload-artifact@3f3e4c8d61d9b324c44aa7b84f5dfdc61b7a4b5b
+      - name: Deploy Allure Report to GitHub Pages
+        uses: peaceiris/actions-gh-pages@v3
         with:
-          name: allure-report
-          path: output/allure-report
+          github_token: ${{ secrets.GITHUB_TOKEN }}
+          publish_dir: ./output/allure
